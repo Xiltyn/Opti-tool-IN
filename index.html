@@ -1,0 +1,555 @@
+<!--
+-------------------------------------------
+>>>>>>>>> Opti-tool © Brainly 2016 <<<<<<<<
+>>>>>>>>>>>>>>>> ver. 1.4 <<<<<<<<<<<<<<<<<
+-------------------------------------------
+---------------- CONTENTS -----------------
+
+	1. HEAD
+		1.1. Meta data
+		1.2. Live reload
+		1.3. Stylesheets import
+		1.4. Favicon settings
+	2. Rendering error screen
+		2.1. logo
+		2.2. whooops
+		2.3. para
+			2.3.1. link
+	3. Preloading screen
+		3.1. animation
+		3.2. text-bit
+		3.3. logo
+	4. Header container
+	5. Content container
+		5.1. Header :: logo
+		5.2. Help top layer
+		5.3. Rankings
+			5.3.1. header
+			5.3.2. controls
+			5.3.3. general
+			5.3.4. weekly
+		5.4. Secondary header
+		5.5. Navigation
+		5.6. Subjects filter
+		5.7. Json results
+			5.7.1. Questions list
+				5.7.1.1. header
+			5.7.2. Call to action
+				5.7.2.1. message
+				5.7.2.2. button
+	6. Footer container
+		6.1. Copyrights
+	7. Top-layer background blackout
+	8. Scripts import
+		8.1. G.A. tracking snippet placeholder
+
+-------------------------------------------
+--------------- DESCRIPTION ---------------
+
+
+
+
+-------------------------------------------
+-->
+
+<!doctype html>
+<html>
+
+<!-- 1. HEAD
+=============================================|▷ -->
+<head>
+
+	<!-- 1.1. Meta data
+	===========================================|▷ -->
+	<title>Optitim</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, maximum-scale=1.0">
+
+	<!-- 1.2. Live Reload
+	===========================================|▷ -->
+	<script src="live.js"></script>
+
+	<!-- 1.3. Stylesheets import
+	===========================================|▷ -->
+	<link rel="stylesheet" type="text/css" href="http://styleguide.brainly.com/21.6.0/style-guide.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/animate.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!-- 1.4. Favicon settings
+	===========================================|▷ -->
+	<link rel="icon" type="image/x-icon" href="http://styleguide.brainly.com/images/favicons/brainly/favicon-0c2222f36b.ico">
+	<link rel="icon" sizes="192x192" href="http://styleguide.brainly.com/images/favicons/brainly/favicon-hd-0865c7f19f.png">
+
+</head>
+<body>
+
+	<!-- 2. Rendering error screen
+	===========================================|▷ -->
+	<div id="render-error">
+		<div class="render-error--wrapper">
+
+			<!-- 2.1. Rendering error screen :: logo
+			=======================================|▷ -->
+			<div class="mint-logo">
+				<img class="mint-logo__image" src="http://styleguide.brainly.com/images/logos/eodev-1972bd4349.svg">
+			</div>
+
+			<!-- 2.2. Rendering error screen :: whooops
+			=======================================|▷ -->
+			<h1>
+					ÜZGÜNÜZ :(
+				</h1>
+
+			<!-- 2.3. Rendering error screen :: para
+			=======================================|▷ -->
+			<p>
+				Galiba Opti Sayfa'da bir hata oluştu.
+				<br><br>
+				Sayfayı yeniden yüklemelisin. Hala aynı sorun devam ederse...
+				<br><br>
+
+				<!-- 2.3.1. Rendering error screen :: para :: link
+				=====================================|▷ -->
+				<a href="#">LÜTFEN BİZE BİLDİR!</a>
+			</p>
+		</div>
+	</div>
+
+	<!-- 3. Preloading screen
+	===========================================|▷ -->
+	<div id="preloader">
+
+		<!-- 3.1. Preloading screen :: animation
+		=========================================|▷ -->
+		<div class="preloader-animation">
+			<div class="la-ball-clip-rotate-multiple la-3x">
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+
+		<!-- 3.2. Preloading screen :: text-bit
+		=========================================|▷ -->
+		<h1 class="mint-text-bit mint-text-bit--light">
+				SÜPER BİR ŞEYLER GELİYOR
+			</h1>
+
+		<!-- 3.3. Preloading screen :: logo
+		=========================================|▷ -->
+		<div class="mint-logo">
+			<img class="mint-logo__image" src="http://styleguide.brainly.com/images/logos/eodev-1972bd4349.svg">
+		</div>
+	</div>
+
+	<!-- 4. Header container
+	===========================================|▷ -->
+	<section id="header">
+		<h1 class="mint-text-bit mint-text-bit--light">
+				OPTİ TİM İŞ BAŞINDA!
+			</h1>
+	</section>
+
+	<!-- 5. Content container
+	===========================================|▷ -->
+	<section id="content">
+
+		<!-- 5.1. Header :: logo
+		=========================================|▷ -->
+		<div class="mint-logo">
+			<img class="mint-logo__image" src="http://styleguide.brainly.com/images/logos/eodev-1972bd4349.svg">
+		</div>
+
+		<!-- 5.2. Help top layer
+		=========================================|▷ -->
+		<div id="help" class="hidden">
+			<h2 align="center">Sevgili Ustam&#305;z,</h2>
+			<h1 align="center">OPT&#304; T&#304;M'E HO&#350; GELD&#304;N&#304;Z! :)</h1>
+			<p align="center">De&#287;erli arkada&#351;lar, Mart ay&#305; boyunca &#231;ok &#246;zel bir projeye ba&#351;lad&#305;k. Varl&#305;&#287;&#305;n&#305;z ve de&#287;erli yard&#305;mlar&#305;n&#305;z i&#231;in g&#246;n&#252;lden te&#351;ekk&#252;rler.
+			</p>
+			<p align="center">Bu &#231;al&#305;&#351;mam&#305;z&#305;n ismi, optimizasyon &#231;al&#305;&#351;mas&#305;d&#305;r. &#199;al&#305;&#351;mam&#305;za dahil olanlar, Opti Tim'de g&#246;revlidir.</p>
+			<blockquote>
+				<p>Tim nedir?
+					<br /> Belirli bir alanda sa&#287;lanabilecek en y&#252;ksek seviyedeki d&#252;zeni sa&#287;layan ekip.</p>
+				<p>Optimizasyon nedir?
+					<br /> Belirli ama&#231;lar&#305; ger&#231;ekle&#351;tirmek i&#231;in en iyi kararlar&#305; verme sanat&#305;</p>
+			</blockquote>
+			<p>Yani Eodevimiz'de amac&#305;m&#305;z, &#246;devlerimizde birbirimize yard&#305;m etmek oldu&#287;una g&#246;re, birbirimize en iyi &#351;ekilde yard&#305;m etmeyi bir sanat haline getirelim :)</p>
+			<h3 align="center">Bu sanat&#305;n ustalar&#305; kim peki? : her birimiz!</h3>
+			<h4>Bizleri neler bekliyor?</h4>
+			<ul>
+				<li>Opti Tim ustalarımız için özel Facebook Grubumuz burada <a href="https://www.facebook.com/groups/optitim/" target="_blank">https://www.facebook.com/groups/optitim/</a></li>
+				<li>G&#252;nl&#252;k, haftal&#305;k, ayl&#305;k s&#305;ralama ve liderlerin &#246;zel sayfam&#305;zda otomatikman g&#252;ncellenmesi</li>
+				<li>Haftal&#305;k ve ayl&#305;k liderlerin Facebook grupta profillerinin tan&#305;t&#305;lmas&#305; :)</li>
+				<li>3 ayl&#305;k liderlerimize sertifikalar&#305;n takdim edilmesi :)</li>
+				<li>Liderlerimize, belirli aral&#305;klarla, toplam puanlar&#305;na g&#246;re d&#252;zenlenecek olan hediyelerin sunulmas&#305; :) - (Tarihler daha sonra belirlenecektir. )</li>
+				<li>Konular&#305;na g&#246;re liderler se&#231;ilmesi ve g&#246;rev tayini ;)</li>
+				<li>Gelecekte i&#231;imizden se&#231;ilecek liderlerin, yeni gelen <i>opti
+					elemanlar&#305;na</i> yol g&#246;sterici olarak g&#246;revlendirilmesi, onlar&#305;n da <i>opti usta</i> olmas&#305;na yard&#305;m sa&#287;lanmas&#305; ;)</li>
+			</ul>
+			<h4>Nas&#305;l bir y&#246;ntem izlenir? Optimizasyon Sanat&#305;n&#305;n Temelleri
+				Nelerdir?</h4>
+			<ul>
+				<li>Parakeet731 sizlerle, G&#220;NL&#220;K OLARAK, 180-250 aras&#305; soru payla&#351;&#305;r.
+					<br />
+				</li>
+				<li>Bu sorular&#305;n &#246;zellikleri nelerdir? &#304;statistiklerden incelendi&#287;ine g&#246;re, sitemizde di&#287;er &#246;&#287;renci arkada&#351;lar&#305;m&#305;z taraf&#305;ndan en &#231;ok aranan ve ziyaret edilen sorulard&#305;r. Bu sorular&#305;n
+					izlenme oranlar&#305;, soru ba&#351;&#305;na en az 500 - en &#231;ok 20,000 g&#246;r&#252;nt&#252;lenme olarak de&#287;i&#351;ebilir :))
+				</li>
+				<li>Hal b&#246;yle olunca, bu sorular&#305;m&#305;za verilebilecek en kaliteli cevaplar&#305; vererek, <i>yani bu sorular&#305; ve bu sorulara ait
+					cevaplar&#305;</i> <i>optimize ederek,</i> ustal&#305;&#287;&#305;m&#305;z&#305; konu&#351;turuyoruz veeeeec binlerce arkada&#351;&#305;m&#305;za yard&#305;m etmenin yan&#305; s&#305;ra, te&#351;ekk&#252;r say&#305;m&#305;zda rekora ko&#351;uyoruz!
+					:)
+				</li>
+			</ul>
+			<h4>Yak&#305;n ge&#231;mi&#351;teki m&#252;kemmel optimizasyon &#246;rnekleri:</h4>
+			<ul>
+				<li><a href="http://eodev.com/gorev/771314" target="_blank">http://eodev.com/gorev/771314 <b>(bug&#252;n itibariyle y&#252;kseli&#351;e
+					ge&#231;en bir soru)</b></a></li>
+				<li><a href="http://eodev.com/gorev/394816" target="_blank">http://eodev.com/gorev/394816 <b>(100-200 te&#351;ekk&#252;r aras&#305;
+					y&#252;kselmeye devam eden)</b></a></li>
+				<li><a href="http://eodev.com/gorev/7418957" target="_blank">http://eodev.com/gorev/7418957 <b>(200-300 te&#351;ekk&#252;r
+					aras&#305;)</b></a></li>
+				<li><a href="http://eodev.com/gorev/4995717" target="_blank">http://eodev.com/gorev/4995717 <b>(300-600 te&#351;ekk&#252;r
+					aras&#305;)</b></a></li>
+				<li><a href="http://eodev.com/gorev/6318114" target="_blank">http://eodev.com/gorev/6318114 <b>(800-900 te&#351;ekk&#252;r
+					aras&#305;)</b></a></li>
+				<li><a href="http://eodev.com/gorev/7236334" target="_blank">http://eodev.com/gorev/7236334 <b>(1000 ve &#252;zeri
+					te&#351;ekk&#252;r!)</b></a>
+					<br />
+					<br />
+				</li>
+			</ul>
+			<h3 align="center">Kurallar&#305;m&#305;z ve Taktiklerimiz:</h3>
+			<ul>
+				<li>G&#252;nl&#252;k, ki&#351;i ba&#351;&#305;na, en az 15-20 soru de&#287;erlendirilmelidir. <i>En az</i>, dedim ;)</li>
+				<li>Bu listedeki sorular, ASLA S&#304;L&#304;NMEZ. Ne &#231;e&#351;it soru olursa olsun. Silinmez. Taktik dedik ya! :)</li>
+			</ul>
+			<p><b>Soru de&#287;erlendirme nedir?</b></p>
+			<ol>
+				<li>Bir soruyu inceledik; soruda 80-200+ te&#351;ekk&#252;rler bir cevap var.
+					<ul>
+						<li><i>Hemen cevab&#305;n kopya olup olmad&#305;&#287;&#305;na bak&#305;l&#305;r,
+							yani sa&#287; t&#305;kla cevap metni taran&#305;r, Google'da
+							arat&#305;l&#305;r.</i></li>
+						<li><i>Cevap kopya de&#287;ilse, ONAYLANIR. (ye&#351;il do&#287;rulama
+							butonu)</i></li>
+						<li><i>Cevap kopya ise, te&#351;ekk&#252;r say&#305;s&#305; dikkate
+							al&#305;namaz. Kopya cevap, hemen silinmelidir.</i></li>
+						<li><i>Kopya cevap silindiyse, bu SORU ASLA CEVAPSIZ BIRAKILMAZ.
+							Cevab&#305;n&#305; sildi&#287;imiz soruya, hemen ard&#305;ndan kendi
+							cevab&#305;m&#305;z&#305; eklemek zorunday&#305;z.</i></li>
+					</ul>
+				</li>
+				<li>Bir soruyu inceledik; soruda 20-40+ k&#252;s&#252;r te&#351;ekk&#252;rde tak&#305;lm&#305;&#351; kalm&#305;&#351; bir cevap var. Cevab&#305; dikkatlice okuruz. K&#305;sa yaz&#305;lm&#305;&#351; veya a&#231;&#305;klamas&#305; yap&#305;lmam&#305;&#351;
+					bir cevapsa HEMEN S&#304;LEB&#304;L&#304;R&#304;Z. Te&#351;ekk&#252;r say&#305;s&#305; &#246;nemli de&#287;il. Amac&#305;m&#305;z, bu cevab&#305; olabilecek en iyi &#351;ekilde yeniden vermek :)
+					<ul>
+						<li><i>Cevab&#305; silinen bir SORU ASLA CEVAPSIZ BIRAKILMAZ. Cevab&#305;n&#305;
+							sildi&#287;imiz soruya, hemen ard&#305;ndan kendi cevab&#305;m&#305;z&#305;
+							eklemek zorunday&#305;z.</i></li>
+					</ul>
+				</li>
+			</ol>
+			<p><b>"L&#252;tfen cevab&#305; eklerken bu notu siliniz:)" - bu c&#252;mle
+				nedir?</b></p>
+			<ul>
+				<li>Baz&#305; sorulara, a&#231;&#305;kta cevaps&#305;z &#351;ekilde kalmamalar&#305; i&#231;in, Parakeet 731 &#351;u ifadeyi eklemi&#351; olabilir: <i>"l&#252;tfen
+					cevab&#305; eklerken bu notu siliniz:)"</i>. Bu notu g&#246;r&#252;rsek, hi&#231; &#231;ekinmeden Parakeet731fin bu notunu silebiliriz ve silerken ghatal&#305; cevaph se&#231;erek puan k&#305;rmal&#305;y&#305;z - ki b&#246;ylece haks&#305;zl&#305;k
+					olmas&#305;n.
+				</li>
+				<li>Bu notu sildikten sonra, yine hemen kendi cevab&#305;m&#305;z&#305; mutlaka eklemek zorunday&#305;z. Soruyu cevaps&#305;z &#351;ekilde bo&#351;ta b&#305;rakamay&#305;z.
+				</li>
+				<li>Dikkat: bu &#246;zel notu, sadece Parakeet731 girebilir. Takdir edersiniz ki, kar&#305;&#351;&#305;kl&#305;&#287;a veya haks&#305;zl&#305;&#287;a yol a&#231;mamak i&#231;in.
+				</li>
+			</ul>
+			<blockquote>
+				<p><i>* Bu sorular&#305;m&#305;z&#305;n &#231;o&#287;u, eski tarihlerde
+					a&#231;&#305;lm&#305;&#351; sorular oldu&#287;undan, cevaps&#305;z &#351;ekilde
+					a&#231;&#305;kta b&#305;rak&#305;l&#305;rsa, sistemden otomatikman silinme riski ile
+					kar&#351;&#305;la&#351;&#305;r. Soru kayb&#305;n&#305; en aza indirmek i&#231;in,
+					sorulardan hatal&#305; cevap silersek, ASLA SORUYU BO&#350; BIRAKMIYORUZ.</i></p>
+			</blockquote>
+			<p><b>AC&#304;L SOS nedir?</b></p>
+			<ul>
+				<li>SOS, uluslararas&#305; mors alfabesi acil durum sinyalidir :)))</li>
+				<li>Parakeet731, site &#252;zerinden veya facebook grup &#252;zerinden, duyurularla acil sos'lerin linklerin iletir.</li>
+				<li>Acil sos'ler, sorunun duyuruldu&#287;u anda s&#305;k&#231;a g&#246;r&#252;nt&#252;lenmekte olan ama cevab&#305; kalitesiz olan sorulard&#305;r. Yani acil sos'lerin cevaplar&#305; hemen silinmeli, ve hemen kaliteli cevap ayn&#305; anda eklenmelidir.</li>
+			</ul>
+			<p><b>Son olarak</b></p>
+			<blockquote>
+				<p>Tüm hatalı doğrulanmış cevapları, eodev üzerinden özel mesajla Parakeet731 ve 3on4 e iletebilirsiniz. Hatalı doğrulama yazın ve soru link ini ekleyin. Teşekkürler!</p>
+			</blockquote>
+			<h4 align="center">G&#252;&#231; sizde, arkada&#351;lar! Hepimiz, Opti Tim'e hayat
+				veriyoruz.</h4>
+			<h2 align="center">Birlikte var&#305;z :)</h2>
+			<h3 align="center"><i>Together, we are Brainly!</i></h3>
+		</div>
+
+		<!-- 5.3. Rankings
+		=========================================|▷ -->
+		<div id="ranking">
+
+			<!-- 5.3.1. Rankings :: header
+			=======================================|▷ -->
+			<h3>
+					En Çok Cevaplayanlar
+				</h3>
+
+			<!-- 5.3.2. Rankings :: tab controls
+			=======================================|▷ -->
+			<ul class="mint-tabs">
+				<li class="mint-tabs__tab mint-tabs__tab--active" data-ranking='general'>Genel</li>
+				<li class="mint-tabs__tab" data-ranking='weekly'>Haftalik</li>
+			</ul>
+
+			<!-- 5.3.3. Rankings :: general
+			=======================================|▷ -->
+			<ul id="rankingList">
+			</ul>
+
+			<!-- 5.3.4. Rankings :: weekly
+			=======================================|▷ -->
+			<ul id="rankingListWeekly">
+			</ul>
+		</div>
+
+		<!-- 5.4. Secondary Header
+		=========================================|▷ -->
+		<h1 class="mint-text-bit mint-text-bit--alt">
+				EN SEVDİĞİN KONU
+			</h1>
+
+		<!-- 5.5. Navigation
+		=========================================|▷ -->
+		<menu id="controls">
+			<div class="menu-element" id="help-button">
+			</div>
+			<div class="menu-element" id="subjects-button">
+			</div>
+			<div class="menu-element" id="ranking-button">
+			</div>
+		</menu>
+
+		<!-- 5.6. Subjects filter
+		=========================================|▷ -->
+		<div class="subjects-menu">
+			<button data-subject="all" class="mint-button-secondary mint-button-secondary--alt-inverse">
+				<div class="mint-button-secondary__hole">
+					HEPSI
+				</div>
+			</button>
+			<button data-subject="5" class="mint-button-secondary mint-button-secondary--dark">
+				<div class="mint-button-secondary__hole">
+					İngilizce
+				</div>
+			</button>
+			<button data-subject="16" data-subject="german" class="mint-button-secondary mint-button-secondary--dark">
+				<div class="mint-button-secondary__hole">
+					Almanca
+				</div>
+			</button>
+			<button data-subject="18" class="mint-button-secondary mint-button-secondary--dark">
+				<div class="mint-button-secondary__hole">
+					Fransızca
+				</div>
+			</button>
+			<button data-subject="22" class="mint-button-secondary mint-button-secondary--dark">
+				<div class="mint-button-secondary__hole">
+					DİĞER DİLLER
+				</div>
+			</button>
+			<button data-subject="25" class="mint-button-secondary mint-button-secondary--dark">
+				<div class="mint-button-secondary__hole">
+					Türkçe
+				</div>
+			</button>
+			<button data-subject="41" class="mint-button-secondary mint-button-secondary--dark">
+				<div class="mint-button-secondary__hole">
+					Türk Edebiyatı
+				</div>
+			</button>
+			<button data-subject="8" class="mint-button-secondary mint-button-secondary--dark">
+				<div class="mint-button-secondary__hole">
+					TARİH
+				</div>
+			</button>
+			<button data-subject="1" class="mint-button-secondary mint-button-secondary--dark">
+				<div class="mint-button-secondary__hole">
+					Matematik
+				</div>
+			</button>
+			<button data-subject="27" class="mint-button-secondary mint-button-secondary--dark">
+				<div class="mint-button-secondary__hole">
+					Geometri
+				</div>
+			</button>
+			<button data-subject="7" class="mint-button-secondary mint-button-secondary--dark">
+				<div class="mint-button-secondary__hole">
+					Coğrafya
+				</div>
+			</button>
+			<button data-subject="26" class="mint-button-secondary mint-button-secondary--dark">
+				<div class="mint-button-secondary__hole">
+					Fizik
+				</div>
+			</button>
+			<button data-subject="19" class="mint-button-secondary mint-button-secondary--dark">
+				<div class="mint-button-secondary__hole">
+					BİLGİSAYAR
+				</div>
+			</button>
+			<button data-subject="42" class="mint-button-secondary mint-button-secondary--dark">
+				<div class="mint-button-secondary__hole">
+					Hayat Bilgisi
+				</div>
+			</button>
+			<button data-subject="2" class="mint-button-secondary mint-button-secondary--dark">
+				<div class="mint-button-secondary__hole">
+					Kimya
+				</div>
+			</button>
+			<button data-subject="6" class="mint-button-secondary mint-button-secondary--dark">
+				<div class="mint-button-secondary__hole">
+					Biyoloji
+				</div>
+			</button>
+			<button data-subject="31" class="mint-button-secondary mint-button-secondary--dark">
+				<div class="mint-button-secondary__hole">
+					Mantık
+				</div>
+			</button>
+			<button data-subject="35" class="mint-button-secondary mint-button-secondary--dark">
+				<div class="mint-button-secondary__hole">
+					Trafik
+				</div>
+			</button>
+			<button data-subject="30" class="mint-button-secondary mint-button-secondary--dark">
+				<div class="mint-button-secondary__hole">
+					Turizm
+				</div>
+			</button>
+			<button data-subject="32" class="mint-button-secondary mint-button-secondary--dark">
+				<div class="mint-button-secondary__hole">
+					Müzik
+				</div>
+			</button>
+			<button data-subject="4" class="mint-button-secondary mint-button-secondary--dark">
+				<div class="mint-button-secondary__hole">
+					FELSEFE
+				</div>
+			</button>
+			<button data-subject="28" class="mint-button-secondary mint-button-secondary--dark">
+				<div class="mint-button-secondary__hole">
+					Psikoloji
+				</div>
+			</button>
+			<button data-subject="38" class="mint-button-secondary mint-button-secondary--dark">
+				<div class="mint-button-secondary__hole">
+					Fen & Tek
+				</div>
+			</button>
+			<button data-subject="34" class="mint-button-secondary mint-button-secondary--dark">
+				<div class="mint-button-secondary__hole">
+					DKAB
+				</div>
+			</button>
+			<button data-subject="number" class="mint-button-secondary mint-button-secondary--dark">
+				<div class="mint-button-secondary__hole">
+					Dil ve Anlatım
+				</div>
+			</button>
+			<button data-subject="20" class="mint-button-secondary mint-button-secondary--dark">
+				<div class="mint-button-secondary__hole">
+					Sanat
+				</div>
+			</button>
+			<button data-subject="33" class="mint-button-secondary mint-button-secondary--dark">
+				<div class="mint-button-secondary__hole">
+					Sağlık
+				</div>
+			</button>
+			<button data-subject="39" class="mint-button-secondary mint-button-secondary--dark">
+				<div class="mint-button-secondary__hole">
+					Sosyal Bilgiler
+				</div>
+			</button>
+			<button data-subject="29" class="mint-button-secondary mint-button-secondary--dark">
+				<div class="mint-button-secondary__hole">
+					Sosyoloji
+				</div>
+			</button>
+			<button data-subject="36" class="mint-button-secondary mint-button-secondary--dark">
+				<div class="mint-button-secondary__hole">
+					YGS-LYS
+				</div>
+			</button>
+		</div>
+
+		<!-- 5.7. Json results
+		=========================================|▷ -->
+		<div id="results-wrapper">
+
+			<!-- 5.7.1. Question list
+			=======================================|▷ -->
+			<ul id="questionList">
+
+				<!-- 5.7.1.1. Question list :: header
+				=====================================|▷ -->
+				<h3>
+					Cevapları görmek için sorunun üzerine tıkla
+				</h3>
+			</ul>
+
+			<!-- 5.7.2. Call to action
+			=======================================|▷ -->
+			<div class="call-to-action">
+
+				<!-- 5.7.2.1. Call to action :: message
+				=====================================|▷ -->
+				<h3>
+						İşin bitti mi? Siteye dönmek ister misin?
+					</h3>
+
+				<!-- 5.7.2.2. Call to action :: button
+				=====================================|▷ -->
+				<div class="call-to-action--btn">
+					<a href="http://www.eodev.com" target="_blank" class="mint-button-primary mint-button-primary--alt">
+						<div class="mint-button-primary__hole">
+							Eodev'e geç!
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- 6. Footer section
+	===========================================|▷ -->
+	<section id="footer">
+
+		<!-- 6.1. Copyrights
+		=========================================|▷ -->
+		<p>
+			Copyright © 2016 Brainly.in
+		</p>
+	</section>
+
+	<!-- 7. Top-layer background blackout
+	===========================================|▷ -->
+	<div id="blackout" class="hidden">
+	</div>
+
+	<!-- 8. Scripts import
+	===========================================|▷ -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+	<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+	<script src="js/script.js"></script>
+
+		<!-- 8.1. G.A. tracking snippet placeholder
+		===========================================|▷
+
+			Put your G.A. script here so the magic could start happening!
+
+		-->
+
+</body>
+
+</html>

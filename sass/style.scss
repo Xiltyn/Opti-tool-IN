@@ -1,0 +1,519 @@
+/*
+-------------------------------------------
+>>>>>>>>> Opti-tool © Brainly 2016 <<<<<<<<
+>>>>>>>>>>> STYLESHEET ver. 1.4 <<<<<<<<<<<
+-------------------------------------------
+---------------- CONTENTS -----------------
+
+	1. General
+	2. Independent elements
+		2.1. Preloader
+		2.2. Top-layer blackout
+	3. Header
+	4. Content
+		4.1. Header logo
+		4.2. Navigation
+		4.3. Help toplayer
+		4.4. Subjects filter menu
+		4.5. Rankings
+			4.5.1. Header
+			4.5.2. Menu
+			4.5.3. Ranking wrappers
+		4.6. Secondary header
+		4.7. Questions container
+		 	4.7.1. Answer style
+		4.8. Call to action
+	5. Footer
+		5.1. Facebook share button
+		5.2. Twitter share button
+	6. SASS partials import
+		6.1. _preloader-animation.scss
+		6.2. _error.scss
+		6.3. _rwd.scss
+
+	-------------------------------------------
+	--------------- DESCRIPTION ---------------
+
+
+
+
+	-------------------------------------------
+*/
+
+/*
+=================================|▷
+1. General
+=================================|▷
+*/
+
+html {
+	font-size: 100%;
+}
+body {
+	background-color: #ebf2ef;
+}
+
+/*
+=================================|▷
+2. Independent elements
+=================================|▷
+	2.1. Preloader
+=================================|▷
+*/
+#preloader {
+	width: 100vw;
+	height: 100vh;
+	background-color: #6e85ff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1001;
+	.preloader-animation {
+		position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -48px;
+    margin-top: -48px;
+	}
+	h1 {
+		position: absolute;
+    left: 50%;
+    margin-left: -386px;
+    top: 58%;
+	}
+	.mint-logo {
+		position: absolute;
+    left: 50%;
+    margin-left: 265px;
+    top: 50%;
+    margin-top: 110px;
+	}
+}
+/*
+=================================|▷
+	2.2. Top-layer blackout
+=================================|▷
+*/
+#blackout {
+	position: fixed;
+	display: none;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0,0,0,0.75);
+	z-index: 250;
+}
+
+/*
+=================================|▷
+3. Header
+=================================|▷
+*/
+#header {
+	height: 400px;
+	width: 100%;
+	background: url("background.jpg") no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+	h1 {
+		text-align: center;
+		padding-top: 120px;
+	}
+}
+
+/*
+=================================|▷
+4. Content
+=================================|▷
+*/
+#content {
+	position:relative;
+	padding: 10px;
+	padding-left: 200px;
+	width: 950px;
+	min-height: 88vh;
+	margin: auto;
+	margin-top: -75px;
+	margin-bottom: 30px;
+	background: url('arrow-blue.png') no-repeat;
+	background-size: 40px 80px;
+	background-position: 83% 40px;
+	background-color: #fff;
+	border-radius: 30px;
+	/*
+	===============================|▷
+	4.1. Header logo
+	===============================|▷
+	*/
+	.mint-logo {
+		position: absolute;
+		left: 385px;
+		top: -270px;
+	}
+	/*
+	===============================|▷
+	4.2. Navigation
+	===============================|▷
+	*/
+	#controls {
+		width: 300px;
+		height: 35px;
+		margin: -60px auto 60px 350px;
+		position: relative;
+		.menu-element {
+			position: absolute;
+			min-width: 35px;
+			height: 35px;
+			background-size: 35px 35px !important;
+			top: 35px;
+			z-index: 150;
+			transition: 0.2s;
+		}
+		.menu-element:hover {
+			transition: 0.2s;
+		}
+		.menu-element:active {
+			z-index: 750;
+			transition: 0.1s;
+		}
+		#help-button {
+			background: url('info_normal.png') no-repeat;
+			left: 40px;
+		}
+		#help-button:hover {
+			background: url('info_hover.png') no-repeat;
+		}
+		#help-button:active {
+			background: url('info_active.png') no-repeat;
+		}
+		#ranking-button {
+			display: none;
+			background: url('ranking_normal.png') no-repeat;
+			left: 0;
+		}
+		#ranking-button:hover {
+			background: url('ranking_hover.png') no-repeat;
+		}
+		#ranking-button:active {
+			background: url('ranking_active.png') no-repeat;
+		}
+		#subjects-button {
+			background: url('subjects_normal.png') no-repeat;
+			left: -40px;
+		}
+		#subjects-button:hover {
+			background: url('subjects_hover.png') no-repeat;
+		}
+		#subjects-button:active {
+			background: url('subjects_active.png') no-repeat;
+		}
+	}
+	/*
+	===============================|▷
+	4.3. Help toplayer
+	===============================|▷
+	*/
+	#help {
+		padding: 50px;
+		margin-bottom: 50px;
+		position: absolute;
+		display: none;
+		top: 140px;
+		left: 50%;
+		margin-left:-455px;
+		width: 910px;
+		min-height: 84vh;
+		border: solid 2px black;
+		border-radius: 20px;
+		background-color: rgba(255,255,255,0.9);
+		z-index: 500;
+		h3 {
+			margin-bottom: 15px;
+		}
+		p {
+			margin-bottom: 15px;
+			text-align: justify;
+		}
+		a {
+			color: #5bb8ff;
+			cursor: pointer;
+			cursor: hand;
+		}
+	}
+	/*
+	===============================|▷
+	4.4. Subjects filter menu
+	===============================|▷
+	*/
+	.subjects-menu--unfold {
+		height: 300px !important;
+		overflow: hidden;
+		transition: 1s;
+	}
+	.subjects-menu {
+		margin: 45px 0 20px 7.5% !important;
+		width: 85% !important;
+		height: 75px;
+		overflow: hidden;
+		transition: 1s;
+		.mint-button-secondary {
+			margin: 1px;
+			width: 150px;
+			margin-top: 5px;
+			line-height: 1rem;
+		}
+	}
+	/*
+	===============================|▷
+	4.5. Rankings
+	===============================|▷
+	*/
+	#ranking {
+		z-index: 100;
+		position: absolute;
+		padding-left: 20px;
+		padding-right: 20px;
+		background: white;
+		border-radius: 25px;
+		max-height: 84vh;
+		width: 200px;
+		top: 25px;
+		left: 50%;
+		margin-left: -455px;
+		border: solid 2px black;
+		overflow:auto;
+		/*
+		=============================|▷
+		4.5.1. Header
+		=============================|▷
+		*/
+		h3 {
+			color: #5bb8ff;
+			margin-top: 20px;
+			margin-bottom: -5px;
+			padding-bottom: 10px;
+			width: 100%;
+			text-align: center;
+		}
+		/*
+		=============================|▷
+		4.5.2. Menu
+		=============================|▷
+		*/
+		.mint-tabs {
+			margin-top: 10px;
+			margin-right: -20px;
+			line-height: 1.5rem;
+			height: 1.5rem;
+			.mint-tabs__tab {
+				padding: 0 1rem;
+				min-height: 1.5rem;
+				font-size: .1rem;
+			}
+		}
+		/*
+		=============================|▷
+		4.5.3. Ranking wrappers
+		=============================|▷
+		*/
+		#rankingList, #rankingListWeekly {
+			overflow: auto;
+    	padding-right: 17px; /* Increase/decrease this value for cross-browser compatibility */
+			li {
+				position: relative;
+				margin-left: -40px;
+				list-style:inside decimal;
+				font-weight: bold;
+				font-size: 0.75rem;
+				.ranking-element {
+					padding-bottom: 10px;
+					margin-bottom: 10px;
+					border-bottom: dashed 1px #bbbdbf;
+					a {
+						color: black;
+						transition: 0.25s;
+					}
+					a:hover {
+						color: #969799;
+						transition: 0.25s;
+					}
+					.number {
+						position: absolute;
+						top: 0;
+						left: 95%;
+						color: #ff8073;
+						text-align: right;
+					}
+				}
+			}
+		}
+		#rankingListWeekly {
+			display: none;
+		}
+	}
+	/*
+	===============================|▷
+	4.6. Secondary header
+	===============================|▷
+	*/
+	h1 {
+		width: 95%;
+		margin: auto;
+		font-size: 2.4rem !important;
+		text-align: center;
+		padding: 20px 0 10px 0;
+		margin-bottom: 30px;
+		color: #5bb8ff !important;
+	}
+	/*
+	===============================|▷
+	4.7. Questions container
+	===============================|▷
+	*/
+	#results-wrapper {
+		ul {
+			padding: 0 100px;
+			font-size: 1.1rem;
+			a {
+				width: 100%;
+				color: black;
+				transition: 0.25s;
+			}
+			a:hover {
+				color: #5bb8ff;
+				transition: 0.25s;
+			}
+			li {
+				margin: 8px;
+				list-style: circle;
+				list-style-image: url('bullet.gif');
+				cursor: pointer;
+				cursor: hand;
+				transition: 0.5s;
+			}
+			.js-li--blue {
+				color: #5bb8ff !important;
+			}
+			li:hover {
+				color: #5bb8ff;
+				transition: 0.5s;
+			}
+			h3 {
+				padding-bottom: 10px;
+				padding-top: 10px;
+			}
+			/*
+			=============================|▷
+			4.7.1. Answer style
+			=============================|▷
+			*/
+			.json-answer--hidden {
+				display: none;
+			}
+			.json-answer--wrapper {
+				padding: 20px;
+				padding-top: 5px;
+				margin-top: 10px;
+				margin-bottom: 30px;
+				border: solid 2px #e1e3e5;
+				border-radius: 25px;
+				h3 {
+					font-size: 1rem;
+					color: #5bb8ff;
+				}
+				.json-answer {
+					position: relative;
+					font-size: 1rem;
+					text-align: justify;
+				}
+				.approved {
+					background: url("tick.png") no-repeat;
+					background-position: right;
+					background-size: 30px 30px;
+				}
+				.not-approved {
+					background: url("cross.png") no-repeat;
+					background-position: right;
+					background-size: 30px 30px;
+				}
+			}
+		}
+	}
+	/*
+	===============================|▷
+	4.8. Call to actions
+	===============================|▷
+	*/
+	.call-to-action {
+		width: 500px;
+		margin: auto;
+		h3 {
+			font-size: 1.4rem !important;
+			text-align: center;
+			padding: 20px;
+		}
+		.call-to-action--btn {
+			width: 175px;
+			margin: auto;
+		}
+	}
+}
+/*
+=================================|▷
+5. Footer
+=================================|▷
+*/
+#footer {
+	position: relative;
+	height: 40px;
+	width: 100%;
+	background-color: #ebf2ef;
+	/*
+	===============================|▷
+	5.1. Facebook share button
+	===============================|▷
+	*/
+	.fb-share-button {
+		position: absolute;
+		left: 75%;
+		top: 0px;
+	}
+	/*
+	===============================|▷
+	5.2. Twitter share button
+	===============================|▷
+	*/
+	.twitter-share-btn {
+		position: absolute;
+		left: 63%;
+		top: 4px;
+	}
+	p {
+		position: absolute;
+		bottom: 15px;
+		left: 17vw;
+		text-align: center;
+		color: #383838;
+	}
+}
+/*
+=================================|▷
+6. SASS partials import
+=================================|▷
+	6.1. _preloader-animation.scss
+=================================|▷
+*/
+@import 'preloader-animation';
+/*
+=================================|▷
+	6.2. _error.scss
+=================================|▷
+*/
+@import 'error';
+/*
+=================================|▷
+	6.3. _rwd.scss
+=================================|▷
+*/
+@import 'rwd';

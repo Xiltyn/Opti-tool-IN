@@ -1,0 +1,44 @@
+#render-error {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1500;
+  background: #ffbe32;
+  color: #fff;
+  background-image: url('error-background.png');
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 30%;
+  display: none;
+  .render-error--wrapper {
+    width: 800px;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -200px;
+    .mint-logo {
+      margin-left: -15px;
+    }
+    h1 {
+      font-size: 6rem;
+      text-transform: uppercase;
+      margin-top: 60px;
+    }
+    p {
+      width: 500px;
+      font-size: 1.5rem;
+      line-height: 1.6rem;
+      font-weight: bolder;
+      padding-top: 70px;
+      a {
+        text-transform: uppercase;
+        font-size: 2rem;
+        line-height: 3rem;
+        color: #fff;
+      }
+    }
+  }
+}
