@@ -23,13 +23,14 @@
 		4.7. Questions container
 		 	4.7.1. Answer style
 		4.8. Call to action
-	5. Footer
-		5.1. Facebook share button
-		5.2. Twitter share button
-	6. SASS partials import
-		6.1. _preloader-animation.scss
-		6.2. _error.scss
-		6.3. _rwd.scss
+	5. Profile
+	6. Footer
+		6.1. Facebook share button
+		6.2. Twitter share button
+	7. SASS partials import
+		7.1. _preloader-animation.scss
+		7.2. _error.scss
+		7.3. _rwd.scss
 
 	-------------------------------------------
 	--------------- DESCRIPTION ---------------
@@ -52,6 +53,10 @@ html {
 body {
 	background-color: #ebf2ef;
 }
+a {
+	text-decoration: none;
+	color: inherit;
+}
 
 /*
 =================================|▷
@@ -61,6 +66,11 @@ body {
 =================================|▷
 */
 #preloader {
+
+	/* disable */
+	display: none;
+	/* disable end */
+
 	width: 100vw;
 	height: 100vh;
 	background-color: #6e85ff;
@@ -467,9 +477,158 @@ body {
 }
 /*
 =================================|▷
-5. Footer
+5. Profile
 =================================|▷
 */
+#profile {
+	overflow: auto;
+	position: fixed;
+	top: 0;
+	left: 100vw;
+	margin-left: -900px;
+	height: 100vh;
+	width: 900px;
+	z-index: 2000;
+	background: #fff;
+	box-shadow: inset 0px 0px 24px -3px #F7F7F7,-14px 0px 16px -18px #A1A1A1;
+	-webkit-box-shadow: inset 0px 0px 24px -3px #F7F7F7,-14px 0px 16px -18px #A1A1A1;
+	-moz-box-shadow: inset 0px 0px 24px -3px #F7F7F7,-14px 0px 16px -18px #A1A1A1;
+	-o-box-shadow: inset 0px 0px 24px -3px #F7F7F7,-14px 0px 16px -18px #A1A1A1;
+	.profile-wrapper {
+		.profile-top {
+			position: relative;
+			height: 75px;
+			width: 100%;
+			background: #ffbe32;
+			button {
+				position: absolute;
+				width: 50px;
+				height: 50px;
+				margin: 12.5px;
+			}
+			h1 {
+				font-size: 3.5rem;
+				padding-top: 25px;
+				color: #fff;;
+				text-align: center;
+			}
+		}
+		.profile-user {
+			position: relative;
+			padding: 25px;
+			.avatar {
+				position: absolute;
+				left: 50%;
+				margin-left: -75px;
+				width: 150px;
+				height: 150px;
+				border-radius: 75px;
+				border: solid 1px #1a1a1a;
+				img {
+					width: 150px;
+					height: 150px;
+					border-radius: 75px;
+				}
+			}
+			.user-info {
+				position: absolute;
+				top: 75px;
+				left: 75px;
+				.username {
+					font-size: 2.5rem;
+				}
+				.rank {
+					color: rgb(126, 126, 126);
+					font-size: 1.1rem;
+				}
+			}
+			.user-titles {
+				position: absolute;
+				left: 630px;
+				top: 50px;
+				h3 {
+					text-align: center;
+				}
+				.titles {
+					li {
+						margin-left: -20px;
+						list-style: none;
+					}
+				}
+			}
+		}
+		.profile-achievements {
+			border-top: solid 1px rgb(126, 126, 126);
+			margin: 200px 25px 25px 25px;
+			padding-top: 50px;
+			h2 {
+				text-align: center;
+				font-size: 3rem;
+				color: #ffbe32;
+				padding-bottom: 50px;
+			}
+			.badges {
+				width: 100%;
+				display: flex;
+				.general, .special  {
+					width: 50%;
+					h3 {
+						font-size: 1.5rem;
+						text-align: center;
+						border-bottom: solid 1px rgb(126, 126, 126);
+						margin-left: 50px;
+						margin-right: 50px;
+					}
+					.badges-wrapper {
+						list-style: none;
+						.badges-item {
+							position: relative;
+							padding-bottom: 50px;
+							.badge {
+								position: absolute;
+								width: 120px;
+								min-height: 120px;
+								border-radius: 60px;
+								background: #1a1a1a;
+								margin: 30px;
+								opacity: 0.3;
+							}
+							.rookie {
+								top: 50px;
+							}
+							.zealot {
+								top: 10px;
+							}
+							.master {
+								top: -30px;
+							}
+							.description {
+								width: 40%;
+								margin-left: 50%;
+								h3 {
+									margin-left: 20px;
+									margin-right: 20px;
+									margin-bottom: 10px;
+									font-size: 1.1rem;
+								}
+								p {
+									text-align: justify;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/*
+=================================|▷
+6. Footer
+=================================|▷
+*/
+
 #footer {
 	position: relative;
 	height: 40px;
@@ -477,7 +636,7 @@ body {
 	background-color: #ebf2ef;
 	/*
 	===============================|▷
-	5.1. Facebook share button
+	6.1. Facebook share button
 	===============================|▷
 	*/
 	.fb-share-button {
@@ -487,7 +646,7 @@ body {
 	}
 	/*
 	===============================|▷
-	5.2. Twitter share button
+	6.2. Twitter share button
 	===============================|▷
 	*/
 	.twitter-share-btn {
@@ -505,21 +664,21 @@ body {
 }
 /*
 =================================|▷
-6. SASS partials import
+7. SASS partials import
 =================================|▷
-	6.1. _preloader-animation.scss
+	7.1. _preloader-animation.scss
 =================================|▷
 */
 @import 'preloader-animation';
 /*
 =================================|▷
-	6.2. _error.scss
+	7.2. _error.scss
 =================================|▷
 */
 @import 'error';
 /*
 =================================|▷
-	6.3. _rwd.scss
+	7.3. _rwd.scss
 =================================|▷
 */
 @import 'rwd';

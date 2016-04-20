@@ -98,7 +98,7 @@
 		showFirstAnswer();
 		toggleSubjects();
 		hideApproved();
-		preLoaded();
+		// preLoaded();
 	}
 
 	// function displayMatches(event) {
