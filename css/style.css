@@ -115,7 +115,7 @@ a {
 #header {
   height: 600px;
   width: 100%;
-  background: url("background_IN.jpg") no-repeat;
+  background: url("assets/img/background_IN.jpg") no-repeat;
   background-position: center;
   background-attachment: fixed; }
   #header h1 {
@@ -136,7 +136,7 @@ a {
   margin: auto;
   margin-top: -75px;
   margin-bottom: 30px;
-  background: url("arrow-mustard.png") no-repeat;
+  background: url("assets/img/arrow-mustard.png") no-repeat;
   background-size: 40px 80px;
   background-position: 83% 40px;
   background-color: #fff;
@@ -178,7 +178,7 @@ a {
 	*/
   /*
 	===============================|▷
-	4.8. Call to actions
+	4.8. Call to action
 	===============================|▷
 	*/ }
   #content .mint-logo {
@@ -204,27 +204,27 @@ a {
       z-index: 750;
       transition: 0.1s; }
     #content #controls #help-button {
-      background: url("info_normal.png") no-repeat;
+      background: url("assets/img/info_normal.png") no-repeat;
       left: 40px; }
     #content #controls #help-button:hover {
-      background: url("info_hover.png") no-repeat; }
+      background: url("assets/img/info_hover.png") no-repeat; }
     #content #controls #help-button:active {
-      background: url("info_active.png") no-repeat; }
+      background: url("assets/img/info_active.png") no-repeat; }
     #content #controls #ranking-button {
       display: none;
-      background: url("ranking_normal.png") no-repeat;
+      background: url("assets/img/ranking_normal.png") no-repeat;
       left: 0; }
     #content #controls #ranking-button:hover {
-      background: url("ranking_hover.png") no-repeat; }
+      background: url("assets/img/ranking_hover.png") no-repeat; }
     #content #controls #ranking-button:active {
-      background: url("ranking_active.png") no-repeat; }
+      background: url("assets/img/ranking_active.png") no-repeat; }
     #content #controls #subjects-button {
-      background: url("subjects_normal.png") no-repeat;
+      background: url("assets/img/subjects_normal.png") no-repeat;
       left: -40px; }
     #content #controls #subjects-button:hover {
-      background: url("subjects_hover.png") no-repeat; }
+      background: url("assets/img/subjects_hover.png") no-repeat; }
     #content #controls #subjects-button:active {
-      background: url("subjects_active.png") no-repeat; }
+      background: url("assets/img/subjects_active.png") no-repeat; }
   #content #help {
     padding: 50px;
     margin-bottom: 50px;
@@ -366,10 +366,11 @@ a {
     #content #results-wrapper ul li {
       margin: 8px;
       list-style: circle;
-      list-style-image: url("bullet-mustard.gif");
+      list-style-image: url("assets/img/bullet-mustard.gif");
       cursor: pointer;
       cursor: hand;
-      transition: 0.5s; }
+      transition: 0.5s;
+      overflow: hidden; }
     #content #results-wrapper ul .js-li--blue {
       color: #ffbe32 !important; }
     #content #results-wrapper ul li:hover {
@@ -395,11 +396,11 @@ a {
         font-size: 1rem;
         text-align: justify; }
       #content #results-wrapper ul .json-answer--wrapper .approved {
-        background: url("tick.png") no-repeat;
+        background: url("assets/img/tick.png") no-repeat;
         background-position: right;
         background-size: 30px 30px; }
       #content #results-wrapper ul .json-answer--wrapper .not-approved {
-        background: url("cross.png") no-repeat;
+        background: url("assets/img/cross.png") no-repeat;
         background-position: right;
         background-size: 30px 30px; }
   #content .call-to-action {
@@ -423,9 +424,9 @@ a {
   position: fixed;
   top: 0;
   left: 100vw;
-  margin-left: -900px;
+  margin-left: -960px;
   height: 100vh;
-  width: 900px;
+  width: 960px;
   z-index: 2000;
   background: #fff;
   box-shadow: inset 0px 0px 24px -3px #F7F7F7,-14px 0px 16px -18px #A1A1A1;
@@ -456,8 +457,7 @@ a {
       margin-left: -75px;
       width: 150px;
       height: 150px;
-      border-radius: 75px;
-      border: solid 1px #1a1a1a; }
+      border-radius: 75px; }
       #profile .profile-wrapper .profile-user .avatar img {
         width: 150px;
         height: 150px;
@@ -499,36 +499,45 @@ a {
           text-align: center;
           border-bottom: solid 1px #7e7e7e;
           margin-left: 50px;
-          margin-right: 50px; }
+          margin-right: 50px;
+          padding-bottom: 15px;
+          margin-bottom: 50px; }
         #profile .profile-wrapper .profile-achievements .badges .general .badges-wrapper, #profile .profile-wrapper .profile-achievements .badges .special .badges-wrapper {
           list-style: none; }
           #profile .profile-wrapper .profile-achievements .badges .general .badges-wrapper .badges-item, #profile .profile-wrapper .profile-achievements .badges .special .badges-wrapper .badges-item {
             position: relative;
-            padding-bottom: 50px; }
+            padding-bottom: 50px;
+            margin-bottom: 100px; }
             #profile .profile-wrapper .profile-achievements .badges .general .badges-wrapper .badges-item .badge, #profile .profile-wrapper .profile-achievements .badges .special .badges-wrapper .badges-item .badge {
               position: absolute;
-              width: 120px;
-              min-height: 120px;
-              border-radius: 60px;
-              background: #1a1a1a;
               margin: 30px;
-              opacity: 0.3; }
+              margin-left: -20px; }
+              #profile .profile-wrapper .profile-achievements .badges .general .badges-wrapper .badges-item .badge img, #profile .profile-wrapper .profile-achievements .badges .special .badges-wrapper .badges-item .badge img {
+                width: 200px;
+                height: 200px;
+                border-radius: 100px; }
             #profile .profile-wrapper .profile-achievements .badges .general .badges-wrapper .badges-item .rookie, #profile .profile-wrapper .profile-achievements .badges .special .badges-wrapper .badges-item .rookie {
-              top: 50px; }
+              top: 70px;
+              opacity: 0.8; }
             #profile .profile-wrapper .profile-achievements .badges .general .badges-wrapper .badges-item .zealot, #profile .profile-wrapper .profile-achievements .badges .special .badges-wrapper .badges-item .zealot {
-              top: 10px; }
+              top: 20px;
+              opacity: 0.6; }
             #profile .profile-wrapper .profile-achievements .badges .general .badges-wrapper .badges-item .master, #profile .profile-wrapper .profile-achievements .badges .special .badges-wrapper .badges-item .master {
-              top: -30px; }
+              top: -40px;
+              opacity: 1;
+              z-index: 100; }
             #profile .profile-wrapper .profile-achievements .badges .general .badges-wrapper .badges-item .description, #profile .profile-wrapper .profile-achievements .badges .special .badges-wrapper .badges-item .description {
-              width: 40%;
-              margin-left: 50%; }
+              width: 200px;
+              margin-left: 50%;
+              padding-top: 50px; }
               #profile .profile-wrapper .profile-achievements .badges .general .badges-wrapper .badges-item .description h3, #profile .profile-wrapper .profile-achievements .badges .special .badges-wrapper .badges-item .description h3 {
                 margin-left: 20px;
                 margin-right: 20px;
                 margin-bottom: 10px;
                 font-size: 1.1rem; }
               #profile .profile-wrapper .profile-achievements .badges .general .badges-wrapper .badges-item .description p, #profile .profile-wrapper .profile-achievements .badges .special .badges-wrapper .badges-item .description p {
-                text-align: justify; }
+                text-align: justify;
+                line-height: 1.2rem; }
 
 /*
 =================================|▷

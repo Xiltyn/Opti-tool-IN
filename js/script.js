@@ -2,6 +2,9 @@
 
 	var JSONURL = 'https://spreadsheets.google.com/feeds/list/1RT2unQwLR1bGtOT0M0psbEmsaKGuCwSfbN2Cv_Iq-RQ/1/public/basic?alt=json';
 	var JSONURLRANKING = 'https://spreadsheets.google.com/feeds/list/1RT2unQwLR1bGtOT0M0psbEmsaKGuCwSfbN2Cv_Iq-RQ/2/public/basic?alt=json';
+  var JSONUSER = 'https://spreadsheets.google.com/feeds/list/1g_RCrLq21BkES-l5CRuhL0h0vFRZyCGgx_typdtJiCs/1/public/basic?alt=json';
+  var JSONBADGESGENERAL = 'https://spreadsheets.google.com/feeds/list/1g_RCrLq21BkES-l5CRuhL0h0vFRZyCGgx_typdtJiCs/2/public/basic?alt=json';
+  var JSONBADGESSPECIAL = 'https://spreadsheets.google.com/feeds/list/1g_RCrLq21BkES-l5CRuhL0h0vFRZyCGgx_typdtJiCs/3/public/basic?alt=json';
 	var $search = $('#search');
 	var $questionList = $('#questionList');
 	var $rankingList = $('#rankingList');
@@ -17,6 +20,9 @@
 	var $templateQuestions = _.template('<li class="json-question all <%= sub_id %> <%= aged %>"><%= content %><div class="json-answer--wrapper json-answer--hidden"><a href="<%= link %>" class="json-link" target="_blank"><h3 class="json-header <%= approve_1 %>">Cevap 1</h3><p class="json-answer"><%= answer_1 %></p></a><a href="<%= link %>" class="json-link" target="_blank"><h3 class="json-header <%= approve_2 %>">Cevap 2</h3><p class="json-answer"><%= answer_2 %></p></a></div></li>');
 	var $templateRanking = _.template('<li><div class="ranking-element"><a href="http://eodev.com/profil/<%=user_name%>-<%= user_id %>" target="_blank"><%= user_name %><div class="number"><%= answers_count %></div></a></div></li>');
 	var $templateRankingWeekly = _.template('<li><div class="ranking-element"><a href="http://eodev.com/profil/<%=user_name%>-<%= user_id %>" target="_blank"><%= user_name %><div class="number"><%= answers_count_weekly %></div></a></div></li>');
+  var $templateProfile = _.template ('<div class="profile-user" data-userid="<%= user_id %>"><div class="avatar"><img src="<%= avatar %>" alt="avatar" /></div<div class="user-info"><h3 class="username"><a href="http://www.brainly.in/profile/user-<%= user_id %>"><%= user_name %></a></h3><h4 class="rank"><%= user_rank %></h4></div><div class="user-titles"><h3>Titles</h3><ul class="titles"><li><%= user_title_1 %></li><li><%= user_title_2 %></li><li><%= user_title_3 %></li></ul></div></div><div class="profile-achievements"><h2>Achievements</h2><div class="badges"></div></div></div>');
+  var $templateBadgesGeneral = _.template ('<div class="general"><h3>General</h3><ul class="badges-wrapper badges-wrapper--general"><li class="badges-item"><div class="badge rookie <%= badge_id %>"><img src="css/assets/img/badges/<%= badge_id %>1.png" alt="<%= badge_name %>" /></div><div class="badge zealot <%= badge_id %>"><img src="css/assets/img/badges/<%= badge_id %>2.png" alt="<%= badge_name %>" /></div><div class="badge master <%= badge_id %>"><img src="css/assets/img/badges/<%= badge_id %>3.png" alt="<%= badge_name %>" /></div><div class="description"><h3><%= badge_name %></h3><p><%= badge_description %></p></div></li></div>');
+  var $templateBadgesSpecial = _.template ('<div class="special"><h3>Special</h3><ul class="badges-wrapper badges-wrapper--special"><li class="badges-item"><div class="badge <%= badge_id %>"><img src="css/assets/img/badges/<%= badge_id %>.png" alt="" /></div><div class="description"><h3><%= badge_name %></h3><p><%= badge_description %></p></div></li></ul></div>');
 
 	function parseResponse(data){
 	    var rows = [];
