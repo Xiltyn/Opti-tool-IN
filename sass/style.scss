@@ -500,7 +500,7 @@ a {
 			position: relative;
 			height: 75px;
 			width: 100%;
-			background: #ffbe32;
+			background: #6e85ff;
 			button {
 				position: absolute;
 				width: 50px;
@@ -564,7 +564,7 @@ a {
 			h2 {
 				text-align: center;
 				font-size: 3rem;
-				color: #ffbe32;
+				color: #6e85ff;
 				padding-bottom: 50px;
 			}
 			.badges {
@@ -586,41 +586,50 @@ a {
 						.badges-item {
 							position: relative;
 							padding-bottom: 50px;
-							margin-bottom: 100px;
+							margin-bottom: 50px;
 							.badge {
 								position: absolute;
 								margin: 30px;
-								margin-left: -20px;
+								margin-left: -40px;
+								top: 50%;
+								margin-top: -100px;
 								img {
-									width: 200px;
+									width: auto;
 									height: 200px;
 									border-radius: 100px;
 								}
 							}
 							.rookie {
-								top: 70px;
-								opacity: 0.8;
+								margin-top: -30px;
+								z-index: 80
 							}
 							.zealot {
-								top: 20px;
-								opacity: 0.6;
+								z-index: 90
 							}
 							.master {
-								top: -40px;
-								opacity: 1;
+								margin-top: -170px;
 								z-index: 100
 							}
 							.description {
-								width: 200px;
-								margin-left: 50%;
-								padding-top: 50px;
+								background: #6e85ff;
+								width: 225px;
+								margin-left: 175px;
+								height: 300px;
+								border-radius: 30px;
 								h3 {
+									color: #fff;
+									border: none;
+									padding: 15px;
 									margin-left: 20px;
 									margin-right: 20px;
-									margin-bottom: 10px;
+									margin-bottom: 0px;
 									font-size: 1.1rem;
 								}
 								p {
+									background: #f7f6f6;
+									padding: 15px;
+									width: 100%;
+									height: 100%;
 									text-align: justify;
 									line-height: 1.2rem;
 								}
@@ -679,16 +688,22 @@ a {
 	7.1. _preloader-animation.scss
 =================================|▷
 */
+@import 'operational';
+/*
+=================================|▷
+	7.2. _preloader-animation.scss
+=================================|▷
+*/
 @import 'preloader-animation';
 /*
 =================================|▷
-	7.2. _error.scss
+	7.3. _error.scss
 =================================|▷
 */
 @import 'error';
 /*
 =================================|▷
-	7.3. _rwd.scss
+	7.4. _rwd.scss
 =================================|▷
 */
 @import 'rwd';

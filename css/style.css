@@ -437,7 +437,7 @@ a {
     position: relative;
     height: 75px;
     width: 100%;
-    background: #ffbe32; }
+    background: #6e85ff; }
     #profile .profile-wrapper .profile-top button {
       position: absolute;
       width: 50px;
@@ -487,7 +487,7 @@ a {
     #profile .profile-wrapper .profile-achievements h2 {
       text-align: center;
       font-size: 3rem;
-      color: #ffbe32;
+      color: #6e85ff;
       padding-bottom: 50px; }
     #profile .profile-wrapper .profile-achievements .badges {
       width: 100%;
@@ -507,35 +507,44 @@ a {
           #profile .profile-wrapper .profile-achievements .badges .general .badges-wrapper .badges-item, #profile .profile-wrapper .profile-achievements .badges .special .badges-wrapper .badges-item {
             position: relative;
             padding-bottom: 50px;
-            margin-bottom: 100px; }
+            margin-bottom: 50px; }
             #profile .profile-wrapper .profile-achievements .badges .general .badges-wrapper .badges-item .badge, #profile .profile-wrapper .profile-achievements .badges .special .badges-wrapper .badges-item .badge {
               position: absolute;
               margin: 30px;
-              margin-left: -20px; }
+              margin-left: -40px;
+              top: 50%;
+              margin-top: -100px; }
               #profile .profile-wrapper .profile-achievements .badges .general .badges-wrapper .badges-item .badge img, #profile .profile-wrapper .profile-achievements .badges .special .badges-wrapper .badges-item .badge img {
-                width: 200px;
+                width: auto;
                 height: 200px;
                 border-radius: 100px; }
             #profile .profile-wrapper .profile-achievements .badges .general .badges-wrapper .badges-item .rookie, #profile .profile-wrapper .profile-achievements .badges .special .badges-wrapper .badges-item .rookie {
-              top: 70px;
-              opacity: 0.8; }
+              margin-top: -30px;
+              z-index: 80; }
             #profile .profile-wrapper .profile-achievements .badges .general .badges-wrapper .badges-item .zealot, #profile .profile-wrapper .profile-achievements .badges .special .badges-wrapper .badges-item .zealot {
-              top: 20px;
-              opacity: 0.6; }
+              z-index: 90; }
             #profile .profile-wrapper .profile-achievements .badges .general .badges-wrapper .badges-item .master, #profile .profile-wrapper .profile-achievements .badges .special .badges-wrapper .badges-item .master {
-              top: -40px;
-              opacity: 1;
+              margin-top: -170px;
               z-index: 100; }
             #profile .profile-wrapper .profile-achievements .badges .general .badges-wrapper .badges-item .description, #profile .profile-wrapper .profile-achievements .badges .special .badges-wrapper .badges-item .description {
-              width: 200px;
-              margin-left: 50%;
-              padding-top: 50px; }
+              background: #6e85ff;
+              width: 225px;
+              margin-left: 175px;
+              height: 300px;
+              border-radius: 30px; }
               #profile .profile-wrapper .profile-achievements .badges .general .badges-wrapper .badges-item .description h3, #profile .profile-wrapper .profile-achievements .badges .special .badges-wrapper .badges-item .description h3 {
+                color: #fff;
+                border: none;
+                padding: 15px;
                 margin-left: 20px;
                 margin-right: 20px;
-                margin-bottom: 10px;
+                margin-bottom: 0px;
                 font-size: 1.1rem; }
               #profile .profile-wrapper .profile-achievements .badges .general .badges-wrapper .badges-item .description p, #profile .profile-wrapper .profile-achievements .badges .special .badges-wrapper .badges-item .description p {
+                background: #f7f6f6;
+                padding: 15px;
+                width: 100%;
+                height: 100%;
                 text-align: justify;
                 line-height: 1.2rem; }
 
@@ -579,6 +588,23 @@ a {
 7. SASS partials import
 =================================|▷
 	7.1. _preloader-animation.scss
+=================================|▷
+*/
+.badge-dim {
+  filter: brightness(50%) grayscale(0.75);
+  -webkit-filter: brightness(50%) grayscale(0.75);
+  -moz-filter: brightness(50%) grayscale(0.75);
+  -o-filter: brightness(50%) grayscale(0.75);
+  -ms-filter: brightness(50%) grayscale(0.75);
+  opacity: 0.8;
+  z-index: 0 !important; }
+
+.badge-dim:nth-of-type(1) {
+  opacity: 0.6; }
+
+/*
+=================================|▷
+	7.2. _preloader-animation.scss
 =================================|▷
 */
 /*!
@@ -745,7 +771,7 @@ a {
 
 /*
 =================================|▷
-	7.2. _error.scss
+	7.3. _error.scss
 =================================|▷
 */
 #render-error {
@@ -756,7 +782,7 @@ a {
   z-index: 1500;
   background: #ffbe32;
   color: #fff;
-  background-image: url("error-background.png");
+  background-image: url("assets/img/error-background.png");
   background-repeat: no-repeat;
   background-position: left bottom;
   background-size: 30%;
@@ -789,7 +815,7 @@ a {
 
 /*
 =================================|▷
-	7.3. _rwd.scss
+	7.4. _rwd.scss
 =================================|▷
 */
 @media screen and (max-width: 600px) {

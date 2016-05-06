@@ -9,6 +9,12 @@
 	var $questionList = $('#questionList');
 	var $rankingList = $('#rankingList');
 	var $rankingListWeekly = $('#rankingListWeekly');
+  var $profileWrapper = $('.profile-wrapper');
+  var $badgesGeneralWrapper;
+  var $badgesSpecialWrapper;
+  var $badges;
+	var $badgesArray;
+  var $badgesSpecial;
 	var $questionListElements;
 	var $questions;
 	var $questionsArray;
@@ -20,9 +26,9 @@
 	var $templateQuestions = _.template('<li class="json-question all <%= sub_id %> <%= aged %>"><%= content %><div class="json-answer--wrapper json-answer--hidden"><a href="<%= link %>" class="json-link" target="_blank"><h3 class="json-header <%= approve_1 %>">Cevap 1</h3><p class="json-answer"><%= answer_1 %></p></a><a href="<%= link %>" class="json-link" target="_blank"><h3 class="json-header <%= approve_2 %>">Cevap 2</h3><p class="json-answer"><%= answer_2 %></p></a></div></li>');
 	var $templateRanking = _.template('<li><div class="ranking-element"><a href="http://eodev.com/profil/<%=user_name%>-<%= user_id %>" target="_blank"><%= user_name %><div class="number"><%= answers_count %></div></a></div></li>');
 	var $templateRankingWeekly = _.template('<li><div class="ranking-element"><a href="http://eodev.com/profil/<%=user_name%>-<%= user_id %>" target="_blank"><%= user_name %><div class="number"><%= answers_count_weekly %></div></a></div></li>');
-  var $templateProfile = _.template ('<div class="profile-user" data-userid="<%= user_id %>"><div class="avatar"><img src="<%= avatar %>" alt="avatar" /></div<div class="user-info"><h3 class="username"><a href="http://www.brainly.in/profile/user-<%= user_id %>"><%= user_name %></a></h3><h4 class="rank"><%= user_rank %></h4></div><div class="user-titles"><h3>Titles</h3><ul class="titles"><li><%= user_title_1 %></li><li><%= user_title_2 %></li><li><%= user_title_3 %></li></ul></div></div><div class="profile-achievements"><h2>Achievements</h2><div class="badges"></div></div></div>');
-  var $templateBadgesGeneral = _.template ('<div class="general"><h3>General</h3><ul class="badges-wrapper badges-wrapper--general"><li class="badges-item"><div class="badge rookie <%= badge_id %>"><img src="css/assets/img/badges/<%= badge_id %>1.png" alt="<%= badge_name %>" /></div><div class="badge zealot <%= badge_id %>"><img src="css/assets/img/badges/<%= badge_id %>2.png" alt="<%= badge_name %>" /></div><div class="badge master <%= badge_id %>"><img src="css/assets/img/badges/<%= badge_id %>3.png" alt="<%= badge_name %>" /></div><div class="description"><h3><%= badge_name %></h3><p><%= badge_description %></p></div></li></div>');
-  var $templateBadgesSpecial = _.template ('<div class="special"><h3>Special</h3><ul class="badges-wrapper badges-wrapper--special"><li class="badges-item"><div class="badge <%= badge_id %>"><img src="css/assets/img/badges/<%= badge_id %>.png" alt="" /></div><div class="description"><h3><%= badge_name %></h3><p><%= badge_description %></p></div></li></ul></div>');
+  var $templateProfile = _.template ('<div class="profile-user"><div class="avatar"><img src="https://<%= user_avatar %>" alt="avatar" /></div><div class="user-info" data-userid="<%= user_id %>"><h3 class="username"><a href="http://www.brainly.in/profile/user-<%= user_id %>"><%= user_name %></a></h3><h4 class="rank"><%= user_rank %></h4></div><div class="user-titles"><h3>Titles</h3><ul class="titles"><li><%= user_title_1 %></li><li><%= user_title_2 %></li><li><%= user_title_3 %></li></ul></div></div><div class="profile-achievements"><h2>Achievements</h2><div class="badges" data-badgeId="<%= badge_011 %>;<%= badge_012 %>;<%= badge_013 %>;<%= badge_021 %>;<%= badge_022 %>;<%= badge_023 %>;<%= badge_031 %>;<%= badge_032 %>;<%= badge_033 %>;<%= badge_04 %>;<%= badge_05 %>;<%= badge_06 %>;<%= badge_07 %>;<%= badge_08 %>;<%= badge_09 %>;<%= badge_10 %>;<%= badge_11 %>;<%= badge_12 %>;<%= badge_13 %>;<%= badge_14 %>;<%= badge_15 %>"><div class="general"><h3>General</h3><ul class="badges-wrapper badges-wrapper--general"></ul></div><div class="special"><h3>Special</h3><ul class="badges-wrapper badges-wrapper--special"></ul></div>');
+  var $templateBadgesGeneral = _.template ('<li class="badges-item"><div class="badge rookie" data-id="<%= badge_id %>1"><img src="css/assets/img/badges/<%= badge_id %>1.png" alt="<%= badge_name %>" /></div><div class="badge zealot" data-id="<%= badge_id %>2"><img src="css/assets/img/badges/<%= badge_id %>2.png" alt="<%= badge_name %>" /></div><div class="badge master" data-id="<%= badge_id %>3"><img src="css/assets/img/badges/<%= badge_id %>3.png" alt="<%= badge_name %>" /></div><div class="description"><h3><%= badge_name %></h3><p><%= badge_description %></p></div></li>');
+  var $templateBadgesSpecial = _.template ('<li class="badges-item"><div class="badge" data-id="<%= badge_id %>"><img src="css/assets/img/badges/<%= badge_id %>.png" alt="" /></div><div class="description"><h3><%= badge_name %></h3><p><%= badge_description %></p></div></li>');
 
 	function parseResponse(data){
 	    var rows = [];
@@ -106,21 +112,6 @@
 		hideApproved();
 		// preLoaded();
 	}
-
-	// function displayMatches(event) {
-	// 	var phrase = event.currentTarget.value.toLowerCase();
-	//
-	// 	$.each($questionList.children(), function(key, value) {
-	// 		var $question = $(value);
-	// 		var content = $question.html();
-	//
-	// 		if (content.toLowerCase().indexOf(phrase) >= 0 ) {
-	// 			$question.show();
-	// 		} else {
-	// 			$question.hide();
-	// 		}
-	// 	});
-	// }
 
 	function onQuestionClick() {
 			var $answer = $(this).find('.json-answer--wrapper');
@@ -360,9 +351,180 @@
 
 	}
 
+  // =========================
+  // ======== PROFILE ========
+  // =========================
+
+  function parseProfile(data){
+	    var rows = [];
+	    var cells = data.feed.entry;
+
+			try {
+		    for (var i = 0; i < cells.length; i++){
+		        var rowObj = {};
+		        rowObj.timestamp = cells[i].title.$t;
+		        var rowCols = cells[i].content.$t.split(', profile');
+		        for (var j = 0; j < rowCols.length; j++) {
+		            var keyVal = rowCols[j].split(':');
+								if (keyVal[1]) {
+									rowObj[keyVal[0].trim()] = keyVal[1].trim();
+								}
+		        }
+		        rows.push(rowObj);
+					}
+				} catch (exception) {
+					showError();
+					console.log('Whoooooops!');
+	    	}
+	    return rows;
+		}
+
+    function renderProfile(profileData) {
+  		var profileElements = parseProfile(profileData);
+  		var $profile = $(document.createDocumentFragment());
+
+      // console.log(profileElements);
+  // ASSIGNING ATTRIBUTES TO PLACEHOLDERS IN THE TEMPLATE
+  		profileElements.forEach(function(profile) {
+  			$profile.append($templateProfile({
+  				user_id: profile.timestamp,
+  				user_name: profile.profileusername,
+  				user_rank: profile.userrank,
+  				user_title_1: profile.usertitle1,
+  				user_title_2: profile.usertitle2,
+  				user_title_3: profile.usertitle3,
+  				user_avatar: profile.useravatar,
+          badge_011: profile.badge011,
+          badge_012: profile.badge012,
+          badge_013: profile.badge013,
+          badge_021: profile.badge021,
+          badge_022: profile.badge022,
+          badge_023: profile.badge023,
+          badge_031: profile.badge031,
+          badge_032: profile.badge032,
+          badge_033: profile.badge033,
+          badge_04: profile.badge04,
+          badge_05: profile.badge05,
+          badge_06: profile.badge06,
+          badge_07: profile.badge07,
+          badge_08: profile.badge08,
+          badge_09: profile.badge09,
+          badge_10: profile.badge10,
+          badge_11: profile.badge11,
+          badge_12: profile.badge12,
+          badge_13: profile.badge13,
+          badge_14: profile.badge14,
+          badge_15: profile.badge15,
+  			}));
+  		});
+  		$profileWrapper.append($profile);
+
+      appendBadges();
+			dimBadges();
+    }
+
+    function renderBadgesGeneral(profileData) {
+      var profileElements = parseProfile(profileData);
+      var $badgesGeneral = $(document.createDocumentFragment());
+
+      // console.log(profileElements);
+
+      // General badges render
+      // =======================================================|>
+      profileElements.forEach(function(badges) {
+  			$badgesGeneral.append($templateBadgesGeneral({
+  				badge_id: badges.timestamp,
+  				badge_name: badges.profilebadgename,
+  				badge_description: badges.badgedescription,
+          // badge_reward_1: badges.badgereward1,
+          // badge_reward_2: badges.badgereward2,
+  			}));
+  		});
+      $badgesGeneralWrapper.append($badgesGeneral);
+
+      return $badgesGeneral
+    }
+
+    function renderBadgesSpecial(profileData) {
+      var profileElements = parseProfile(profileData);
+      $badgesSpecial = $(document.createDocumentFragment());
+
+      // Special badges render
+      // =======================================================|>
+      profileElements.forEach(function(badges) {
+        $badgesSpecial.append($templateBadgesSpecial({
+          badge_id: badges.timestamp,
+          badge_name: badges.profilebadgename,
+          badge_description: badges.badgedescription,
+          badge_reward_1: badges.badgereward1,
+          badge_reward_2: badges.badgereward2,
+        }));
+      });
+      $badgesSpecialWrapper.append($badgesSpecial);
+
+      return $badgesSpecial;
+    }
+
+    function appendBadges() {
+      $badgesGeneralWrapper = $('.badges-wrapper--general');
+      $badgesSpecialWrapper = $('.badges-wrapper--special');
+
+      if ($badgesSpecialWrapper.load()) {
+        $.ajax({
+            url:JSONBADGESSPECIAL,
+            success: renderBadgesSpecial
+        });
+        $.ajax({
+            url:JSONBADGESGENERAL,
+            success: renderBadgesGeneral
+        });
+      }
+    }
+
+		function appendUser() {
+			$.ajax({
+		      url:JSONUSER,
+		      success: renderProfile
+		  });
+
+		}
+
+    function dimBadges() {
+			$badges = $('.badge');
+			$badgesArray = Array.prototype.slice.call($badges);
+
+			function dimElements() {
+				$badges.hide();
+				console.log($badges);
+				console.log($badgesArray);
+			}
+ 			dimElements();
+
+			// var $badgeWrappers = $('.badges')
+			// var badgeConfig;
+			//
+			// if ($badges.load()) {}
+			// 	$badges.each(function() {
+			// 		var $element = $(this).parents('.badges');
+			// 		var protoArray = $element.data('badgeid');
+			// 		badgeConfig = [];
+			//
+			// 		badgeConfig = protoArray.split(';');
+			//
+			// 		return badgeConfig;
+			//
+			// 		console.log('shit');
+			// 	});
+			}
+
+			// function filterBadges() {
+			// 	badgeConfig = jQuery.grep(badgeConfig, function(a) {
+			// 		a = parseInt(a);
+			// 		return a != 0
+			// 	})
+			// }
 
 
-	// $.getJSON( "questions.json", renderQuestions);
 
 	$.ajax({
       url:JSONURLRANKING,
@@ -373,13 +535,20 @@
       success: renderQuestions
   });
 
+
 	openHelp();
 	openMenu();
 	openRankingMobile();
 	rankingTabs();
 	rankingTabsToggle();
-
-	// $search.on('keyup', _.debounce(displayMatches, 200));
+	appendUser();
 
 
 })(window.$, window._);
+
+$(document).ready(function() {
+var $badges = $('.badge');
+$badges.load(function() {
+	hide();
+	});
+})

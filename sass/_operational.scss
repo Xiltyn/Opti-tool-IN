@@ -1,0 +1,12 @@
+.badge-dim {
+  filter: brightness(50%) grayscale(0.75);
+  -webkit-filter: brightness(50%) grayscale(0.75);
+  -moz-filter: brightness(50%) grayscale(0.75);
+  -o-filter: brightness(50%) grayscale(0.75);
+  -ms-filter: brightness(50%) grayscale(0.75);
+  opacity: 0.8;
+  z-index: 0 !important;
+}
+.badge-dim:nth-of-type(1) {
+  opacity: 0.6;
+}
