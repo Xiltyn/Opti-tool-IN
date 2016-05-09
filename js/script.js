@@ -111,6 +111,8 @@
 		toggleSubjects();
 		hideApproved();
 		// preLoaded();
+		appendUser();
+		dimBadges();
 	}
 
 	function onQuestionClick() {
@@ -420,7 +422,6 @@
   		$profileWrapper.append($profile);
 
       appendBadges();
-			dimBadges();
     }
 
     function renderBadgesGeneral(profileData) {
@@ -443,6 +444,8 @@
       $badgesGeneralWrapper.append($badgesGeneral);
 
       return $badgesGeneral
+
+
     }
 
     function renderBadgesSpecial(profileData) {
@@ -470,6 +473,7 @@
       $badgesSpecialWrapper = $('.badges-wrapper--special');
 
       if ($badgesSpecialWrapper.load()) {
+
         $.ajax({
             url:JSONBADGESSPECIAL,
             success: renderBadgesSpecial
@@ -478,7 +482,9 @@
             url:JSONBADGESGENERAL,
             success: renderBadgesGeneral
         });
+
       }
+
     }
 
 		function appendUser() {
@@ -500,29 +506,7 @@
 			}
  			dimElements();
 
-			// var $badgeWrappers = $('.badges')
-			// var badgeConfig;
-			//
-			// if ($badges.load()) {}
-			// 	$badges.each(function() {
-			// 		var $element = $(this).parents('.badges');
-			// 		var protoArray = $element.data('badgeid');
-			// 		badgeConfig = [];
-			//
-			// 		badgeConfig = protoArray.split(';');
-			//
-			// 		return badgeConfig;
-			//
-			// 		console.log('shit');
-			// 	});
 			}
-
-			// function filterBadges() {
-			// 	badgeConfig = jQuery.grep(badgeConfig, function(a) {
-			// 		a = parseInt(a);
-			// 		return a != 0
-			// 	})
-			// }
 
 
 
@@ -541,14 +525,7 @@
 	openRankingMobile();
 	rankingTabs();
 	rankingTabsToggle();
-	appendUser();
+
 
 
 })(window.$, window._);
-
-$(document).ready(function() {
-var $badges = $('.badge');
-$badges.load(function() {
-	hide();
-	});
-})
