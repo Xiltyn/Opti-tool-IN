@@ -1,7 +1,7 @@
 (function($, _) {
 
-	var JSONURL = 'https://spreadsheets.google.com/feeds/list/1RT2unQwLR1bGtOT0M0psbEmsaKGuCwSfbN2Cv_Iq-RQ/1/public/basic?alt=json';
-	var JSONURLRANKING = 'https://spreadsheets.google.com/feeds/list/1RT2unQwLR1bGtOT0M0psbEmsaKGuCwSfbN2Cv_Iq-RQ/2/public/basic?alt=json';
+	var JSONURL = 'https://spreadsheets.google.com/feeds/list/1oiAp1Rcgz3qQKdwJf30v7cDJdG8oihXUhqQDWxpSebM/1/public/basic?alt=json';
+	var JSONURLRANKING = 'https://spreadsheets.google.com/feeds/list/1oiAp1Rcgz3qQKdwJf30v7cDJdG8oihXUhqQDWxpSebM/2/public/basic?alt=json';
 	var $search = $('#search');
 	var $questionList = $('#questionList');
 	var $rankingList = $('#rankingList');
