@@ -433,120 +433,137 @@ a {
   -webkit-box-shadow: inset 0px 0px 24px -3px #F7F7F7,-14px 0px 16px -18px #A1A1A1;
   -moz-box-shadow: inset 0px 0px 24px -3px #F7F7F7,-14px 0px 16px -18px #A1A1A1;
   -o-box-shadow: inset 0px 0px 24px -3px #F7F7F7,-14px 0px 16px -18px #A1A1A1; }
-  #profile .profile-wrapper .profile-top {
+  #profile .profile-wrapper {
     position: relative;
-    height: 75px;
-    width: 100%;
-    background: #6e85ff; }
-    #profile .profile-wrapper .profile-top button {
-      position: absolute;
-      width: 50px;
-      height: 50px;
-      margin: 12.5px; }
-    #profile .profile-wrapper .profile-top h1 {
-      font-size: 3.5rem;
-      padding-top: 25px;
-      color: #fff;
-      text-align: center; }
-  #profile .profile-wrapper .profile-user {
-    position: relative;
-    padding: 25px; }
-    #profile .profile-wrapper .profile-user .avatar {
-      position: absolute;
-      left: 50%;
-      margin-left: -75px;
-      width: 150px;
-      height: 150px;
-      border-radius: 75px; }
-      #profile .profile-wrapper .profile-user .avatar img {
-        width: 150px;
-        height: 150px;
-        border-radius: 75px; }
-    #profile .profile-wrapper .profile-user .user-info {
-      position: absolute;
-      top: 75px;
-      left: 75px; }
-      #profile .profile-wrapper .profile-user .user-info .username {
-        font-size: 2.5rem; }
-      #profile .profile-wrapper .profile-user .user-info .rank {
-        color: #7e7e7e;
-        font-size: 1.1rem; }
-    #profile .profile-wrapper .profile-user .user-titles {
-      position: absolute;
-      left: 630px;
-      top: 50px; }
-      #profile .profile-wrapper .profile-user .user-titles h3 {
-        text-align: center; }
-      #profile .profile-wrapper .profile-user .user-titles .titles li {
-        margin-left: -20px;
-        list-style: none; }
-  #profile .profile-wrapper .profile-achievements {
-    border-top: solid 1px #7e7e7e;
-    margin: 200px 25px 25px 25px;
-    padding-top: 50px; }
-    #profile .profile-wrapper .profile-achievements h2 {
-      text-align: center;
-      font-size: 3rem;
-      color: #6e85ff;
-      padding-bottom: 50px; }
-    #profile .profile-wrapper .profile-achievements .badges {
+    width: 100%; }
+    #profile .profile-wrapper .profile-top {
+      position: relative;
+      height: 75px;
       width: 100%;
-      display: flex; }
-      #profile .profile-wrapper .profile-achievements .badges .general, #profile .profile-wrapper .profile-achievements .badges .special {
-        width: 50%; }
-        #profile .profile-wrapper .profile-achievements .badges .general h3, #profile .profile-wrapper .profile-achievements .badges .special h3 {
-          font-size: 1.5rem;
+      background: #6e85ff; }
+      #profile .profile-wrapper .profile-top button {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        margin: 12.5px; }
+      #profile .profile-wrapper .profile-top h1 {
+        font-size: 3.5rem;
+        padding-top: 25px;
+        color: #fff;
+        text-align: center; }
+    #profile .profile-wrapper .profile-wrapper--hole {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 75px; }
+      #profile .profile-wrapper .profile-wrapper--hole .profile-user {
+        position: relative;
+        padding: 25px;
+        width: 100%;
+        height: 200px; }
+        #profile .profile-wrapper .profile-wrapper--hole .profile-user .avatar {
+          position: absolute;
+          left: 50%;
+          margin-left: -75px;
+          width: 150px;
+          height: 150px;
+          border-radius: 75px; }
+          #profile .profile-wrapper .profile-wrapper--hole .profile-user .avatar img {
+            width: 150px;
+            height: 150px;
+            border-radius: 75px; }
+        #profile .profile-wrapper .profile-wrapper--hole .profile-user .user-info {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-left: -300px;
+          margin-top: -20px; }
+          #profile .profile-wrapper .profile-wrapper--hole .profile-user .user-info .username {
+            font-size: 2.5rem; }
+          #profile .profile-wrapper .profile-wrapper--hole .profile-user .user-info .rank {
+            color: #7e7e7e;
+            font-size: 1.1rem; }
+        #profile .profile-wrapper .profile-wrapper--hole .profile-user .user-titles {
+          position: absolute;
+          left: 630px;
+          top: 50px; }
+          #profile .profile-wrapper .profile-wrapper--hole .profile-user .user-titles h3 {
+            text-align: center; }
+          #profile .profile-wrapper .profile-wrapper--hole .profile-user .user-titles .titles li {
+            margin-left: -20px;
+            list-style: none; }
+      #profile .profile-wrapper .profile-wrapper--hole .profile-achievements {
+        border-top: solid 1px #7e7e7e;
+        margin: 25px;
+        padding-top: 50px; }
+        #profile .profile-wrapper .profile-wrapper--hole .profile-achievements h2 {
           text-align: center;
-          border-bottom: solid 1px #7e7e7e;
-          margin-left: 50px;
-          margin-right: 50px;
-          padding-bottom: 15px;
-          margin-bottom: 50px; }
-        #profile .profile-wrapper .profile-achievements .badges .general .badges-wrapper, #profile .profile-wrapper .profile-achievements .badges .special .badges-wrapper {
-          list-style: none; }
-          #profile .profile-wrapper .profile-achievements .badges .general .badges-wrapper .badges-item, #profile .profile-wrapper .profile-achievements .badges .special .badges-wrapper .badges-item {
-            position: relative;
-            padding-bottom: 50px;
-            margin-bottom: 50px; }
-            #profile .profile-wrapper .profile-achievements .badges .general .badges-wrapper .badges-item .badge, #profile .profile-wrapper .profile-achievements .badges .special .badges-wrapper .badges-item .badge {
+          font-size: 3rem;
+          color: #6e85ff;
+          padding-bottom: 50px; }
+        #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges {
+          width: 100%;
+          display: flex; }
+          #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general {
+            width: 100%;
+            position: relative; }
+            #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general h3 {
+              font-size: 1.5rem;
+              text-align: center;
+              border-bottom: solid 1px #7e7e7e;
+              margin-left: 50px;
+              margin-right: 50px;
+              padding-bottom: 15px;
+              margin-bottom: 50px; }
+            #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper {
               position: absolute;
-              margin: 30px;
-              margin-left: -40px;
-              top: 50%;
-              margin-top: -100px; }
-              #profile .profile-wrapper .profile-achievements .badges .general .badges-wrapper .badges-item .badge img, #profile .profile-wrapper .profile-achievements .badges .special .badges-wrapper .badges-item .badge img {
-                width: auto;
-                height: 200px;
-                border-radius: 100px; }
-            #profile .profile-wrapper .profile-achievements .badges .general .badges-wrapper .badges-item .rookie, #profile .profile-wrapper .profile-achievements .badges .special .badges-wrapper .badges-item .rookie {
-              margin-top: -30px;
-              z-index: 80; }
-            #profile .profile-wrapper .profile-achievements .badges .general .badges-wrapper .badges-item .zealot, #profile .profile-wrapper .profile-achievements .badges .special .badges-wrapper .badges-item .zealot {
-              z-index: 90; }
-            #profile .profile-wrapper .profile-achievements .badges .general .badges-wrapper .badges-item .master, #profile .profile-wrapper .profile-achievements .badges .special .badges-wrapper .badges-item .master {
-              margin-top: -170px;
-              z-index: 100; }
-            #profile .profile-wrapper .profile-achievements .badges .general .badges-wrapper .badges-item .description, #profile .profile-wrapper .profile-achievements .badges .special .badges-wrapper .badges-item .description {
-              background: #6e85ff;
-              width: 225px;
-              margin-left: 175px;
-              height: 300px;
-              border-radius: 30px; }
-              #profile .profile-wrapper .profile-achievements .badges .general .badges-wrapper .badges-item .description h3, #profile .profile-wrapper .profile-achievements .badges .special .badges-wrapper .badges-item .description h3 {
-                color: #fff;
-                border: none;
-                padding: 15px;
-                margin-left: 20px;
-                margin-right: 20px;
-                margin-bottom: 0px;
-                font-size: 1.1rem; }
-              #profile .profile-wrapper .profile-achievements .badges .general .badges-wrapper .badges-item .description p, #profile .profile-wrapper .profile-achievements .badges .special .badges-wrapper .badges-item .description p {
-                background: #f7f6f6;
-                padding: 15px;
-                width: 100%;
-                height: 100%;
-                text-align: justify;
-                line-height: 1.2rem; }
+              list-style: none;
+              width: 600px;
+              left: 50%;
+              margin-left: -300px; }
+              #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item {
+                position: relative;
+                padding-bottom: 50px;
+                margin-bottom: 50px; }
+                #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .badge {
+                  position: absolute;
+                  margin: 30px;
+                  margin-left: -40px;
+                  top: 50%;
+                  margin-top: -100px; }
+                  #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .badge img {
+                    width: auto;
+                    height: 200px;
+                    border-radius: 100px; }
+                #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .rookie {
+                  margin-top: -30px;
+                  z-index: 80; }
+                #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .zealot {
+                  z-index: 90; }
+                #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .master {
+                  margin-top: -170px;
+                  z-index: 100; }
+                #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .description {
+                  background: #6e85ff;
+                  width: 400px;
+                  margin-left: 200px;
+                  height: 300px;
+                  border-radius: 30px; }
+                  #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .description h3 {
+                    color: #fff;
+                    border: none;
+                    padding: 15px;
+                    margin-left: 20px;
+                    margin-right: 20px;
+                    margin-bottom: 0px;
+                    font-size: 1.1rem; }
+                  #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .description p {
+                    background: #f7f6f6;
+                    padding: 15px;
+                    width: 100%;
+                    height: 100%;
+                    text-align: justify;
+                    line-height: 1.2rem; }
 
 /*
 =================================|▷
@@ -591,16 +608,21 @@ a {
 =================================|▷
 */
 .badge-dim {
-  filter: brightness(50%) grayscale(0.75);
-  -webkit-filter: brightness(50%) grayscale(0.75);
-  -moz-filter: brightness(50%) grayscale(0.75);
-  -o-filter: brightness(50%) grayscale(0.75);
-  -ms-filter: brightness(50%) grayscale(0.75);
-  opacity: 0.8;
+  filter: brightness(30%);
+  -webkit-filter: brightness(30%);
+  -moz-filter: brightness(30%);
+  -o-filter: brightness(30%);
+  -ms-filter: brightness(30%);
   z-index: 0 !important; }
 
-.badge-dim:nth-of-type(1) {
-  opacity: 0.6; }
+.badge-dim:nth-child(3) {
+  opacity: 0.3; }
+
+.badge-dim:nth-child(2) {
+  opacity: 0.5; }
+
+.badge-dim:nth-child(1) {
+  opacity: 0.3; }
 
 /*
 =================================|▷
