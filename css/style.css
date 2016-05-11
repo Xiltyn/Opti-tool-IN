@@ -433,10 +433,10 @@ a {
   width: 960px;
   z-index: 2000;
   background: #fff;
-  box-shadow: inset 0px 0px 24px -3px #F7F7F7,-14px 0px 16px -18px #A1A1A1;
-  -webkit-box-shadow: inset 0px 0px 24px -3px #F7F7F7,-14px 0px 16px -18px #A1A1A1;
-  -moz-box-shadow: inset 0px 0px 24px -3px #F7F7F7,-14px 0px 16px -18px #A1A1A1;
-  -o-box-shadow: inset 0px 0px 24px -3px #F7F7F7,-14px 0px 16px -18px #A1A1A1; }
+  box-shadow: inset 0px 0px 24px -3px #F7F7F7, -14px 0px 16px -5px rgba(119, 114, 114, 0.5);
+  -webkit-box-shadow: inset 0px 0px 24px -3px #F7F7F7, -14px 0px 16px -5px rgba(119, 114, 114, 0.5);
+  -moz-box-shadow: inset 0px 0px 24px -3px #F7F7F7, -14px 0px 16px -5px rgba(119, 114, 114, 0.5);
+  -o-box-shadow: inset 0px 0px 24px -3px #F7F7F7, -14px 0px 16px -5px rgba(119, 114, 114, 0.5); }
   #profile .profile-wrapper {
     position: relative;
     width: 100%; }
@@ -444,17 +444,27 @@ a {
       position: relative;
       height: 75px;
       width: 100%;
-      background: #6e85ff; }
-      #profile .profile-wrapper .profile-top button {
+      background: url("assets/img/background_IN.jpg") no-repeat;
+      background-position: center;
+      background-size: cover; }
+      #profile .profile-wrapper .profile-top #profile-btn {
         position: absolute;
         width: 50px;
         height: 50px;
-        margin: 12.5px; }
-      #profile .profile-wrapper .profile-top h1 {
-        font-size: 3.5rem;
-        padding-top: 25px;
-        color: #fff;
-        text-align: center; }
+        margin: 20px; }
+        #profile .profile-wrapper .profile-top #profile-btn .mint-icon {
+          max-width: 35px;
+          max-height: 35px;
+          width: 35px;
+          height: 35px;
+          opacity: 0.75;
+          transition: 0.2s; }
+        #profile .profile-wrapper .profile-top #profile-btn .mint-icon:hover {
+          opacity: 1;
+          transition: 0.2s; }
+        #profile .profile-wrapper .profile-top #profile-btn .mint-icon:active {
+          opacity: 0.3;
+          transition: 0.1s; }
     #profile .profile-wrapper .profile-wrapper--hole {
       position: absolute;
       width: 100%;
@@ -462,30 +472,43 @@ a {
       top: 75px;
       display: none; }
       #profile .profile-wrapper .profile-wrapper--hole .profile-user {
+        background: #dbe0fa;
         position: relative;
         padding: 25px;
         width: 100%;
-        height: 200px; }
+        height: 200px;
+        -webkit-box-shadow: 0 15px 20px -15px black;
+        -moz-box-shadow: 0 15px 20px -15px black;
+        box-shadow: 0 15px 20px -15px black; }
         #profile .profile-wrapper .profile-wrapper--hole .profile-user .avatar {
           position: absolute;
           left: 50%;
           margin-left: -75px;
           width: 150px;
           height: 150px;
-          border-radius: 75px; }
+          border-radius: 75px;
+          background: #595959; }
           #profile .profile-wrapper .profile-wrapper--hole .profile-user .avatar img {
             width: 150px;
             height: 150px;
             border-radius: 75px; }
         #profile .profile-wrapper .profile-wrapper--hole .profile-user .user-info {
+          width: 400px;
           position: absolute;
           top: 50%;
-          left: 50%;
+          left: 300px;
           margin-left: -300px;
           margin-top: -20px; }
           #profile .profile-wrapper .profile-wrapper--hole .profile-user .user-info .username {
+            width: 100%;
+            text-align: center;
             font-size: 2.5rem; }
           #profile .profile-wrapper .profile-wrapper--hole .profile-user .user-info .rank {
+            width: 300px;
+            padding-top: 5px;
+            margin: auto;
+            margin-top: 10px;
+            text-align: center;
             color: #7e7e7e;
             font-size: 1.1rem; }
         #profile .profile-wrapper .profile-wrapper--hole .profile-user .user-titles {
@@ -498,7 +521,6 @@ a {
             margin-left: -20px;
             list-style: none; }
       #profile .profile-wrapper .profile-wrapper--hole .profile-achievements {
-        border-top: solid 1px #7e7e7e;
         margin: 25px;
         padding-top: 50px; }
         #profile .profile-wrapper .profile-wrapper--hole .profile-achievements h2 {
@@ -535,40 +557,87 @@ a {
                   margin: 30px;
                   margin-left: -40px;
                   top: 50%;
-                  margin-top: -100px; }
+                  margin-top: -130px; }
                   #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .badge img {
                     width: auto;
                     height: 200px;
                     border-radius: 100px; }
                 #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .rookie {
-                  margin-top: -30px;
+                  margin-top: -60px;
                   z-index: 80; }
                 #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .zealot {
                   z-index: 90; }
                 #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .master {
-                  margin-top: -170px;
+                  margin-top: -200px;
                   z-index: 100; }
                 #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .description {
-                  background: #6e85ff;
+                  color: #1a1a1a !important;
+                  text-transform: uppercase;
+                  position: relative;
                   width: 400px;
                   margin-left: 200px;
-                  height: 300px;
-                  border-radius: 30px; }
+                  height: 370px;
+                  border-radius: 30px;
+                  border-left: 2px solid #595959;
+                  border-right: 2px solid #595959; }
                   #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .description h3 {
-                    color: #fff;
+                    position: absolute;
+                    color: #595959;
                     border: none;
-                    padding: 15px;
-                    margin-left: 20px;
-                    margin-right: 20px;
-                    margin-bottom: 0px;
+                    top: -10px;
+                    width: 300px;
+                    text-align: center;
                     font-size: 1.1rem; }
                   #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .description p {
-                    background: #f7f6f6;
-                    padding: 15px;
+                    color: #595959;
+                    padding: 10px;
+                    font-size: .9rem;
+                    padding-top: 50px;
                     width: 100%;
-                    height: 100%;
                     text-align: justify;
-                    line-height: 1.2rem; }
+                    line-height: 1.2rem;
+                    font-variant: small-caps !important; }
+                  #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .description .based-on {
+                    color: #595959;
+                    font-size: .9rem;
+                    margin: 15px 50px;
+                    padding: 5px 0;
+                    border-top: 1px solid #595959;
+                    border-bottom: 1px solid #595959; }
+                  #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .description h2 {
+                    font-size: 2rem;
+                    padding: 0;
+                    margin: 20px 0;
+                    margin-top: 30px; }
+                  #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .description .requirements {
+                    display: flex; }
+                    #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .description .requirements .element {
+                      width: 30%;
+                      margin: auto; }
+                      #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .description .requirements .element h3 {
+                        position: initial;
+                        width: 100%;
+                        text-align: center;
+                        margin: 0;
+                        padding: 0; }
+                      #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .description .requirements .element p {
+                        font-size: 3rem;
+                        font-weight: bold;
+                        width: 100%;
+                        text-align: center;
+                        margin: 0;
+                        padding: 15px; }
+              #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item:nth-of-type(1) .description h2 {
+                color: #ff8073; }
+              #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item:nth-of-type(1) .description .requirements .element p {
+                color: #ff8073; }
+              #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item:nth-of-type(2) .description .requirements .element p {
+                color: #6e85ff; }
+              #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item:nth-of-type(3) .description h2 {
+                color: #ffbe32; }
+              #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item:nth-of-type(3) .description .requirements .element p {
+                color: #ffbe32;
+                font-size: 2rem; }
 
 /*
 =================================|▷

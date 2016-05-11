@@ -27,7 +27,7 @@
 	var $templateRankingWeekly = _.template('<li><div class="ranking-element"><a class="ranking-user" data-userId=<%= user_id %>><%= user_name %><div class="number"><%= answers_count_weekly %></div></a></div></li>');
   var $templateProfile = _.template ('<div class="profile-wrapper--hole <%= user_id %>"><div class="profile-user"><div class="avatar"><img src="https://<%= user_avatar %>" alt="avatar" /></div><div class="user-info" data-userid="<%= user_id %>"><h3 class="username"><a href="http://www.brainly.in/profile/user-<%= user_id %>"><%= user_name %></a></h3><h4 class="rank"><%= user_rank %></h4></div><div class="user-titles"><h3>Titles</h3><ul class="titles"><li><%= user_title_1 %></li><li><%= user_title_2 %></li><li><%= user_title_3 %></li></ul></div></div><div class="profile-achievements"><h2>Achievements</h2><div class="badges" data-badgeId="<%= badge_011 %>,<%= badge_012 %>,<%= badge_013 %>,<%= badge_021 %>,<%= badge_022 %>,<%= badge_023 %>,<%= badge_031 %>,<%= badge_032 %>,<%= badge_033 %>,<%= badge_04 %>,<%= badge_05 %>,<%= badge_06 %>,<%= badge_07 %>,<%= badge_08 %>,<%= badge_09 %>,<%= badge_10 %>,<%= badge_11 %>,<%= badge_12 %>,<%= badge_13 %>,<%= badge_14 %>,<%= badge_15 %>"><div class="general"><ul class="badges-wrapper badges-wrapper--general"></ul></div></div>');
 	var $templateProfileBoth = _.template ('<div class="profile-user"><div class="avatar"><img src="https://<%= user_avatar %>" alt="avatar" /></div><div class="user-info" data-userid="<%= user_id %>"><h3 class="username"><a href="http://www.brainly.in/profile/user-<%= user_id %>"><%= user_name %></a></h3><h4 class="rank"><%= user_rank %></h4></div><div class="user-titles"><h3>Titles</h3><ul class="titles"><li><%= user_title_1 %></li><li><%= user_title_2 %></li><li><%= user_title_3 %></li></ul></div></div><div class="profile-achievements"><h2>Achievements</h2><div class="badges" data-badgeId="<%= badge_011 %>,<%= badge_012 %>,<%= badge_013 %>,<%= badge_021 %>,<%= badge_022 %>,<%= badge_023 %>,<%= badge_031 %>,<%= badge_032 %>,<%= badge_033 %>,<%= badge_04 %>,<%= badge_05 %>,<%= badge_06 %>,<%= badge_07 %>,<%= badge_08 %>,<%= badge_09 %>,<%= badge_10 %>,<%= badge_11 %>,<%= badge_12 %>,<%= badge_13 %>,<%= badge_14 %>,<%= badge_15 %>"><div class="general"><h3>General</h3><ul class="badges-wrapper badges-wrapper--general"></ul></div><div class="special"><h3>Special</h3><ul class="badges-wrapper badges-wrapper--special"></ul></div>');
-  var $templateBadgesGeneral = _.template ('<li class="badges-item"><div class="badge rookie" data-id="<%= badge_id %>1"><img src="css/assets/img/badges/<%= badge_id %>1.png" alt="<%= badge_name %>" /></div><div class="badge zealot" data-id="<%= badge_id %>2"><img src="css/assets/img/badges/<%= badge_id %>2.png" alt="<%= badge_name %>" /></div><div class="badge master" data-id="<%= badge_id %>3"><img src="css/assets/img/badges/<%= badge_id %>3.png" alt="<%= badge_name %>" /></div><div class="description"><h3><%= badge_name %></h3><p><%= badge_description %></p></div></li>');
+  var $templateBadgesGeneral = _.template ('<li class="badges-item"><div class="badge rookie" data-id="<%= badge_id %>1"><img src="css/assets/img/badges/<%= badge_id %>1.png" alt="<%= badge_name %>" /></div><div class="badge zealot" data-id="<%= badge_id %>2"><img src="css/assets/img/badges/<%= badge_id %>2.png" alt="<%= badge_name %>" /></div><div class="badge master" data-id="<%= badge_id %>3"><img src="css/assets/img/badges/<%= badge_id %>3.png" alt="<%= badge_name %>" /></div><div class="description"><h3><%= badge_name %></h3><p><%= badge_description %></p><div class="based-on"><%= badge_metric %></div><h2>Requirements</h2><div class="requirements"><div class="element rookie"><h3>rookie</h3><p><%= req_rookie %></p></div><div class="element disciple"><h3>disciple</h3><p><%= req_disciple %></p></div><div class="element master"><h3>master</h3><p><%= req_master %></p></div></div></div></li>');
   // var $templateBadgesSpecial = _.template ('<li class="badges-item"><div class="badge" data-id="<%= badge_id %>"><img src="css/assets/img/badges/<%= badge_id %>.png" alt="" /></div><div class="description"><h3><%= badge_name %></h3><p><%= badge_description %></p></div></li>');
 
 	function parseResponse(data){
@@ -110,7 +110,7 @@
 		showFirstAnswer();
 		toggleSubjects();
 		hideApproved();
-		// preLoaded();
+		preLoaded();
 
 	}
 
@@ -436,36 +436,17 @@
   				badge_id: badges.timestamp,
   				badge_name: badges.profilebadgename,
   				badge_description: badges.badgedescription,
-          // badge_reward_1: badges.badgereward1,
-          // badge_reward_2: badges.badgereward2,
+          badge_metric: badges.badgereward1,
+          req_rookie: badges.rookie,
+					req_disciple: badges.disciple,
+					req_master: badges.master,
   			}));
   		});
       $badgesGeneralWrapper.append($badgesGeneral);
 			// dimBadges();
       return $badgesGeneral
 
-
     }
-		//
-    // function renderBadgesSpecial(profileData) {
-    //   var profileElements = parseProfile(profileData);
-    //   $badgesSpecial = $(document.createDocumentFragment());
-		//
-    //   // Special badges render
-    //   // =======================================================|>
-    //   profileElements.forEach(function(badges) {
-    //     $badgesSpecial.append($templateBadgesSpecial({
-    //       badge_id: badges.timestamp,
-    //       badge_name: badges.profilebadgename,
-    //       badge_description: badges.badgedescription,
-    //       badge_reward_1: badges.badgereward1,
-    //       badge_reward_2: badges.badgereward2,
-    //     }));
-    //   });
-    //   $badgesSpecialWrapper.append($badgesSpecial);
-		// 	// dimBadges();
-    //   return $badgesSpecial;
-    // }
 
     function appendBadges() {
       $badgesGeneralWrapper = $('.badges-wrapper--general');
@@ -476,30 +457,28 @@
       }
     }
 
-
-
 		function myFunc(succesGeneral) {
 			// renderBadgesSpecial(succesSpecial[0]);
 			renderBadgesGeneral(succesGeneral);
 			dimBadges();
 			openProfile();
-
 		}
 
 		function myFailure(arg1, arg2) {
 			console.log('fail', arg1, arg2);
 		}
 
-
     function dimBadges() {
+			$badgesGeneralWrapper = $('.badges-wrapper--general');
 			$badges = $('.badge');
-			var badgesArr = $('.badges').data('badgeid').split(',');
-			console.log('Badge Array', badgesArr);
 
 			$badges.each(function() {
-				console.log('this badge', this);
-				if (badgesArr.indexOf($(this).data('id')) > -1) {
 
+				// console.log('this badge', this);
+
+				var badgesArr = $(this).closest('.badges').data('badgeid').split(',');
+				console.log('this array', badgesArr);
+				if (badgesArr.indexOf($(this).data('id')) > -1) {
 				} else {
 					$(this).addClass('badge-dim');
 				}
@@ -510,35 +489,22 @@
 			var $rankingUser = $('.ranking-user');
 			var $profile = $('#profile');
 			var $profileUser = $('.profile-wrapper--hole');
-			var $rankingUserArray = [];
-
-			function makeUserIdArray() {
-
-				$rankingUser.each(function() {
-
-					var id = $(this).data('userid');
-					$rankingUserArray.push(id);
-				})
-			}
-			makeUserIdArray();
-
-			console.log('profile user array', $rankingUserArray);
+			var $profileButton = $('#profile-btn');
 
 			$rankingUser.on('click', function() {
-				toggleUsers();
-			})
+				console.log('does it work?');
+        var userId = $(this).data('userid');
+        var $userProfile = $profileUser.filter('.' + userId);
 
-			function toggleUsers() {
-				$profile.toggle(200);
+        $profileUser.fadeOut(200);
+        $profile.fadeIn(200, function() {
+            $userProfile.fadeIn(200);
+        });
+    	});
 
-				$profileUser.each(function() {
-					if ($rankingUserArray.indexOf($(this).data('userid')) > -1) {
-						$(this).hide();
-					} else {
-						$(this).show();
-					}
-				});
-			}
+			$profileButton.on('click', function() {
+				$profile.fadeOut(200);
+			});
 		}
 
 
@@ -564,6 +530,7 @@
 	openRankingMobile();
 	rankingTabs();
 	rankingTabsToggle();
+
 
 
 
