@@ -24,14 +24,13 @@
 		4.7. Questions container
 		 	4.7.1. Answer style
 		4.8. Call to action
-	5. Profile
-	6. Footer
-		6.1. Facebook share button
-		6.2. Twitter share button
-	7. SASS partials import
-		7.1. _preloader-animation.scss
-		7.2. _error.scss
-		7.3. _rwd.scss
+	5. Footer
+		5.1. Facebook share button
+		5.2. Twitter share button
+	6. SASS partials import
+		6.1. _preloader-animation.scss
+		6.2. _error.scss
+		6.3. _rwd.scss
 
 	-------------------------------------------
 	--------------- DESCRIPTION ---------------
@@ -51,10 +50,6 @@ html {
 
 body {
   background-color: #ebf2ef; }
-
-a {
-  text-decoration: none;
-  color: inherit; }
 
 /*
 =================================|▷
@@ -86,11 +81,7 @@ a {
   #preloader .mint-logo {
     position: absolute;
     left: 50%;
-<<<<<<< HEAD
     margin-left: 180px;
-=======
-    margin-left: 190px;
->>>>>>> user-profile
     top: 50%;
     margin-top: 95px; }
 
@@ -117,7 +108,7 @@ a {
 #header {
   height: 600px;
   width: 100%;
-  background: url("assets/img/background_IN.jpg") no-repeat;
+  background: url("background_IN.jpg") no-repeat;
   background-position: center;
   background-attachment: fixed;
   background-size: cover; }
@@ -139,11 +130,7 @@ a {
   margin: auto;
   margin-top: -75px;
   margin-bottom: 30px;
-<<<<<<< HEAD
   background: url("arrow-lavender.png") no-repeat;
-=======
-  background: url("assets/img/arrow-lavender.png") no-repeat;
->>>>>>> user-profile
   background-size: 40px 80px;
   background-position: 83% 40px;
   background-color: #fff;
@@ -185,7 +172,7 @@ a {
 	*/
   /*
 	===============================|▷
-	4.8. Call to action
+	4.8. Call to actions
 	===============================|▷
 	*/ }
   #content .mint-logo {
@@ -211,27 +198,27 @@ a {
       z-index: 750;
       transition: 0.1s; }
     #content #controls #help-button {
-      background: url("assets/img/info_normal.png") no-repeat;
+      background: url("info_normal.png") no-repeat;
       left: 40px; }
     #content #controls #help-button:hover {
-      background: url("assets/img/info_hover.png") no-repeat; }
+      background: url("info_hover.png") no-repeat; }
     #content #controls #help-button:active {
-      background: url("assets/img/info_active.png") no-repeat; }
+      background: url("info_active.png") no-repeat; }
     #content #controls #ranking-button {
       display: none;
-      background: url("assets/img/ranking_normal.png") no-repeat;
+      background: url("ranking_normal.png") no-repeat;
       left: 0; }
     #content #controls #ranking-button:hover {
-      background: url("assets/img/ranking_hover.png") no-repeat; }
+      background: url("ranking_hover.png") no-repeat; }
     #content #controls #ranking-button:active {
-      background: url("assets/img/ranking_active.png") no-repeat; }
+      background: url("ranking_active.png") no-repeat; }
     #content #controls #subjects-button {
-      background: url("assets/img/subjects_normal.png") no-repeat;
+      background: url("subjects_normal.png") no-repeat;
       left: -40px; }
     #content #controls #subjects-button:hover {
-      background: url("assets/img/subjects_hover.png") no-repeat; }
+      background: url("subjects_hover.png") no-repeat; }
     #content #controls #subjects-button:active {
-      background: url("assets/img/subjects_active.png") no-repeat; }
+      background: url("subjects_active.png") no-repeat; }
   #content #help {
     padding: 50px;
     margin-bottom: 50px;
@@ -247,11 +234,7 @@ a {
     background-color: rgba(255, 255, 255, 0.9);
     z-index: 500; }
     #content #help h1 {
-<<<<<<< HEAD
       color: #ffbe32 !important; }
-=======
-      color: #6e85ff !important; }
->>>>>>> user-profile
     #content #help h3 {
       margin-bottom: 15px; }
     #content #help p {
@@ -364,7 +347,6 @@ a {
   #content #results-wrapper ul {
     padding: 0 100px;
     font-size: 1.1rem;
-    overflow: hidden;
     /*
 			=============================|▷
 			4.7.1. Answer style
@@ -380,11 +362,7 @@ a {
     #content #results-wrapper ul li {
       margin: 8px;
       list-style: circle;
-<<<<<<< HEAD
       list-style-image: url("bullet-lavender.gif");
-=======
-      list-style-image: url("assets/img/bullet-lavender.gif");
->>>>>>> user-profile
       cursor: pointer;
       cursor: hand;
       transition: 0.5s; }
@@ -413,11 +391,11 @@ a {
         font-size: 1rem;
         text-align: justify; }
       #content #results-wrapper ul .json-answer--wrapper .approved {
-        background: url("assets/img/tick.png") no-repeat;
+        background: url("tick.png") no-repeat;
         background-position: right;
         background-size: 30px 30px; }
       #content #results-wrapper ul .json-answer--wrapper .not-approved {
-        background: url("assets/img/cross.png") no-repeat;
+        background: url("cross.png") no-repeat;
         background-position: right;
         background-size: 30px 30px; }
   #content .call-to-action {
@@ -433,229 +411,7 @@ a {
 
 /*
 =================================|▷
-5. Profile
-=================================|▷
-*/
-#profile {
-  display: none;
-  overflow: auto;
-  position: fixed;
-  top: 0;
-  left: 100vw;
-  margin-left: -960px;
-  height: 100vh;
-  width: 960px;
-  z-index: 2000;
-  background: #fff;
-  box-shadow: inset 0px 0px 24px -3px #F7F7F7, -14px 0px 16px -5px rgba(119, 114, 114, 0.5);
-  -webkit-box-shadow: inset 0px 0px 24px -3px #F7F7F7, -14px 0px 16px -5px rgba(119, 114, 114, 0.5);
-  -moz-box-shadow: inset 0px 0px 24px -3px #F7F7F7, -14px 0px 16px -5px rgba(119, 114, 114, 0.5);
-  -o-box-shadow: inset 0px 0px 24px -3px #F7F7F7, -14px 0px 16px -5px rgba(119, 114, 114, 0.5); }
-  #profile .profile-wrapper {
-    position: relative;
-    width: 100%; }
-    #profile .profile-wrapper .profile-top {
-      position: relative;
-      height: 75px;
-      width: 100%;
-      background: url("assets/img/background_IN.jpg") no-repeat;
-      background-position: center;
-      background-size: cover; }
-      #profile .profile-wrapper .profile-top #profile-btn {
-        position: absolute;
-        width: 50px;
-        height: 50px;
-        margin: 20px; }
-        #profile .profile-wrapper .profile-top #profile-btn .mint-icon {
-          max-width: 35px;
-          max-height: 35px;
-          width: 35px;
-          height: 35px;
-          opacity: 0.75;
-          transition: 0.2s; }
-        #profile .profile-wrapper .profile-top #profile-btn .mint-icon:hover {
-          opacity: 1;
-          transition: 0.2s; }
-        #profile .profile-wrapper .profile-top #profile-btn .mint-icon:active {
-          opacity: 0.3;
-          transition: 0.1s; }
-    #profile .profile-wrapper .profile-wrapper--hole {
-      position: absolute;
-      width: 100%;
-      left: 0;
-      top: 75px;
-      display: none; }
-      #profile .profile-wrapper .profile-wrapper--hole .profile-user {
-        background: #dbe0fa;
-        position: relative;
-        padding: 25px;
-        width: 100%;
-        height: 200px;
-        -webkit-box-shadow: 0 15px 20px -15px black;
-        -moz-box-shadow: 0 15px 20px -15px black;
-        box-shadow: 0 15px 20px -15px black; }
-        #profile .profile-wrapper .profile-wrapper--hole .profile-user .avatar {
-          position: absolute;
-          left: 50%;
-          margin-left: -75px;
-          width: 150px;
-          height: 150px;
-          border-radius: 75px;
-          background: #595959; }
-          #profile .profile-wrapper .profile-wrapper--hole .profile-user .avatar img {
-            width: 150px;
-            height: 150px;
-            border-radius: 75px; }
-        #profile .profile-wrapper .profile-wrapper--hole .profile-user .user-info {
-          width: 400px;
-          position: absolute;
-          top: 50%;
-          left: 300px;
-          margin-left: -300px;
-          margin-top: -20px; }
-          #profile .profile-wrapper .profile-wrapper--hole .profile-user .user-info .username {
-            width: 100%;
-            text-align: center;
-            font-size: 2.5rem; }
-          #profile .profile-wrapper .profile-wrapper--hole .profile-user .user-info .rank {
-            width: 300px;
-            padding-top: 5px;
-            margin: auto;
-            margin-top: 10px;
-            text-align: center;
-            color: #7e7e7e;
-            font-size: 1.1rem; }
-        #profile .profile-wrapper .profile-wrapper--hole .profile-user .user-titles {
-          position: absolute;
-          left: 630px;
-          top: 50px; }
-          #profile .profile-wrapper .profile-wrapper--hole .profile-user .user-titles h3 {
-            text-align: center; }
-          #profile .profile-wrapper .profile-wrapper--hole .profile-user .user-titles .titles li {
-            margin-left: -20px;
-            list-style: none; }
-      #profile .profile-wrapper .profile-wrapper--hole .profile-achievements {
-        margin: 25px;
-        padding-top: 50px; }
-        #profile .profile-wrapper .profile-wrapper--hole .profile-achievements h2 {
-          text-align: center;
-          font-size: 3rem;
-          color: #6e85ff;
-          padding-bottom: 50px; }
-        #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges {
-          width: 100%;
-          display: flex; }
-          #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general {
-            width: 100%;
-            position: relative; }
-            #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general h3 {
-              font-size: 1.5rem;
-              text-align: center;
-              border-bottom: solid 1px #7e7e7e;
-              margin-left: 50px;
-              margin-right: 50px;
-              padding-bottom: 15px;
-              margin-bottom: 50px; }
-            #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper {
-              position: absolute;
-              list-style: none;
-              width: 600px;
-              left: 50%;
-              margin-left: -300px; }
-              #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item {
-                position: relative;
-                padding-bottom: 50px;
-                margin-bottom: 50px; }
-                #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .badge {
-                  position: absolute;
-                  margin: 30px;
-                  margin-left: -40px;
-                  top: 50%;
-                  margin-top: -130px; }
-                  #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .badge img {
-                    width: auto;
-                    height: 200px;
-                    border-radius: 100px; }
-                #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .rookie {
-                  margin-top: -60px;
-                  z-index: 80; }
-                #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .zealot {
-                  z-index: 90; }
-                #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .master {
-                  margin-top: -200px;
-                  z-index: 100; }
-                #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .description {
-                  color: #1a1a1a !important;
-                  text-transform: uppercase;
-                  position: relative;
-                  width: 400px;
-                  margin-left: 200px;
-                  height: 370px;
-                  border-radius: 30px;
-                  border-left: 2px solid #595959;
-                  border-right: 2px solid #595959; }
-                  #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .description h3 {
-                    position: absolute;
-                    color: #595959;
-                    border: none;
-                    top: -10px;
-                    width: 300px;
-                    text-align: center;
-                    font-size: 1.1rem; }
-                  #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .description p {
-                    color: #595959;
-                    padding: 10px;
-                    font-size: .9rem;
-                    padding-top: 50px;
-                    width: 100%;
-                    text-align: justify;
-                    line-height: 1.2rem;
-                    font-variant: small-caps !important; }
-                  #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .description .based-on {
-                    color: #595959;
-                    font-size: .9rem;
-                    margin: 15px 50px;
-                    padding: 5px 0;
-                    border-top: 1px solid #595959;
-                    border-bottom: 1px solid #595959; }
-                  #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .description h2 {
-                    font-size: 2rem;
-                    padding: 0;
-                    margin: 20px 0;
-                    margin-top: 30px; }
-                  #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .description .requirements {
-                    display: flex; }
-                    #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .description .requirements .element {
-                      width: 30%;
-                      margin: auto; }
-                      #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .description .requirements .element h3 {
-                        position: initial;
-                        width: 100%;
-                        text-align: center;
-                        margin: 0;
-                        padding: 0; }
-                      #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .description .requirements .element p {
-                        font-size: 3rem;
-                        font-weight: bold;
-                        width: 100%;
-                        text-align: center;
-                        margin: 0;
-                        padding: 15px; }
-              #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item:nth-of-type(1) .description h2 {
-                color: #ff8073; }
-              #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item:nth-of-type(1) .description .requirements .element p {
-                color: #ff8073; }
-              #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item:nth-of-type(2) .description .requirements .element p {
-                color: #6e85ff; }
-              #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item:nth-of-type(3) .description h2 {
-                color: #ffbe32; }
-              #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item:nth-of-type(3) .description .requirements .element p {
-                color: #ffbe32;
-                font-size: 2rem; }
-
-/*
-=================================|▷
-6. Footer
+5. Footer
 =================================|▷
 */
 #footer {
@@ -665,12 +421,12 @@ a {
   background-color: #ebf2ef;
   /*
 	===============================|▷
-	6.1. Facebook share button
+	5.1. Facebook share button
 	===============================|▷
 	*/
   /*
 	===============================|▷
-	6.2. Twitter share button
+	5.2. Twitter share button
 	===============================|▷
 	*/ }
   #footer .fb-share-button {
@@ -690,31 +446,9 @@ a {
 
 /*
 =================================|▷
-7. SASS partials import
+6. SASS partials import
 =================================|▷
-	7.1. _preloader-animation.scss
-=================================|▷
-*/
-.badge-dim {
-  filter: brightness(30%);
-  -webkit-filter: brightness(30%);
-  -moz-filter: brightness(30%);
-  -o-filter: brightness(30%);
-  -ms-filter: brightness(30%);
-  z-index: 0 !important; }
-
-.badge-dim:nth-child(3) {
-  opacity: 0.3; }
-
-.badge-dim:nth-child(2) {
-  opacity: 0.5; }
-
-.badge-dim:nth-child(1) {
-  opacity: 0.3; }
-
-/*
-=================================|▷
-	7.2. _preloader-animation.scss
+	6.1. _preloader-animation.scss
 =================================|▷
 */
 /*!
@@ -881,7 +615,7 @@ a {
 
 /*
 =================================|▷
-	7.3. _error.scss
+	6.2. _error.scss
 =================================|▷
 */
 #render-error {
@@ -926,7 +660,7 @@ a {
 
 /*
 =================================|▷
-	7.4. _rwd.scss
+	6.3. _rwd.scss
 =================================|▷
 */
 @media screen and (max-width: 600px) {
