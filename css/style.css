@@ -108,7 +108,7 @@ body {
 #header {
   height: 600px;
   width: 100%;
-  background: url("background_IN.jpg") no-repeat;
+  background: url("assets/img/background_IN.jpg") no-repeat;
   background-position: center;
   background-attachment: fixed;
   background-size: cover; }
@@ -130,7 +130,7 @@ body {
   margin: auto;
   margin-top: -75px;
   margin-bottom: 30px;
-  background: url("arrow-lavender.png") no-repeat;
+  background: url("assets/img/arrow-lavender.png") no-repeat;
   background-size: 40px 80px;
   background-position: 83% 40px;
   background-color: #fff;
@@ -198,27 +198,27 @@ body {
       z-index: 750;
       transition: 0.1s; }
     #content #controls #help-button {
-      background: url("info_normal.png") no-repeat;
+      background: url("assets/img/info_normal.png") no-repeat;
       left: 40px; }
     #content #controls #help-button:hover {
-      background: url("info_hover.png") no-repeat; }
+      background: url("assets/img/info_hover.png") no-repeat; }
     #content #controls #help-button:active {
-      background: url("info_active.png") no-repeat; }
+      background: url("assets/img/info_active.png") no-repeat; }
     #content #controls #ranking-button {
       display: none;
-      background: url("ranking_normal.png") no-repeat;
+      background: url("assets/img/ranking_normal.png") no-repeat;
       left: 0; }
     #content #controls #ranking-button:hover {
-      background: url("ranking_hover.png") no-repeat; }
+      background: url("assets/img/ranking_hover.png") no-repeat; }
     #content #controls #ranking-button:active {
-      background: url("ranking_active.png") no-repeat; }
+      background: url("assets/img/ranking_active.png") no-repeat; }
     #content #controls #subjects-button {
-      background: url("subjects_normal.png") no-repeat;
+      background: url("assets/img/subjects_normal.png") no-repeat;
       left: -40px; }
     #content #controls #subjects-button:hover {
-      background: url("subjects_hover.png") no-repeat; }
+      background: url("assets/img/subjects_hover.png") no-repeat; }
     #content #controls #subjects-button:active {
-      background: url("subjects_active.png") no-repeat; }
+      background: url("assets/img/subjects_active.png") no-repeat; }
   #content #help {
     padding: 50px;
     margin-bottom: 50px;
@@ -362,7 +362,7 @@ body {
     #content #results-wrapper ul li {
       margin: 8px;
       list-style: circle;
-      list-style-image: url("bullet-lavender.gif");
+      list-style-image: url("assets/img/bullet-lavender.gif");
       cursor: pointer;
       cursor: hand;
       transition: 0.5s; }
@@ -391,11 +391,11 @@ body {
         font-size: 1rem;
         text-align: justify; }
       #content #results-wrapper ul .json-answer--wrapper .approved {
-        background: url("tick.png") no-repeat;
+        background: url("assets/img/tick.png") no-repeat;
         background-position: right;
         background-size: 30px 30px; }
       #content #results-wrapper ul .json-answer--wrapper .not-approved {
-        background: url("cross.png") no-repeat;
+        background: url("assets/img/cross.png") no-repeat;
         background-position: right;
         background-size: 30px 30px; }
   #content .call-to-action {
