@@ -30,3 +30,11 @@ Aim of this project is to create a stand-alone tool to fetch data about question
   - Created tab-like button to switch between both rankings
   - Adjusted rankings' layouts for RWD
   - Organized the code in index.html and style.css in sections listed on the top of the respective documents under --- CONTENTS --- section. 
+
+### Version 1.5
+
+##### Added features:
+  - Profile containers for each user in the ranking accessable by clicking user's name in any ranking. 
+  - RWD support for all features
+  - Achievements system configurable via separate JSON-profile-IN spreadsheet
+  - Numbers of questions left from each subject accessable by hovering over a filter button (_all shows all questions_)
