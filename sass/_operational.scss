@@ -1,0 +1,17 @@
+.badge-dim {
+  filter: brightness(30%) ;
+  -webkit-filter: brightness(30%) ;
+  -moz-filter: brightness(30%) ;
+  -o-filter: brightness(30%) ;
+  -ms-filter: brightness(30%) ;
+  z-index: 0 !important;
+}
+.badge-dim:nth-child(3) {
+  opacity: 0.3;
+}
+.badge-dim:nth-child(2) {
+  opacity: 0.5;
+}
+.badge-dim:nth-child(1) {
+  opacity: 0.3;
+}
