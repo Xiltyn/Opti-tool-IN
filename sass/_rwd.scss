@@ -53,6 +53,7 @@
 		height: 350px;
 		h1 {
 	 		line-height: 2.2rem !important;
+			padding-top: 160px;
 	 	}
 	}
 	#content {
@@ -62,6 +63,11 @@
 	 	padding: 30px 5px 30px 5px;
 	 	background-image: none;
 	 	border-radius: 0;
+		.mint-logo {
+	 		top: -240px;
+	 		left: 50%;
+	 		margin-left: -67px;
+	 	}
 		#controls {
 			display: flex;
 	    width: 225px;
@@ -117,12 +123,7 @@
 			height: 570px !important;
 			transition: 1s;
 		}
-	 	.mint-logo {
-	 		top: -280px;
-	 		left: 50%;
-	 		margin-left: -67px;
-	 	}
-			h1 {
+		h1 {
 			font-size: 2rem !important;
 			text-align: center;
 	 	}

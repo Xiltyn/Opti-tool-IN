@@ -84,14 +84,19 @@ a {
 		position: absolute;
     left: 50%;
     margin-left: -386px;
-    top: 58%;
+    top: 50%;
+		margin-top: 75px;
 	}
 	.mint-logo {
 		position: absolute;
     left: 50%;
+<<<<<<< HEAD
+    margin-left: 180px;
+=======
     margin-left: 190px;
+>>>>>>> user-profile
     top: 50%;
-    margin-top: 110px;
+    margin-top: 95px;
 	}
 }
 /*
@@ -118,7 +123,11 @@ a {
 #header {
 	height: 600px;
 	width: 100%;
+<<<<<<< HEAD
+	background: url("background_IN.jpg") no-repeat;
+=======
 	background: url('assets/img/background_IN.jpg') no-repeat;
+>>>>>>> user-profile
   background-position: center;
   background-attachment: fixed;
 	background-size: cover;
@@ -142,7 +151,11 @@ a {
 	margin: auto;
 	margin-top: -75px;
 	margin-bottom: 30px;
+<<<<<<< HEAD
+	background: url('arrow-lavender.png') no-repeat;
+=======
 	background: url('assets/img/arrow-lavender.png') no-repeat;
+>>>>>>> user-profile
 	background-size: 40px 80px;
 	background-position: 83% 40px;
 	background-color: #fff;
@@ -235,7 +248,11 @@ a {
 		background-color: rgba(255,255,255,0.9);
 		z-index: 500;
 		h1 {
+<<<<<<< HEAD
+			color: #ffbe32 !important;
+=======
 			color: #6e85ff !important;
+>>>>>>> user-profile
 		}
 		h3 {
 			margin-bottom: 15px;
@@ -403,7 +420,11 @@ a {
 			li {
 				margin: 8px;
 				list-style: circle;
+<<<<<<< HEAD
+				list-style-image: url('bullet-lavender.gif');
+=======
 				list-style-image: url('assets/img/bullet-lavender.gif');
+>>>>>>> user-profile
 				cursor: pointer;
 				cursor: hand;
 				transition: 0.5s;
