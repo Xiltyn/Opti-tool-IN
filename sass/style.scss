@@ -66,11 +66,6 @@ a {
 =================================|▷
 */
 #preloader {
-
-	/* disable */
-	display: none;
-	/* disable end */
-
 	width: 100vw;
 	height: 100vh;
 	background-color: #6e85ff;
@@ -94,7 +89,7 @@ a {
 	.mint-logo {
 		position: absolute;
     left: 50%;
-    margin-left: 265px;
+    margin-left: 190px;
     top: 50%;
     margin-top: 110px;
 	}
@@ -475,7 +470,7 @@ a {
 			padding: 20px;
 		}
 		.call-to-action--btn {
-			width: 175px;
+			width: 180px;
 			margin: auto;
 		}
 	}

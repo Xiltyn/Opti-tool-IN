@@ -229,11 +229,9 @@
 		// console.log($questionListElements.find('h3:nth-child(1)'));
 
 			$questionListElements.each(function(item) {
-			$approved1 = $(this).find('h3').eq(0);
-			$approved2 = $(this).find('h3').eq(1);
 			// console.log($approved1);
 			// console.log($approved2)
-			if (($approved1.hasClass('approved') && $approved2.hasClass('approved')) || ($approved1.hasClass('approved') && $(this).hasClass('aged')) ) {
+			if ($(this).hasClass('aged')) {
 				$(this).hide();
 
 			};
@@ -346,7 +344,7 @@
 					$rankingListWeekly.fadeOut(300).fadeIn(300)
 					// console.log($rankingListWeekly);
 				}
-				console.log('tabbed!');
+				// console.log('tabbed!');
 			})
 		});
 
@@ -462,6 +460,7 @@
 			renderBadgesGeneral(succesGeneral);
 			dimBadges();
 			openProfile();
+			questionsLeft();
 		}
 
 		function myFailure(arg1, arg2) {
@@ -477,7 +476,7 @@
 				// console.log('this badge', this);
 
 				var badgesArr = $(this).closest('.badges').data('badgeid').split(',');
-				console.log('this array', badgesArr);
+				// console.log('this array', badgesArr);
 				if (badgesArr.indexOf($(this).data('id')) > -1) {
 				} else {
 					$(this).addClass('badge-dim');
@@ -492,7 +491,7 @@
 			var $profileButton = $('#profile-btn');
 
 			$rankingUser.on('click', function() {
-				console.log('does it work?');
+				// console.log('does it work?');
         var userId = $(this).data('userid');
         var $userProfile = $profileUser.filter('.' + userId);
 
@@ -504,6 +503,21 @@
 
 			$profileButton.on('click', function() {
 				$profile.fadeOut(200);
+			});
+		}
+
+		function questionsLeft() {
+			$buttons = $('.subjects-menu').find('button')
+			var previousText;
+
+			$buttons.on({
+				mouseenter: function () {
+					previousText = $(this).text();
+			 		$(this).html(" (" + $("." + $(this).data('subject')).not('.aged').length + ")")
+				},
+				mouseleave: function () {
+					$(this).html(previousText)
+				}
 			});
 		}
 

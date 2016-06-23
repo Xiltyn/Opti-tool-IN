@@ -64,9 +64,6 @@ a {
 =================================|▷
 */
 #preloader {
-  /* disable */
-  display: none;
-  /* disable end */
   width: 100vw;
   height: 100vh;
   background-color: #6e85ff;
@@ -88,7 +85,7 @@ a {
   #preloader .mint-logo {
     position: absolute;
     left: 50%;
-    margin-left: 265px;
+    margin-left: 190px;
     top: 50%;
     margin-top: 110px; }
 
@@ -414,7 +411,7 @@ a {
       text-align: center;
       padding: 20px; }
     #content .call-to-action .call-to-action--btn {
-      width: 175px;
+      width: 180px;
       margin: auto; }
 
 /*
@@ -1020,8 +1017,56 @@ a {
     #content #results-wrapper ul {
       padding: 0;
       padding-left: 10px; }
+    #content .call-to-action {
+      width: 100%; }
   .no-data {
     width: 100%; }
+  #profile {
+    width: 100%;
+    left: 0;
+    margin-left: 0; }
+    #profile .profile-wrapper .profile-wrapper--hole .profile-user {
+      height: 300px; }
+      #profile .profile-wrapper .profile-wrapper--hole .profile-user .avatar {
+        position: initial;
+        margin-left: 0;
+        left: 0;
+        margin: 0 auto 25px auto; }
+      #profile .profile-wrapper .profile-wrapper--hole .profile-user .user-info {
+        width: 100%;
+        left: 0;
+        margin: 0;
+        top: auto; }
+    #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper {
+      width: 100%;
+      left: 0;
+      padding: 0;
+      margin-left: 0; }
+      #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .badge {
+        left: 50%;
+        margin-left: -100px; }
+      #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .rookie {
+        margin-top: -500px; }
+      #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .zealot {
+        margin-top: -560px; }
+      #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .master {
+        margin-top: -620px; }
+      #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .description {
+        width: auto;
+        height: 440px;
+        margin-left: 0px;
+        margin-top: 300px;
+        margin-bottom: 40px;
+        text-align: center !important; }
+        #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .description h3 {
+          width: 100%;
+          margin: auto; }
+        #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .description p {
+          text-align: center; }
+        #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .description .based-on {
+          line-height: 1rem; }
+        #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .description .requirements .element p {
+          font-size: 1.75rem !important; }
   #footer {
     height: 80px; }
     #footer .fb-share-button {

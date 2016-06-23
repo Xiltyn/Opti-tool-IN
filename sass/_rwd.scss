@@ -132,10 +132,91 @@
 				padding-left: 10px;
 			}
 		}
+    .call-to-action {
+      width: 100%;
+    }
 	}
 	.no-data {
 		width: 100%;
 	}
+  #profile {
+    width: 100%;
+    left: 0;
+    margin-left: 0;
+    .profile-wrapper {
+      .profile-wrapper--hole {
+        .profile-user {
+          height: 300px;
+          .avatar {
+            position: initial;
+            margin-left: 0;
+            left: 0;
+            margin: 0 auto 25px auto;
+          }
+          .user-info {
+            width: 100%;
+            left: 0;
+            margin: 0;
+            top: auto;
+          }
+        }
+        .profile-achievements {
+          .badges {
+            .general {
+              .badges-wrapper {
+                width: 100%;
+                left: 0;
+                padding: 0;
+                margin-left: 0;
+                .badges-item {
+                  .badge {
+										left: 50%;
+										margin-left: -100px;
+                    img {
+                    }
+                  }
+									.rookie {
+										margin-top: -500px;
+									}
+									.zealot {
+										margin-top: -560px;
+									}
+									.master {
+										margin-top: -620px;
+									}
+                  .description {
+                    width: auto;
+                    height: 440px;
+                    margin-left: 0px;
+										margin-top: 300px;
+										margin-bottom: 40px;
+										text-align: center !important;
+                    h3 {
+                      width: 100%;
+                      margin: auto;
+                    }
+										p {
+											text-align: center;
+										}
+										.based-on {
+											line-height: 1rem;
+										}
+										.requirements {
+											.element {
+												p {
+													font-size: 1.75rem !important;
+												}
+											}
+										}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 	#footer {
 		height: 80px;
 		.fb-share-button {
