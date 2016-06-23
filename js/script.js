@@ -507,18 +507,32 @@
 		}
 
 		function questionsLeft() {
-			$buttons = $('.subjects-menu').find('button')
-			var previousText;
+			var $buttons = $('.subjects-menu').find('button');
 
-			$buttons.on({
-				mouseenter: function () {
-					previousText = $(this).text();
-			 		$(this).html(" (" + $("." + $(this).data('subject')).not('.aged').length + ")")
-				},
-				mouseleave: function () {
-					$(this).html(previousText)
-				}
+			// count amount of questions from each subject
+			// and add it as data to every button
+			$.each($buttons, function(key, button) {
+				var subjectId = $(button).data('subject-id');
+				var amount = $('.' + subjectId).not('.aged').length;
+				$(button).data('amount', amount);
 			});
+
+			$buttons.on('mouseenter', showAmount);
+			$buttons.on('mouseleave', showSubjectName);
+		}
+
+		function showAmount(event) {
+			var $button = $(event.currentTarget);
+			var number = $button.data('amount');
+
+			$button.find('.mint-button-secondary__hole').text(number);
+		}
+
+		function showSubjectName(event) {
+			var $button = $(event.currentTarget);
+			var subjectName = $button.data('subject-name');
+
+			$button.find('.mint-button-secondary__hole').text(subjectName);
 		}
 
 
