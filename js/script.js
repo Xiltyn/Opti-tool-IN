@@ -16,7 +16,7 @@
 
 	var $templateQuestions = _.template('<li class="json-question all <%= sub_id %> <%= aged %>"><%= content %><div class="json-answer--wrapper json-answer--hidden"><a href="<%= link %>" class="json-link" target="_blank"><h3 class="json-header <%= approve_1 %>">Answer 1</h3><p class="json-answer"><%= answer_1 %></p></a><a href="<%= link %>" class="json-link" target="_blank"><h3 class="json-header <%= approve_2 %>">Answer 2</h3><p class="json-answer"><%= answer_2 %></p></a></div></li>');
 	var $templateRanking = _.template('<li><div class="ranking-element"><a href="http://brainly.in/profile/<%=user_name%>-<%= user_id %>" target="_blank"><%= user_name %><div class="number"><%= answers_count %></div></a></div></li>');
-	var $templateRankingWeekly = _.template('<li><div class="ranking-element"><a href="http://eodev.com/profil/<%=user_name%>-<%= user_id %>" target="_blank"><%= user_name %><div class="number"><%= answers_count_weekly %></div></a></div></li>');
+	var $templateRankingWeekly = _.template('<li><div class="ranking-element"><a href="http://brainly.in/profile/<%=user_name%>-<%= user_id %>" target="_blank"><%= user_name %><div class="number"><%= answers_count_weekly %></div></a></div></li>');
 
 	function parseResponse(data){
 	    var rows = [];
