@@ -496,6 +496,8 @@ body {
             width: 100%;
             text-align: center;
             font-size: 2.5rem; }
+            #profile .profile-wrapper .profile-wrapper--hole .profile-user .user-info .username a {
+              color: black; }
           #profile .profile-wrapper .profile-wrapper--hole .profile-user .user-info .rank {
             width: 300px;
             padding-top: 5px;
