@@ -110,7 +110,7 @@
 		showFirstAnswer();
 		toggleSubjects();
 		hideApproved();
-		preLoaded();
+
 
 	}
 
@@ -461,6 +461,7 @@
 			dimBadges();
 			openProfile();
 			questionsLeft();
+			preLoaded();
 		}
 
 		function myFailure(arg1, arg2) {
