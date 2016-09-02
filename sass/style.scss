@@ -1,7 +1,7 @@
 /*
 -------------------------------------------
 >>>>>>>>> Opti-tool © Brainly 2016 <<<<<<<<
->>>>>>>>>>> STYLESHEET ver. 1.4 <<<<<<<<<<<
+>>>>>>>>>>> STYLESHEET ver. 1.5 <<<<<<<<<<<
 -------------------------------------------
 ---------------- CONTENTS -----------------
 
@@ -30,7 +30,8 @@
 	7. SASS partials import
 		7.1. _preloader-animation.scss
 		7.2. _error.scss
-		7.3. _rwd.scss
+		7.3. _operational.scss
+		7.4. _rwd.scss
 
 	-------------------------------------------
 	--------------- DESCRIPTION ---------------
@@ -49,9 +50,11 @@
 
 html {
 	font-size: 100%;
+	max-width: 100vw !important;
 }
 body {
 	background-color: #ebf2ef;
+	max-width: 100vw !important;
 }
 
 /*
@@ -115,7 +118,7 @@ body {
 #header {
 	height: 600px;
 	width: 100%;
-	background: url('assets/img/background_IN.jpg') no-repeat;
+	background: url('assets/img/background.jpg') no-repeat;
   background-position: center;
   background-attachment: fixed;
 	background-size: cover;
@@ -249,6 +252,18 @@ body {
 	}
 	/*
 	===============================|▷
+	4.4. Classes filter menu
+	===============================|▷
+	*/
+	.sg-input--full-width, .sg-select--full-width, .sg-textarea--full-width {
+		width: 85%;
+		margin: auto;
+	}
+	.sg-select, .sg-select__element {
+		display: block;
+	}
+	/*
+	===============================|▷
 	4.4. Subjects filter menu
 	===============================|▷
 	*/
@@ -258,7 +273,7 @@ body {
 		transition: 1s;
 	}
 	.subjects-menu {
-		margin: 45px 0 20px 7.5% !important;
+		margin: 25px 0 20px 7.5% !important;
 		width: 85% !important;
 		height: 75px;
 		overflow: hidden;
@@ -498,7 +513,7 @@ body {
 			position: relative;
 			height: 75px;
 			width: 100%;
-			background: url('assets/img/background_IN.jpg') no-repeat;
+			background: url('assets/img/background.jpg') no-repeat;
 		  background-position: center;
 			background-size: cover;
 			#profile-btn {
@@ -531,14 +546,11 @@ body {
 			top: 75px;
 			display: none;
 			.profile-user {
-				background: #dbe0fa;
+				background: #6e85ff;
 				position: relative;
 				padding: 25px;
 				width: 100%;
 				height: 200px;
-				-webkit-box-shadow: 0 15px 20px -15px rgba(0,0,0,1);
-			  -moz-box-shadow: 0 15px 20px -15px rgba(0,0,0,1);
-			  box-shadow: 0 15px 20px -15px rgba(0,0,0,1);
 				.avatar {
 					position: absolute;
 					left: 50%;
@@ -574,7 +586,7 @@ body {
 						margin: auto;
 						margin-top: 10px;
 						text-align: center;
-						color: rgb(126, 126, 126);
+						color: #fff;
 						font-size: 1.1rem;
 					}
 				}
@@ -605,6 +617,10 @@ body {
 				.badges {
 					width: 100%;
 					display: flex;
+					.general, .special {
+						position: absolute !important;
+						left: 0;
+					}
 					.general {
 						width: 100%;
 						position: relative;
@@ -758,6 +774,106 @@ body {
 							}
 						}
 					}
+					.special {
+						width: 100%;
+						position: relative;
+						display: none;
+						h3 {
+							font-size: 1.5rem;
+							text-align: center;
+							border-bottom: solid 1px rgb(126, 126, 126);
+							margin-left: 50px;
+							margin-right: 50px;
+							padding-bottom: 15px;
+							margin-bottom: 50px;
+						}
+						.badges-wrapper {
+							position: absolute;
+							list-style: none;
+							width: 600px;
+							left: 50%;
+							margin-left: -300px;
+							.badges-item {
+								position: relative;
+								padding-bottom: 50px;
+								margin-bottom: 50px;
+								.badge {
+									position: absolute;
+									margin: 30px;
+									margin-left: -100px;
+									top: 50%;
+									margin-top: -160px;
+									img {
+										width: auto;
+										height: 250px;
+										border-radius: 100px;
+									}
+								}
+								.description {
+									color: #1a1a1a !important;
+									text-transform: uppercase;
+									position: relative;
+									width: 400px;
+									margin-left: 200px;
+									height: 350px;
+									border-radius: 30px;
+									border-left: 2px solid #595959;
+									border-right: 2px solid #595959;
+									h3 {
+										position: absolute;
+										color: #595959;
+										border: none;
+										top: -10px;
+										width: 300px;
+										text-align: center;
+										font-size: 1.1rem;
+									}
+									p {
+										color: #595959;
+										padding: 10px;
+										font-size: .9rem;
+										padding-top: 50px;
+										width: 100%;
+										text-align: justify;
+										line-height: 1.2rem;
+										font-variant: small-caps !important;
+									}
+									.based-on {
+										color: #595959;
+										font-size: .9rem;
+										margin: 15px 50px;
+										padding: 5px 0;
+										border-top: 1px solid #595959;
+										border-bottom: 1px solid #595959;
+										text-align: center;
+									}
+									h2 {
+										font-size: 2rem;
+										padding: 0;
+										margin: 20px 0;
+										margin-top: 30px;
+									}
+									.requirements {
+										h3 {
+											position: initial;
+											width: 100%;
+											text-align: center;
+											margin: 0;
+											padding: 0;
+										}
+										p {
+											font-size: 1rem;
+											font-weight: bold;
+											width: 100%;
+											text-align: center;
+											margin: 0;
+											padding: 15px;
+										}
+									}
+								}
+							}
+						}
+					}
 				}
 			}
 		}
@@ -817,7 +933,13 @@ body {
 @import 'error';
 /*
 =================================|▷
-	7.3. _rwd.scss
+	7.3. _operational.scss
+=================================|▷
+*/
+@import 'operational';
+/*
+=================================|▷
+	7.4. _rwd.scss
 =================================|▷
 */
 @import 'rwd';

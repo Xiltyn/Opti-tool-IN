@@ -1,0 +1,26 @@
+{
+  "name": "opti-tool-in",
+  "version": "1.0.0",
+  "description": "Optimization tool for moderators",
+  "main": "app.js",
+  "dependencies": {},
+  "devDependencies": {
+    "express": "^4.14.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xiltyn/Opti-tool-IN.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Xiltyn/Opti-tool-IN/issues"
+  },
+  "homepage": "https://github.com/Xiltyn/Opti-tool-IN#readme"
+}
