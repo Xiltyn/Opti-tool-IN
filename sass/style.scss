@@ -11,18 +11,20 @@
 		2.2. Top-layer blackout
 	3. Header
 	4. Content
-		4.1. Header logo
-		4.2. Navigation
-		4.3. Help toplayer
-		4.4. Subjects filter menu
-		4.5. Rankings
-			4.5.1. Header
-			4.5.2. Menu
-			4.5.3. Ranking wrappers
-		4.6. Secondary header
-		4.7. Questions container
-		 	4.7.1. Answer style
-		4.8. Call to action
+		4.1  Last update
+		4.2. Header logo
+		4.3. Navigation
+		4.4. Help toplayer
+		4.5. Classes filter menu
+		4.6. Subjects filter menu
+		4.7. Rankings
+			4.7.1. Header
+			4.7.2. Menu
+			4.7.3. Ranking wrappers
+		4.8. Secondary header
+		4.9. Questions container
+		 	4.9.1. Answer style
+		4.10. Call to action
 	5. Profile
 	6. Footer
 		6.1. Facebook share button
@@ -149,7 +151,16 @@ body {
 	border-radius: 30px;
 	/*
 	===============================|▷
-	4.1. Header logo
+	4.1. Last Update
+	===============================|▷
+	*/
+	.last-update {
+		margin-left: 35px;
+		font-size: .8rem;
+	}
+	/*
+	===============================|▷
+	4.2. Header logo
 	===============================|▷
 	*/
 	.mint-logo {
@@ -159,7 +170,7 @@ body {
 	}
 	/*
 	===============================|▷
-	4.2. Navigation
+	4.3. Navigation
 	===============================|▷
 	*/
 	#controls {
@@ -217,7 +228,7 @@ body {
 	}
 	/*
 	===============================|▷
-	4.3. Help toplayer
+	4.4. Help toplayer
 	===============================|▷
 	*/
 	#help {
@@ -252,7 +263,7 @@ body {
 	}
 	/*
 	===============================|▷
-	4.4. Classes filter menu
+	4.5. Classes filter menu
 	===============================|▷
 	*/
 	.sg-input--full-width, .sg-select--full-width, .sg-textarea--full-width {
@@ -264,7 +275,7 @@ body {
 	}
 	/*
 	===============================|▷
-	4.4. Subjects filter menu
+	4.6. Subjects filter menu
 	===============================|▷
 	*/
 	.subjects-menu--unfold {
@@ -284,10 +295,18 @@ body {
 			margin-top: 5px;
 			line-height: 1rem;
 		}
+		.mint-button-secondary--alt-inverse {
+			border-color: #6e85ff !important;
+    	background-color: #6e85ff !important;
+		}
+		.mint-button-secondary--alt-inverse:hover {
+			color: #6e85ff !important;
+			background-color: #fff !important;
+		}
 	}
 	/*
 	===============================|▷
-	4.5. Rankings
+	4.7. Rankings
 	===============================|▷
 	*/
 	#ranking {
@@ -306,7 +325,7 @@ body {
 		overflow:auto;
 		/*
 		=============================|▷
-		4.5.1. Header
+		4.7.1. Header
 		=============================|▷
 		*/
 		h3 {
@@ -319,7 +338,7 @@ body {
 		}
 		/*
 		=============================|▷
-		4.5.2. Menu
+		4.7.2. Menu
 		=============================|▷
 		*/
 		.mint-tabs {
@@ -341,7 +360,7 @@ body {
 		}
 		/*
 		=============================|▷
-		4.5.3. Ranking wrappers
+		4.7.3. Ranking wrappers
 		=============================|▷
 		*/
 		#rankingList, #rankingListWeekly {
@@ -381,7 +400,7 @@ body {
 	}
 	/*
 	===============================|▷
-	4.6. Secondary header
+	4.8. Secondary header
 	===============================|▷
 	*/
 	h1 {
@@ -395,7 +414,7 @@ body {
 	}
 	/*
 	===============================|▷
-	4.7. Questions container
+	4.9. Questions container
 	===============================|▷
 	*/
 	#results-wrapper {
@@ -418,6 +437,7 @@ body {
 				cursor: pointer;
 				cursor: hand;
 				transition: 0.5s;
+				text-align: justify;
 			}
 			.js-li--blue {
 				color: #6e85ff !important;
@@ -432,7 +452,7 @@ body {
 			}
 			/*
 			=============================|▷
-			4.7.1. Answer style
+			4.9.1. Answer style
 			=============================|▷
 			*/
 			.json-answer--hidden {
@@ -469,7 +489,7 @@ body {
 	}
 	/*
 	===============================|▷
-	4.8. Call to actions
+	4.10. Call to actions
 	===============================|▷
 	*/
 	.call-to-action {

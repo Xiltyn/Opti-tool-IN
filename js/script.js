@@ -179,6 +179,7 @@
         function myFunc() {
             randomizeQuestions();
             toggleTasks();
+            preLoaded();
         }
 
         function myFailure(arg1, arg2) {
@@ -364,8 +365,6 @@
 		        dimBadges();
 						toggleBadges();
 		        openProfile();
-		        preLoaded();
-
 		    }
 
 		    function fail(arg1, arg2) {
@@ -467,7 +466,7 @@
 
 		    $buttons.on('click', function() {
 		        displayQuestionFromSubject($(this).data('subject-id'), chosenClass);
-		        hideApproved();
+		        hideApproved($questionList.children('li'));
 		    });
 		}
 
@@ -481,24 +480,7 @@
 		    });
 		}
 
-		function hideApproved() {
-		    var $approved1;
-		    var $approved2;
-		    var $approvedQuestion;
-        $questionListElements = $questionList.children('li');
 
-
-		    console.log($questionListElements);
-
-		    $questionListElements.each(function(item) {
-		        // console.log($approved1);
-		        // console.log($approved2)
-		        if ($(this).hasClass('aged')) {
-		            $(this).hide();
-
-		        };
-		    });
-		}
 
 		function openHelp() {
 		    var $button = $('#help-button');
@@ -649,7 +631,7 @@
 
 		function randomizeQuestions() {
 		    $('#questionList').randomize('li');
-        hideApproved();
+        hideApproved($questionList.children('li'));
 		    console.log('Randomize!');
 		}
 
