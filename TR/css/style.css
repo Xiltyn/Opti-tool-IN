@@ -6,6 +6,7 @@
 -------------------------------------------
 ---------------- CONTENTS -----------------
 
+	0. Global Variables
 	1. General
 	2. Independent elements
 		2.1. Preloader
@@ -34,7 +35,8 @@
 		7.1. _preloader-animation.scss
 		7.2. _error.scss
 		7.3. _operational.scss
-		7.4. _rwd.scss
+		7.4. _validation.scss
+		7.5. _rwd.scss
 
 	-------------------------------------------
 	--------------- DESCRIPTION ---------------
@@ -43,6 +45,11 @@
 
 
 	-------------------------------------------
+*/
+/*
+=================================|▷
+0. Global Variables
+=================================|▷
 */
 /*
 =================================|▷
@@ -74,22 +81,19 @@ body {
   z-index: 1001; }
   #preloader .preloader-animation {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 50vh;
+    left: 50vw;
     margin-left: -48px;
     margin-top: -48px; }
   #preloader h1 {
-    position: absolute;
-    left: 50%;
-    margin-left: -386px;
-    top: 50%;
-    margin-top: 75px; }
+    width: 100%;
+    text-align: center;
+    margin-top: 58vh; }
   #preloader .mint-logo {
     position: absolute;
     left: 50%;
-    margin-left: 180px;
-    top: 50%;
-    margin-top: 95px; }
+    margin-left: -90px;
+    margin-top: 27px; }
 
 /*
 =================================|▷
@@ -138,7 +142,7 @@ body {
   margin-bottom: 30px;
   background: url("assets/img/arrow-lavender.png") no-repeat;
   background-size: 40px 80px;
-  background-position: 83% 40px;
+  background-position: 88% 40px;
   background-color: #fff;
   border-radius: 30px;
   /*
@@ -325,6 +329,8 @@ body {
       padding-bottom: 10px;
       width: 100%;
       text-align: center; }
+    #content #ranking .sg-select {
+      margin: 10px 0; }
     #content #ranking .mint-tabs {
       margin-top: 10px;
       margin-right: -20px;
@@ -338,33 +344,33 @@ body {
         font-size: .1rem; }
       #content #ranking .mint-tabs .mint-tabs__tab--active {
         background: #000; }
-    #content #ranking #rankingList, #content #ranking #rankingListWeekly {
+    #content #ranking .rankingList {
       overflow: auto;
       padding-right: 17px;
       /* Increase/decrease this value for cross-browser compatibility */ }
-      #content #ranking #rankingList li, #content #ranking #rankingListWeekly li {
+      #content #ranking .rankingList li {
         position: relative;
-        margin-left: -40px;
-        list-style: inside decimal;
-        font-weight: bold;
+        margin-left: -20px;
+        list-style: decimal;
         font-size: 0.75rem; }
-        #content #ranking #rankingList li .ranking-element, #content #ranking #rankingListWeekly li .ranking-element {
+        #content #ranking .rankingList li .ranking-element {
           padding-bottom: 10px;
           margin-bottom: 10px;
           border-bottom: dashed 1px #bbbdbf; }
-          #content #ranking #rankingList li .ranking-element a, #content #ranking #rankingListWeekly li .ranking-element a {
+          #content #ranking .rankingList li .ranking-element a {
             color: black;
             transition: 0.25s; }
-          #content #ranking #rankingList li .ranking-element a:hover, #content #ranking #rankingListWeekly li .ranking-element a:hover {
+          #content #ranking .rankingList li .ranking-element a:hover {
             color: #969799;
             transition: 0.25s; }
-          #content #ranking #rankingList li .ranking-element .number, #content #ranking #rankingListWeekly li .ranking-element .number {
+          #content #ranking .rankingList li .ranking-element .number {
             position: absolute;
             top: 0;
             left: 95%;
             color: #ff8073;
             text-align: right; }
-    #content #ranking #rankingListWeekly {
+    #content #ranking .rankingList[data-cat='approvals'],
+    #content #ranking .rankingList[data-type='weekly'] {
       display: none; }
   #content h1 {
     width: 95%;
@@ -397,11 +403,12 @@ body {
       cursor: hand;
       transition: 0.5s;
       text-align: justify; }
+      #content #results-wrapper ul li .json-question-txt {
+        transition: 0.5s; }
+      #content #results-wrapper ul li .json-question-txt:hover {
+        color: #6e85ff; }
     #content #results-wrapper ul .js-li--blue {
       color: #6e85ff !important; }
-    #content #results-wrapper ul li:hover {
-      color: #6e85ff;
-      transition: 0.5s; }
     #content #results-wrapper ul h3 {
       padding-bottom: 10px;
       padding-top: 10px; }
@@ -557,6 +564,7 @@ body {
             position: absolute !important;
             left: 0; }
           #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general {
+            display: none;
             width: 100%;
             position: relative; }
             #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general h3 {
@@ -665,8 +673,7 @@ body {
                 font-size: 2rem; }
           #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .special {
             width: 100%;
-            position: relative;
-            display: none; }
+            position: relative; }
             #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .special h3 {
               font-size: 1.5rem;
               text-align: center;
@@ -757,7 +764,7 @@ body {
 #footer {
   position: relative;
   height: 40px;
-  width: 100%;
+  width: auto;
   background-color: #ebf2ef;
   /*
 	===============================|▷
@@ -778,9 +785,8 @@ body {
     left: 63%;
     top: 4px; }
   #footer p {
-    position: absolute;
-    bottom: 15px;
-    left: 17vw;
+    padding-bottom: 30px;
+    width: 100%;
     text-align: center;
     color: #383838; }
 
@@ -1055,7 +1061,75 @@ body {
 
 /*
 =================================|▷
-	7.4. _rwd.scss
+	7.4. _validation.scss
+=================================|▷
+*/
+.validation {
+  display: flex; }
+
+.validation-btn {
+  margin: 15px auto;
+  z-index: 500;
+  border: 2px solid #6ed6a0;
+  color: #6ed6a0;
+  padding: 1px 3px;
+  font-weight: 800;
+  font-size: 0.7rem;
+  transition: all 0.2s ease-out;
+  text-align: center;
+  width: 40%; }
+
+.validation-btn:hover {
+  background-color: #6ed6a0;
+  border: 2px solid #6ed6a0;
+  color: #fff; }
+
+.deletion-btn {
+  margin: 15px auto;
+  z-index: 500;
+  border: 2px solid #ff8073;
+  color: #ff8073;
+  padding: 1px 3px;
+  font-weight: 800;
+  font-size: 0.7rem;
+  transition: all 0.2s ease-out;
+  text-align: center;
+  width: 40%; }
+
+.deletion-btn:hover {
+  background-color: #ff8073;
+  border: 2px solid #ff8073;
+  color: #fff; }
+
+.approved {
+  border: 2px solid #6ed6a0;
+  background-color: #6ed6a0;
+  color: #fff; }
+
+.approved:hover {
+  background-color: #6ed6a0;
+  color: #fff;
+  cursor: initial; }
+
+.deleted {
+  border: 2px solid #ff8073;
+  background-color: #ff8073;
+  color: #fff; }
+
+.deleted:hover {
+  background-color: #ff8073;
+  color: #fff;
+  cursor: initial; }
+
+.reviewed-el {
+  color: #6e85ff !important;
+  font-weight: 800 !important; }
+  .reviewed-el .validation-btn, .reviewed-el .deletion-btn {
+    display: none; }
+
+/*
+=================================|▷
+	7.5. _rwd.scss
 =================================|▷
 */
 @media screen and (max-width: 600px) {

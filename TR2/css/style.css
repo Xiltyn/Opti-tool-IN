@@ -1,0 +1,1260 @@
+@charset "UTF-8";
+/*
+-------------------------------------------
+>>>>>>>>> Opti-tool © Brainly 2016 <<<<<<<<
+>>>>>>>>>>> STYLESHEET ver. 1.5 <<<<<<<<<<<
+-------------------------------------------
+---------------- CONTENTS -----------------
+
+	0. Global Variables
+	1. General
+	2. Independent elements
+		2.1. Preloader
+		2.2. Top-layer blackout
+	3. Header
+	4. Content
+		4.1  Last update
+		4.2. Header logo
+		4.3. Navigation
+		4.4. Help toplayer
+		4.5. Classes filter menu
+		4.6. Subjects filter menu
+		4.7. Rankings
+			4.7.1. Header
+			4.7.2. Menu
+			4.7.3. Ranking wrappers
+		4.8. Secondary header
+		4.9. Questions container
+		 	4.9.1. Answer style
+		4.10. Call to action
+	5. Profile
+	6. Footer
+		6.1. Facebook share button
+		6.2. Twitter share button
+	7. SASS partials import
+		7.1. _preloader-animation.scss
+		7.2. _error.scss
+		7.3. _operational.scss
+		7.4. _rwd.scss
+
+	-------------------------------------------
+	--------------- DESCRIPTION ---------------
+
+
+
+
+	-------------------------------------------
+*/
+/*
+=================================|▷
+0. Global Variables
+=================================|▷
+*/
+/*
+=================================|▷
+1. General
+=================================|▷
+*/
+html {
+  font-size: 100%;
+  max-width: 100vw !important; }
+
+body {
+  background-color: #ebf2ef;
+  max-width: 100vw !important; }
+
+/*
+=================================|▷
+2. Independent elements
+=================================|▷
+	2.1. Preloader
+=================================|▷
+*/
+#preloader {
+  width: 100vw;
+  height: 100vh;
+  background-color: #5bb8ff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1001; }
+  #preloader .preloader-animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -48px;
+    margin-top: -48px; }
+  #preloader h1 {
+    position: absolute;
+    left: 50%;
+    margin-left: -386px;
+    top: 50%;
+    margin-top: 75px; }
+  #preloader .mint-logo {
+    position: absolute;
+    left: 50%;
+    margin-left: 180px;
+    top: 50%;
+    margin-top: 95px; }
+
+/*
+=================================|▷
+	2.2. Top-layer blackout
+=================================|▷
+*/
+#blackout {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 250; }
+
+/*
+=================================|▷
+3. Header
+=================================|▷
+*/
+#header {
+  height: 600px;
+  width: 100%;
+  background: url("assets/img/background.jpg") no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover; }
+  #header h1 {
+    text-align: center;
+    padding-top: 220px; }
+
+/*
+=================================|▷
+4. Content
+=================================|▷
+*/
+#content {
+  position: relative;
+  padding: 10px;
+  padding-left: 200px;
+  width: 950px;
+  min-height: 88vh;
+  margin: auto;
+  margin-top: -75px;
+  margin-bottom: 30px;
+  background: url("assets/img/arrow-blue.png") no-repeat;
+  background-size: 40px 80px;
+  background-position: 83% 40px;
+  background-color: #fff;
+  border-radius: 30px;
+  /*
+	===============================|▷
+	4.1. Last Update
+	===============================|▷
+	*/
+  /*
+	===============================|▷
+	4.2. Header logo
+	===============================|▷
+	*/
+  /*
+	===============================|▷
+	4.3. Navigation
+	===============================|▷
+	*/
+  /*
+	===============================|▷
+	4.4. Help toplayer
+	===============================|▷
+	*/
+  /*
+	===============================|▷
+	4.5. Classes filter menu
+	===============================|▷
+	*/
+  /*
+	===============================|▷
+	4.6. Subjects filter menu
+	===============================|▷
+	*/
+  /*
+	===============================|▷
+	4.7. Rankings
+	===============================|▷
+	*/
+  /*
+	===============================|▷
+	4.8. Secondary header
+	===============================|▷
+	*/
+  /*
+	===============================|▷
+	4.9. Questions container
+	===============================|▷
+	*/
+  /*
+	===============================|▷
+	4.10. Call to actions
+	===============================|▷
+	*/ }
+  #content .last-update {
+    margin-left: 35px;
+    font-size: .8rem; }
+  #content .mint-logo {
+    position: absolute;
+    left: 385px;
+    top: -370px; }
+  #content #controls {
+    width: 300px;
+    height: 35px;
+    margin: -60px auto 60px 350px;
+    position: relative; }
+    #content #controls .menu-element {
+      position: absolute;
+      min-width: 35px;
+      height: 35px;
+      background-size: 35px 35px !important;
+      top: 35px;
+      z-index: 150;
+      transition: 0.2s; }
+    #content #controls .menu-element:hover {
+      transition: 0.2s; }
+    #content #controls .menu-element:active {
+      z-index: 750;
+      transition: 0.1s; }
+    #content #controls #help-button {
+      background: url("assets/img/info_normal.png") no-repeat;
+      left: 40px; }
+    #content #controls #help-button:hover {
+      background: url("assets/img/info_hover.png") no-repeat; }
+    #content #controls #help-button:active {
+      background: url("assets/img/info_active.png") no-repeat; }
+    #content #controls #ranking-button {
+      display: none;
+      background: url("assets/img/ranking_normal.png") no-repeat;
+      left: 0; }
+    #content #controls #ranking-button:hover {
+      background: url("assets/img/ranking_hover.png") no-repeat; }
+    #content #controls #ranking-button:active {
+      background: url("assets/img/ranking_active.png") no-repeat; }
+    #content #controls #subjects-button {
+      background: url("assets/img/subjects_normal.png") no-repeat;
+      left: -40px; }
+    #content #controls #subjects-button:hover {
+      background: url("assets/img/subjects_hover.png") no-repeat; }
+    #content #controls #subjects-button:active {
+      background: url("assets/img/subjects_active.png") no-repeat; }
+  #content #help {
+    padding: 50px;
+    margin-bottom: 50px;
+    position: absolute;
+    display: none;
+    top: 20px;
+    left: 50%;
+    margin-left: -455px;
+    width: 910px;
+    min-height: 700px;
+    border: solid 2px black;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 500; }
+    #content #help h1 {
+      color: #ffbe32 !important; }
+    #content #help h3 {
+      margin-bottom: 15px; }
+    #content #help p {
+      margin-bottom: 15px;
+      text-align: justify; }
+    #content #help a {
+      color: #5bb8ff;
+      cursor: pointer;
+      cursor: hand; }
+  #content .sg-input--full-width, #content .sg-select--full-width, #content .sg-textarea--full-width {
+    width: 85%;
+    margin: auto; }
+  #content .sg-select, #content .sg-select__element {
+    display: block; }
+  #content .subjects-menu--unfold {
+    height: 320px !important;
+    overflow: hidden;
+    transition: 1s; }
+  #content .subjects-menu {
+    margin: 25px 0 20px 7.5% !important;
+    width: 85% !important;
+    height: 75px;
+    overflow: hidden;
+    transition: 1s; }
+    #content .subjects-menu .mint-button-secondary {
+      margin: 1px;
+      width: 150px;
+      margin-top: 5px;
+      line-height: 1rem; }
+    #content .subjects-menu .mint-button-secondary--alt-inverse {
+      border-color: #5bb8ff !important;
+      background-color: #5bb8ff !important; }
+    #content .subjects-menu .mint-button-secondary--alt-inverse:hover {
+      color: #5bb8ff !important;
+      background-color: #fff !important; }
+  #content #ranking {
+    z-index: 100;
+    position: absolute;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: white;
+    border-radius: 25px;
+    max-height: 84vh;
+    width: 200px;
+    top: 25px;
+    left: 50%;
+    margin-left: -455px;
+    border: solid 2px black;
+    overflow: auto;
+    /*
+		=============================|▷
+		4.7.1. Header
+		=============================|▷
+		*/
+    /*
+		=============================|▷
+		4.7.2. Menu
+		=============================|▷
+		*/
+    /*
+		=============================|▷
+		4.7.3. Ranking wrappers
+		=============================|▷
+		*/ }
+    #content #ranking h3 {
+      color: #5bb8ff;
+      margin-top: 20px;
+      margin-bottom: -5px;
+      padding-bottom: 10px;
+      width: 100%;
+      text-align: center; }
+    #content #ranking .mint-tabs {
+      margin-top: 10px;
+      margin-right: -20px;
+      line-height: 1.5rem;
+      height: 1.5rem; }
+      #content #ranking .mint-tabs .mint-tabs__tab:hover {
+        background: #6b6b6b; }
+      #content #ranking .mint-tabs .mint-tabs__tab {
+        padding: 0 1rem;
+        min-height: 1.5rem;
+        font-size: .1rem; }
+      #content #ranking .mint-tabs .mint-tabs__tab--active {
+        background: #000; }
+    #content #ranking #rankingList, #content #ranking #rankingListWeekly {
+      overflow: auto;
+      padding-right: 17px;
+      /* Increase/decrease this value for cross-browser compatibility */ }
+      #content #ranking #rankingList li, #content #ranking #rankingListWeekly li {
+        position: relative;
+        margin-left: -40px;
+        list-style: inside decimal;
+        font-weight: bold;
+        font-size: 0.75rem; }
+        #content #ranking #rankingList li .ranking-element, #content #ranking #rankingListWeekly li .ranking-element {
+          padding-bottom: 10px;
+          margin-bottom: 10px;
+          border-bottom: dashed 1px #bbbdbf; }
+          #content #ranking #rankingList li .ranking-element a, #content #ranking #rankingListWeekly li .ranking-element a {
+            color: black;
+            transition: 0.25s; }
+          #content #ranking #rankingList li .ranking-element a:hover, #content #ranking #rankingListWeekly li .ranking-element a:hover {
+            color: #969799;
+            transition: 0.25s; }
+          #content #ranking #rankingList li .ranking-element .number, #content #ranking #rankingListWeekly li .ranking-element .number {
+            position: absolute;
+            top: 0;
+            left: 95%;
+            color: #ff8073;
+            text-align: right; }
+    #content #ranking #rankingListWeekly {
+      display: none; }
+  #content h1 {
+    width: 95%;
+    margin: auto;
+    font-size: 2.4rem !important;
+    text-align: center;
+    padding: 20px 0 10px 0;
+    margin-bottom: 30px;
+    color: #5bb8ff !important; }
+  #content #results-wrapper ul {
+    padding: 0 100px;
+    font-size: 1.1rem;
+    /*
+			=============================|▷
+			4.9.1. Answer style
+			=============================|▷
+			*/ }
+    #content #results-wrapper ul a {
+      width: 100%;
+      color: black;
+      transition: 0.25s; }
+    #content #results-wrapper ul a:hover {
+      color: #5bb8ff;
+      transition: 0.25s; }
+    #content #results-wrapper ul li {
+      margin: 8px;
+      list-style: circle;
+      list-style-image: url("assets/img/bullet.gif");
+      cursor: pointer;
+      cursor: hand;
+      transition: 0.5s;
+      text-align: justify; }
+    #content #results-wrapper ul .js-li--blue {
+      color: #5bb8ff !important; }
+    #content #results-wrapper ul li:hover {
+      color: #5bb8ff;
+      transition: 0.5s; }
+    #content #results-wrapper ul h3 {
+      padding-bottom: 10px;
+      padding-top: 10px; }
+    #content #results-wrapper ul .json-answer--hidden {
+      display: none; }
+    #content #results-wrapper ul .json-answer--wrapper {
+      padding: 20px;
+      padding-top: 5px;
+      margin-top: 10px;
+      margin-bottom: 30px;
+      border: solid 2px #e1e3e5;
+      border-radius: 25px; }
+      #content #results-wrapper ul .json-answer--wrapper h3 {
+        font-size: 1rem;
+        color: #5bb8ff; }
+      #content #results-wrapper ul .json-answer--wrapper .json-answer {
+        position: relative;
+        font-size: 1rem;
+        text-align: justify; }
+      #content #results-wrapper ul .json-answer--wrapper .approved {
+        background: url("assets/img/tick.png") no-repeat;
+        background-position: right;
+        background-size: 30px 30px; }
+      #content #results-wrapper ul .json-answer--wrapper .not-approved {
+        background: url("assets/img/cross.png") no-repeat;
+        background-position: right;
+        background-size: 30px 30px; }
+  #content .call-to-action {
+    width: 500px;
+    margin: auto; }
+    #content .call-to-action h3 {
+      font-size: 1.4rem !important;
+      text-align: center;
+      padding: 20px; }
+    #content .call-to-action .call-to-action--btn {
+      width: 180px;
+      margin: auto; }
+
+/*
+=================================|▷
+5. Profile
+=================================|▷
+*/
+#profile {
+  display: none;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 100vw;
+  margin-left: -960px;
+  height: 100vh;
+  width: 960px;
+  z-index: 2000;
+  background: #fff;
+  box-shadow: inset 0px 0px 24px -3px #F7F7F7, -14px 0px 16px -5px rgba(119, 114, 114, 0.5);
+  -webkit-box-shadow: inset 0px 0px 24px -3px #F7F7F7, -14px 0px 16px -5px rgba(119, 114, 114, 0.5);
+  -moz-box-shadow: inset 0px 0px 24px -3px #F7F7F7, -14px 0px 16px -5px rgba(119, 114, 114, 0.5);
+  -o-box-shadow: inset 0px 0px 24px -3px #F7F7F7, -14px 0px 16px -5px rgba(119, 114, 114, 0.5); }
+  #profile .profile-wrapper {
+    position: relative;
+    width: 100%; }
+    #profile .profile-wrapper .profile-top {
+      position: relative;
+      height: 75px;
+      width: 100%;
+      background: url("assets/img/background.jpg") no-repeat;
+      background-position: center;
+      background-size: cover; }
+      #profile .profile-wrapper .profile-top #profile-btn {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        margin: 20px; }
+        #profile .profile-wrapper .profile-top #profile-btn .mint-icon {
+          max-width: 35px;
+          max-height: 35px;
+          width: 35px;
+          height: 35px;
+          opacity: 0.75;
+          transition: 0.2s; }
+        #profile .profile-wrapper .profile-top #profile-btn .mint-icon:hover {
+          opacity: 1;
+          transition: 0.2s; }
+        #profile .profile-wrapper .profile-top #profile-btn .mint-icon:active {
+          opacity: 0.3;
+          transition: 0.1s; }
+    #profile .profile-wrapper .profile-wrapper--hole {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 75px;
+      display: none; }
+      #profile .profile-wrapper .profile-wrapper--hole .profile-user {
+        background: #5bb8ff;
+        position: relative;
+        padding: 25px;
+        width: 100%;
+        height: 200px; }
+        #profile .profile-wrapper .profile-wrapper--hole .profile-user .avatar {
+          position: absolute;
+          left: 50%;
+          margin-left: -75px;
+          width: 150px;
+          height: 150px;
+          border-radius: 75px;
+          background: #595959; }
+          #profile .profile-wrapper .profile-wrapper--hole .profile-user .avatar img {
+            width: 150px;
+            height: 150px;
+            border-radius: 75px; }
+        #profile .profile-wrapper .profile-wrapper--hole .profile-user .user-info {
+          width: 400px;
+          position: absolute;
+          top: 50%;
+          left: 300px;
+          margin-left: -300px;
+          margin-top: -20px; }
+          #profile .profile-wrapper .profile-wrapper--hole .profile-user .user-info .username {
+            width: 100%;
+            text-align: center;
+            font-size: 2.5rem; }
+            #profile .profile-wrapper .profile-wrapper--hole .profile-user .user-info .username a {
+              color: black; }
+          #profile .profile-wrapper .profile-wrapper--hole .profile-user .user-info .rank {
+            width: 300px;
+            padding-top: 5px;
+            margin: auto;
+            margin-top: 10px;
+            text-align: center;
+            color: #fff;
+            font-size: 1.1rem; }
+        #profile .profile-wrapper .profile-wrapper--hole .profile-user .user-titles {
+          position: absolute;
+          left: 630px;
+          top: 50px; }
+          #profile .profile-wrapper .profile-wrapper--hole .profile-user .user-titles h3 {
+            text-align: center; }
+          #profile .profile-wrapper .profile-wrapper--hole .profile-user .user-titles .titles li {
+            margin-left: -20px;
+            list-style: none; }
+      #profile .profile-wrapper .profile-wrapper--hole .profile-achievements {
+        margin: 25px;
+        padding-top: 50px; }
+        #profile .profile-wrapper .profile-wrapper--hole .profile-achievements h2 {
+          text-align: center;
+          font-size: 3rem;
+          color: #5bb8ff;
+          padding-bottom: 50px; }
+        #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges {
+          width: 100%;
+          display: flex; }
+          #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general, #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .special {
+            position: absolute !important;
+            left: 0; }
+          #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general {
+            display: none;
+            width: 100%;
+            position: relative; }
+            #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general h3 {
+              font-size: 1.5rem;
+              text-align: center;
+              border-bottom: solid 1px #7e7e7e;
+              margin-left: 50px;
+              margin-right: 50px;
+              padding-bottom: 15px;
+              margin-bottom: 50px; }
+            #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper {
+              position: absolute;
+              list-style: none;
+              width: 600px;
+              left: 50%;
+              margin-left: -300px; }
+              #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item {
+                position: relative;
+                padding-bottom: 50px;
+                margin-bottom: 50px; }
+                #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .badge {
+                  position: absolute;
+                  margin: 30px;
+                  margin-left: -40px;
+                  top: 50%;
+                  margin-top: -130px; }
+                  #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .badge img {
+                    width: auto;
+                    height: 200px;
+                    border-radius: 100px; }
+                #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .rookie {
+                  margin-top: -60px;
+                  z-index: 80; }
+                #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .zealot {
+                  z-index: 90; }
+                #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .master {
+                  margin-top: -200px;
+                  z-index: 100; }
+                #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .description {
+                  color: #1a1a1a !important;
+                  text-transform: uppercase;
+                  position: relative;
+                  width: 400px;
+                  margin-left: 200px;
+                  height: 370px;
+                  border-radius: 30px;
+                  border-left: 2px solid #595959;
+                  border-right: 2px solid #595959; }
+                  #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .description h3 {
+                    position: absolute;
+                    color: #595959;
+                    border: none;
+                    top: -10px;
+                    width: 300px;
+                    text-align: center;
+                    font-size: 1.1rem; }
+                  #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .description p {
+                    color: #595959;
+                    padding: 10px;
+                    font-size: .9rem;
+                    padding-top: 50px;
+                    width: 100%;
+                    text-align: justify;
+                    line-height: 1.2rem;
+                    font-variant: small-caps !important; }
+                  #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .description .based-on {
+                    color: #595959;
+                    font-size: .9rem;
+                    margin: 15px 50px;
+                    padding: 5px 0;
+                    border-top: 1px solid #595959;
+                    border-bottom: 1px solid #595959; }
+                  #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .description h2 {
+                    font-size: 2rem;
+                    padding: 0;
+                    margin: 20px 0;
+                    margin-top: 30px; }
+                  #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .description .requirements {
+                    display: flex; }
+                    #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .description .requirements .element {
+                      width: 30%;
+                      margin: auto; }
+                      #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .description .requirements .element h3 {
+                        position: initial;
+                        width: 100%;
+                        text-align: center;
+                        margin: 0;
+                        padding: 0; }
+                      #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .description .requirements .element p {
+                        font-size: 3rem;
+                        font-weight: bold;
+                        width: 100%;
+                        text-align: center;
+                        margin: 0;
+                        padding: 15px; }
+              #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item:nth-of-type(1) .description h2 {
+                color: #ff8073; }
+              #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item:nth-of-type(1) .description .requirements .element p {
+                color: #ff8073; }
+              #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item:nth-of-type(2) .description .requirements .element p {
+                color: #5bb8ff; }
+              #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item:nth-of-type(3) .description h2 {
+                color: #ffbe32; }
+              #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item:nth-of-type(3) .description .requirements .element p {
+                color: #ffbe32;
+                font-size: 2rem; }
+          #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .special {
+            width: 100%;
+            position: relative; }
+            #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .special h3 {
+              font-size: 1.5rem;
+              text-align: center;
+              border-bottom: solid 1px #7e7e7e;
+              margin-left: 50px;
+              margin-right: 50px;
+              padding-bottom: 15px;
+              margin-bottom: 50px; }
+            #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .special .badges-wrapper {
+              position: absolute;
+              list-style: none;
+              width: 600px;
+              left: 50%;
+              margin-left: -300px; }
+              #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .special .badges-wrapper .badges-item {
+                position: relative;
+                padding-bottom: 50px;
+                margin-bottom: 50px; }
+                #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .special .badges-wrapper .badges-item .badge {
+                  position: absolute;
+                  margin: 30px;
+                  margin-left: -100px;
+                  top: 50%;
+                  margin-top: -160px; }
+                  #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .special .badges-wrapper .badges-item .badge img {
+                    width: auto;
+                    height: 250px;
+                    border-radius: 100px; }
+                #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .special .badges-wrapper .badges-item .description {
+                  color: #1a1a1a !important;
+                  text-transform: uppercase;
+                  position: relative;
+                  width: 400px;
+                  margin-left: 200px;
+                  height: 200px;
+                  border-radius: 30px;
+                  border-left: 2px solid #595959;
+                  border-right: 2px solid #595959; }
+                  #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .special .badges-wrapper .badges-item .description h3 {
+                    position: absolute;
+                    color: #595959;
+                    border: none;
+                    top: -10px;
+                    width: 300px;
+                    text-align: center;
+                    font-size: 1.1rem; }
+                  #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .special .badges-wrapper .badges-item .description p {
+                    color: #595959;
+                    padding: 10px;
+                    font-size: .9rem;
+                    padding-top: 50px;
+                    width: 100%;
+                    text-align: justify;
+                    line-height: 1.2rem;
+                    font-variant: small-caps !important; }
+                  #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .special .badges-wrapper .badges-item .description .based-on {
+                    color: #595959;
+                    font-size: .9rem;
+                    margin: 15px 50px;
+                    padding: 5px 0;
+                    border-top: 1px solid #595959;
+                    border-bottom: 1px solid #595959;
+                    text-align: center; }
+                  #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .special .badges-wrapper .badges-item .description h2 {
+                    font-size: 2rem;
+                    padding: 0;
+                    margin: 20px 0;
+                    margin-top: 30px; }
+                  #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .special .badges-wrapper .badges-item .description .requirements h3 {
+                    position: initial;
+                    width: 100%;
+                    text-align: center;
+                    margin: 0;
+                    padding: 0; }
+                  #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .special .badges-wrapper .badges-item .description .requirements p {
+                    font-size: 1rem;
+                    font-weight: bold;
+                    width: 100%;
+                    text-align: center;
+                    margin: 0;
+                    padding: 15px; }
+
+/*
+=================================|▷
+6. Footer
+=================================|▷
+*/
+#footer {
+  position: relative;
+  height: 40px;
+  width: 100%;
+  background-color: #ebf2ef;
+  /*
+	===============================|▷
+	6.1. Facebook share button
+	===============================|▷
+	*/
+  /*
+	===============================|▷
+	6.2. Twitter share button
+	===============================|▷
+	*/ }
+  #footer .fb-share-button {
+    position: absolute;
+    left: 75%;
+    top: 0px; }
+  #footer .twitter-share-btn {
+    position: absolute;
+    left: 63%;
+    top: 4px; }
+  #footer p {
+    position: absolute;
+    bottom: 15px;
+    left: 17vw;
+    text-align: center;
+    color: #383838; }
+
+/*
+=================================|▷
+7. SASS partials import
+=================================|▷
+	7.1. _preloader-animation.scss
+=================================|▷
+*/
+/*!
+ * Load Awesome v1.1.0 (http://github.danielcardoso.net/load-awesome/)
+ * Copyright 2015 Daniel Cardoso <@DanielCardoso>
+ * Licensed under MIT
+ */
+.la-ball-clip-rotate-multiple,
+.la-ball-clip-rotate-multiple > div {
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.la-ball-clip-rotate-multiple {
+  display: block;
+  font-size: 0;
+  color: #fff; }
+
+.la-ball-clip-rotate-multiple.la-dark {
+  color: #333; }
+
+.la-ball-clip-rotate-multiple > div {
+  display: inline-block;
+  float: none;
+  background-color: currentColor;
+  border: 0 solid currentColor; }
+
+.la-ball-clip-rotate-multiple {
+  width: 32px;
+  height: 32px; }
+
+.la-ball-clip-rotate-multiple > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: transparent;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 100%;
+  -webkit-animation: ball-clip-rotate-multiple-rotate 1s ease-in-out infinite;
+  -moz-animation: ball-clip-rotate-multiple-rotate 1s ease-in-out infinite;
+  -o-animation: ball-clip-rotate-multiple-rotate 1s ease-in-out infinite;
+  animation: ball-clip-rotate-multiple-rotate 1s ease-in-out infinite; }
+
+.la-ball-clip-rotate-multiple > div:first-child {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border-right-color: transparent;
+  border-left-color: transparent; }
+
+.la-ball-clip-rotate-multiple > div:last-child {
+  width: 16px;
+  height: 16px;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  -webkit-animation-duration: .5s;
+  -moz-animation-duration: .5s;
+  -o-animation-duration: .5s;
+  animation-duration: .5s;
+  -webkit-animation-direction: reverse;
+  -moz-animation-direction: reverse;
+  -o-animation-direction: reverse;
+  animation-direction: reverse; }
+
+.la-ball-clip-rotate-multiple.la-sm {
+  width: 16px;
+  height: 16px; }
+
+.la-ball-clip-rotate-multiple.la-sm > div {
+  border-width: 1px; }
+
+.la-ball-clip-rotate-multiple.la-sm > div:first-child {
+  width: 16px;
+  height: 16px; }
+
+.la-ball-clip-rotate-multiple.la-sm > div:last-child {
+  width: 8px;
+  height: 8px; }
+
+.la-ball-clip-rotate-multiple.la-2x {
+  width: 64px;
+  height: 64px; }
+
+.la-ball-clip-rotate-multiple.la-2x > div {
+  border-width: 4px; }
+
+.la-ball-clip-rotate-multiple.la-2x > div:first-child {
+  width: 64px;
+  height: 64px; }
+
+.la-ball-clip-rotate-multiple.la-2x > div:last-child {
+  width: 32px;
+  height: 32px; }
+
+.la-ball-clip-rotate-multiple.la-3x {
+  width: 96px;
+  height: 96px; }
+
+.la-ball-clip-rotate-multiple.la-3x > div {
+  border-width: 6px; }
+
+.la-ball-clip-rotate-multiple.la-3x > div:first-child {
+  width: 96px;
+  height: 96px; }
+
+.la-ball-clip-rotate-multiple.la-3x > div:last-child {
+  width: 48px;
+  height: 48px; }
+
+/*
+ * Animation
+ */
+@-webkit-keyframes ball-clip-rotate-multiple-rotate {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg); }
+  50% {
+    -webkit-transform: translate(-50%, -50%) rotate(180deg);
+    transform: translate(-50%, -50%) rotate(180deg); }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg); } }
+
+@-moz-keyframes ball-clip-rotate-multiple-rotate {
+  0% {
+    -moz-transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg); }
+  50% {
+    -moz-transform: translate(-50%, -50%) rotate(180deg);
+    transform: translate(-50%, -50%) rotate(180deg); }
+  100% {
+    -moz-transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg); } }
+
+@-o-keyframes ball-clip-rotate-multiple-rotate {
+  0% {
+    -o-transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg); }
+  50% {
+    -o-transform: translate(-50%, -50%) rotate(180deg);
+    transform: translate(-50%, -50%) rotate(180deg); }
+  100% {
+    -o-transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg); } }
+
+@keyframes ball-clip-rotate-multiple-rotate {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    -moz-transform: translate(-50%, -50%) rotate(0deg);
+    -o-transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg); }
+  50% {
+    -webkit-transform: translate(-50%, -50%) rotate(180deg);
+    -moz-transform: translate(-50%, -50%) rotate(180deg);
+    -o-transform: translate(-50%, -50%) rotate(180deg);
+    transform: translate(-50%, -50%) rotate(180deg); }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+    -moz-transform: translate(-50%, -50%) rotate(360deg);
+    -o-transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg); } }
+
+/*
+=================================|▷
+	7.2. _error.scss
+=================================|▷
+*/
+#render-error {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1500;
+  background: #ffbe32;
+  color: #fff;
+  background-image: url("assets/img/error-background.png");
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 30%;
+  display: none; }
+  #render-error .render-error--wrapper {
+    width: 800px;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -200px; }
+    #render-error .render-error--wrapper .mint-logo {
+      margin-left: -5px; }
+    #render-error .render-error--wrapper h1 {
+      font-size: 5.75rem;
+      text-transform: uppercase;
+      margin-top: 40px; }
+    #render-error .render-error--wrapper p {
+      width: 500px;
+      font-size: 1.5rem;
+      line-height: 1.6rem;
+      font-weight: bolder;
+      padding-top: 15px;
+      text-align: justify; }
+      #render-error .render-error--wrapper p a {
+        text-transform: uppercase;
+        font-size: 2rem;
+        line-height: 3rem;
+        color: #fff; }
+
+/*
+=================================|▷
+	7.3. _operational.scss
+=================================|▷
+*/
+.badge-dim {
+  filter: brightness(30%);
+  -webkit-filter: brightness(30%);
+  -moz-filter: brightness(30%);
+  -o-filter: brightness(30%);
+  -ms-filter: brightness(30%);
+  z-index: 0 !important; }
+
+.badge-dim:nth-child(3) {
+  opacity: 0.3; }
+
+.badge-dim:nth-child(2) {
+  opacity: 0.5; }
+
+.badge-dim:nth-child(1) {
+  opacity: 0.3; }
+
+.last-update {
+  position: absolute;
+  left: 40px;
+  top: 2.5px;
+  width: 900px;
+  height: 50px;
+  text-align: left;
+  font-size: .7rem; }
+
+.sg-button-secondary--small {
+  border-radius: 0; }
+
+.sg-button-secondary--alt-inverse {
+  border-color: #6e85ff;
+  background-color: #6e85ff; }
+
+.sg-button-secondary {
+  border-color: #6e85ff;
+  fill: #6e85ff; }
+
+.sg-button-secondary:hover {
+  color: #6e85ff;
+  border-color: #6e85ff; }
+
+.sg-button-secondary:focus {
+  color: #6e85ff;
+  border-color: #6e85ff; }
+
+.sg-button-secondary-active {
+  border-color: #6e85ff !important;
+  background-color: #fff !important;
+  color: #6e85ff !important; }
+
+/*
+=================================|▷
+	7.4. _rwd.scss
+=================================|▷
+*/
+@media screen and (max-width: 600px) {
+  #render-error {
+    background-size: 45%; }
+    #render-error .render-error--wrapper {
+      width: 100vw;
+      top: 0;
+      left: 50%;
+      margin-top: 0px;
+      margin-left: -150px;
+      padding: 50px 15px; }
+      #render-error .render-error--wrapper .mint-logo {
+        left: 15px; }
+        #render-error .render-error--wrapper .mint-logo img {
+          max-width: 75px; }
+      #render-error .render-error--wrapper h1 {
+        margin-top: 10px;
+        font-size: 2.5rem; }
+      #render-error .render-error--wrapper p {
+        font-size: 1rem;
+        width: 300px;
+        padding-top: 20px;
+        line-height: 1rem; }
+        #render-error .render-error--wrapper p a {
+          font-size: 1.3rem; }
+  #preloader h1 {
+    position: initial;
+    width: 100%;
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 0;
+    margin-top: 50vh;
+    padding-top: 70px; }
+  #preloader .mint-logo {
+    height: 40px !important;
+    position: absolute;
+    left: 50%;
+    margin-left: 45px;
+    top: 50%;
+    margin-top: 95px; }
+  #header {
+    max-width: 100vw;
+    background-attachment: initial;
+    height: 350px; }
+    #header h1 {
+      line-height: 2.2rem !important;
+      padding-top: 160px; }
+  #content {
+    width: 100vw;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 30px 5px 30px 5px;
+    background-image: none;
+    border-radius: 0; }
+    #content .mint-logo {
+      top: -240px;
+      left: 50%;
+      margin-left: -67px; }
+    #content #controls {
+      display: flex;
+      width: 225px;
+      margin: -50px auto 30px auto;
+      position: relative; }
+      #content #controls .menu-element {
+        position: initial;
+        z-index: 150;
+        transition: 0.2s;
+        margin: 15px;
+        margin-left: 0; }
+      #content #controls #ranking-button {
+        display: block; }
+    #content #help {
+      margin-left: 0;
+      left: 0;
+      width: 100%;
+      border: none;
+      border-radius: 0;
+      top: 150px;
+      padding: 5px; }
+    #content #ranking {
+      top: 0;
+      left: 0;
+      margin-left: 0;
+      width: 225px;
+      max-height: 100vh;
+      height: 100vh;
+      border: none;
+      border-radius: 0;
+      border-bottom: solid 1px #bbbdbf;
+      z-index: 400;
+      transform: translate(-225px);
+      transition: 0.5s; }
+      #content #ranking .mint-tabs .mint-tabs__tab {
+        padding: 0 1.4rem; }
+    #content .sg-input--full-width, #content .sg-select--full-width, #content .sg-textarea--full-width {
+      width: 100%;
+      margin-bottom: 20px;
+      margin-top: 35px; }
+    #content .subjects-menu {
+      margin: auto !important;
+      width: 320px !important;
+      max-height: 600px !important;
+      overflow: hidden;
+      transition: 1s; }
+    #content .subjects-menu--unfold {
+      height: 570px !important;
+      transition: 1s; }
+    #content h1 {
+      font-size: 2rem !important;
+      text-align: center; }
+    #content #results-wrapper ul {
+      padding: 0;
+      padding-left: 10px; }
+    #content .call-to-action {
+      width: 100%; }
+  .no-data {
+    width: 100%; }
+  #profile {
+    position: fixed;
+    width: 100vw;
+    left: 0;
+    margin-left: 0; }
+    #profile .profile-wrapper .profile-wrapper--hole .profile-user {
+      height: 300px; }
+      #profile .profile-wrapper .profile-wrapper--hole .profile-user .avatar {
+        position: initial;
+        margin-left: 0;
+        left: 0;
+        margin: 0 auto 25px auto; }
+      #profile .profile-wrapper .profile-wrapper--hole .profile-user .user-info {
+        width: 100%;
+        left: 0;
+        margin: 0;
+        top: auto; }
+      #profile .profile-wrapper .profile-wrapper--hole .profile-user .user-titles {
+        display: none; }
+    #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper, #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .special .badges-wrapper {
+      width: 100%;
+      left: 0;
+      padding: 0;
+      margin-left: 0; }
+      #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .badge, #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .special .badges-wrapper .badges-item .badge {
+        left: 50%;
+        margin-left: -100px; }
+      #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .rookie, #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .special .badges-wrapper .badges-item .rookie {
+        margin-top: -500px; }
+      #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .zealot, #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .special .badges-wrapper .badges-item .zealot {
+        margin-top: -560px; }
+      #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .master, #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .special .badges-wrapper .badges-item .master {
+        margin-top: -620px; }
+      #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .description, #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .special .badges-wrapper .badges-item .description {
+        width: auto;
+        height: 440px;
+        margin-left: 0px;
+        margin-top: 300px;
+        margin-bottom: 40px;
+        text-align: center !important; }
+        #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .description h3, #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .special .badges-wrapper .badges-item .description h3 {
+          width: 100%;
+          margin: auto; }
+        #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .description p, #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .special .badges-wrapper .badges-item .description p {
+          text-align: center; }
+        #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .description .based-on, #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .special .badges-wrapper .badges-item .description .based-on {
+          line-height: 1rem; }
+        #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .general .badges-wrapper .badges-item .description .requirements .element p, #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .special .badges-wrapper .badges-item .description .requirements .element p {
+          font-size: 1.75rem !important; }
+    #profile .profile-wrapper .profile-wrapper--hole .profile-achievements .badges .special .badges-item .badge {
+      margin-top: -575px !important;
+      margin-left: -125px !important; }
+  #footer {
+    height: 80px; }
+    #footer .fb-share-button {
+      top: 10px;
+      left: 50%; }
+    #footer .twitter-share-btn {
+      top: 14px;
+      left: 24.5%; }
+    #footer p {
+      left: 50%;
+      margin-left: -95.5px; } }
+
+/* operational */
+.ranking-open {
+  max-width: 100vw;
+  transform: translate(0px) !important;
+  -webkit-box-shadow: 5px 0px 30px -4px rgba(76, 76, 76, 0.57);
+  -moz-box-shadow: 5px 0px 30px -4px rgba(76, 76, 76, 0.57);
+  box-shadow: 5px 0px 30px -4px rgba(76, 76, 76, 0.57); }
+
+.ranking-open--button {
+  transform: translate(50px) !important; }
+
+.last-update {
+  max-width: 300px;
+  left: 2.5px; }

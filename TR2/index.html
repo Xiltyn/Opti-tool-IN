@@ -1,0 +1,582 @@
+<!--
+-------------------------------------------
+>>>>>>>>> Opti-tool © Brainly 2016 <<<<<<<<
+>>>>>>>>>>>>>>>> ver. 2.0 <<<<<<<<<<<<<<<<<
+-------------------------------------------
+---------------- CONTENTS -----------------
+
+	1. HEAD
+		1.1. Meta data
+		1.2. Live reload
+		1.3. Stylesheets import
+		1.4. Favicon settings
+	2. Rendering error screen
+		2.1. logo
+		2.2. whooops
+		2.3. para
+			2.3.1. link
+	3. Preloading screen
+		3.1. animation
+		3.2. text-bit
+		3.3. logo
+	4. Header container
+	5. Content container
+		5.1. Header :: logo
+		5.2. Help top layer
+		5.3. Rankings
+			5.3.1. header
+			5.3.2. controls
+			5.3.3. general
+			5.3.4. weekly
+		5.4. Secondary header
+		5.5. Navigation
+		5.6. Classes filter dropdown (OFF)
+		5.7. Subjects filter
+		5.8. Json results
+			5.8.1. Questions list
+				5.8.1.1. header
+			5.8.2. Call to action
+				5.8.2.1. message
+				5.8.2.2. button
+		6. Profile section
+			6.1. Top Bar
+			6.2. User Information
+			6.3. Achievements
+			 	6.3.1. General
+				6.3.2. Special
+		7. Footer container
+			7.1. Copyrights
+		8. Top-layer background blackout
+		9. Scripts import
+			9.1. G.A. tracking snippet placeholder
+
+-------------------------------------------
+--------------- DESCRIPTION ---------------
+
+
+
+
+-------------------------------------------
+-->
+
+<!doctype html>
+<html>
+
+<!-- 1. HEAD
+=============================================|▷ -->
+
+<head>
+
+	<!-- 1.1. Meta data
+	===========================================|▷ -->
+	<title>Optitim</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, maximum-scale=1.0">
+
+	<!-- 1.2. Live Reload
+	===========================================|▷ -->
+	<!-- <script src="../live.js"></script> -->
+
+	<!-- 1.3. Stylesheets import
+	===========================================|▷ -->
+	<link rel="stylesheet" type="text/css" href="http://styleguide.brainly.com/46.0.0/style-guide.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="http://styleguide.brainly.com/21.6.0/style-guide.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/animate.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!-- 1.4. Favicon settings
+	===========================================|▷ -->
+	<link rel="icon" type="image/x-icon" href="http://styleguide.brainly.com/images/favicons/brainly/favicon-0c2222f36b.ico">
+	<link rel="icon" sizes="192x192" href="http://styleguide.brainly.com/images/favicons/brainly/favicon-hd-0865c7f19f.png">
+
+</head>
+
+<body>
+
+	<!-- 2. Rendering error screen
+	===========================================|▷ -->
+	<div id="render-error">
+		<div class="render-error--wrapper">
+
+			<!-- 2.1. Rendering error screen :: logo
+			=======================================|▷ -->
+			<div class="mint-logo">
+				<img class="mint-logo__image" src="http://styleguide.brainly.com/images/logos/eodev-1972bd4349.svg">
+			</div>
+
+			<!-- 2.2. Rendering error screen :: whooops
+			=======================================|▷ -->
+			<h1>
+				ÜZÜLME! :)
+			</h1>
+
+			<!-- 2.3. Rendering error screen :: para
+			=======================================|▷ -->
+			<p>
+
+				Opti Sayfa kendini güncelliyor.
+				<br><br>
+				Yapman gereken tek şey, 30 saniye bekledikten sonra ...
+				<br><br>
+
+				<!-- 2.3.1. Rendering error screen :: para :: link
+				=====================================|▷ -->
+				<a href="#">SAYFAYI YENİLEMEK! :)</a>
+			</p>
+		</div>
+	</div>
+
+	<!-- 3. Preloading screen
+	===========================================|▷ -->
+	<div id="preloader">
+
+		<!-- 3.1. Preloading screen :: animation
+		=========================================|▷ -->
+		<div class="preloader-animation">
+			<div class="la-ball-clip-rotate-multiple la-3x">
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+
+		<!-- 3.2. Preloading screen :: text-bit
+		=========================================|▷ -->
+		<h1 class="mint-text-bit mint-text-bit--light">
+				SÜPER Bİ' ŞEYLER GELİYOR!
+			</h1>
+
+		<!-- 3.3. Preloading screen :: logo
+		=========================================|▷ -->
+		<div class="mint-logo">
+			<img class="mint-logo__image" src="http://styleguide.brainly.com/images/logos/eodev-1972bd4349.svg">
+		</div>
+	</div>
+
+	<!-- 4. Header container
+	===========================================|▷ -->
+	<section id="header">
+		<h1 class="mint-text-bit mint-text-bit--light">
+				EODEV ÖGRETMEN İŞ BAŞINDA!
+			</h1>
+	</section>
+
+	<!-- 5. Content container
+	===========================================|▷ -->
+	<section id="content">
+
+		<!-- 5.1. Header :: logo
+		=========================================|▷ -->
+		<div class="mint-logo">
+			<img class="mint-logo__image" src="http://styleguide.brainly.com/images/logos/eodev-1972bd4349.svg">
+		</div>
+
+		<!-- 5.2. Help top layer
+		=========================================|▷ -->
+		<div id="help" class="hidden">
+			<h1 align="center">
+				<b>Altın Kurallar Tam Doküman için</b>
+			</h1>
+			<p align="center">
+				<a data-mce-href="http://bit.ly/1MefDiC%20 " href="http://bit.ly/1MefDiC%20 " target="_blank">
+					<b>http://bit.ly/1MefDiC</b>
+				</a>
+			</p>
+			<h2 align="center">
+				<b>Kurallarımız ve Taktiklerimiz</b>
+			</h2>
+			<ul>
+				<li>Opti Tim’e girebilmek için, ilk önce Opti Adaylık başvurusu yapılır. http://elit.eodev.com/optitimanasayfa/</li>
+				<li>Daha sonra, 5 adet özel değerlendirme sorusu çözülür ve bu değerlendirmeyi geçen  başarılı adaylarımız, Opti Tablo’ya eklenir. Sadece ve sadece bu değerlendirmede sonuç aldıktan sonra özel opti soru sayfasından soru çözmeye başlayabilirler. </li>
+				<li>Opti Tablo’ya geçiş yapmış bir kişinin birinci resmi Opti rütbesi, ilk 25 çözümden sonra eklenir. </li>
+				<li>Opti Tablo’ya geçiş yapan ve ilk 10 gün içerisinde aktif olmayan kişiler, Opti takımından çıkarılır.</li>
+				<li>Opti takımında aktif olmak ne demektir? Günlük olarak, kişi başına, en az 8-10 soruyu uçurmak demektir! Haftalık, ortalama, en az 40-50 soruyu uçurmak demektir.</li>
+			</ul>
+			<h2 align="center">
+				<b>3 Altın Kuralımız nedir?</b>
+			</h2>
+			<ul>
+				<li>Opti özel soru sayfasındaki soruların hiçbirisi, ne koşulda olursa olsun asla silinmez. </li>
+				<li>Opti özel soru sayfasından bir sorudan, eskiden yazılmış kalitesiz, eksik, anlamsız, örneksiz veya kopya olan bir cevap silinirse, osoruya mutlaka ve mutlaka derhal yeniden yazılacak üstün kaliteli ve öğretici bir cevap eklenmek zorundadır. </li>
+				<li>Eğer kendimiz cevap ekleyemeyeceksek (konuyu bilmiyorsak veya ilgi alanımıza girmiyorsa, bir opti sorusundan asla ve asla eski cevabı silerek o soruyu cevapsız şekilde açıkta bırakmıyoruz. Kendimiz cevap eklemeyeceksek, o soruyu pas geçeriz.)</li>
+			</ul>
+			<h3 align="center">
+				<b>3 #optiuçuş kuralı nedir?</b>
+			</h3>
+			<ol>
+				<li align="left"><b>Opti Tablo’ya girdikten sonra, skora odaklanıp, kaliteyi asla düşürmüyoruz. </b>Bu bize olumsuz yansıyacaktır; yeni rozetler kazanmamız mümkün olmaz, ekip içerisinde yeni görevler almamız mümkün olmaz. En kötüsü, eksik cevaplarımız Opti Denetmenler veya Parakeet731 tarafından tek tek silinir. :(</li>
+				<li><b>Aynı sorudan birden fazla görürsek, asla aynı cevabı eklemiyoruz. </b>Kendi cevabımızı klonlayarak, farkli linkler’deki aynı sorulara eklemiyoruz. Eğer ki önceden eklediğimiz bir cevabımıza referans vereceksek, bu cevabı değişik biçimde, farklı örneklerle, farklı bir açıklama ile açıklayarak, eski cevabımıza link referansı verebiliriz. </li>
+				<li><b>Kitap soruları arasında, eksik sorulmuş sorular için asla ve asla özel not eklemiyoruz.</b> <i>(örnek eksik soru: Fen bilgisi 8. Sınıf cevapları…</i> - örnek özel not: <i>“Merhaba, lütfen kitap adı, yayın evi, sayfa numarası veya soru numarası belirterek soruyu daha net ve açık biçimde sorunuz.”)</i><b> Bu tarz bir bilgilendirme notunu sadece Parakeet731 ve/veya Profesyonel Editör arkadaşlarımız ekleme yetkisine sahiptirler.</b></li>
+				</ol>
+				<h3 align="center">
+					<b>3 #optikalite kuralı nedir?</b>
+				</h3>
+				<ol>
+					<li>Yabancı dil sorularına, sadece ve sadece Yabancı Dil Uzmanlarımız cevap vermekle görevlidirler. <b>Yabancı dil uzmanları haricinde hiçbir kimse, yabancı dil sorusu çözemez. </b></li>
+					<li>Kendi seviyemizin üzerinde bir konuya, asla bilgimizin olmadığı, kendi sınıfımızda işlemediğimiz bir konuya, asla ve asla cevap eklemiyoruz. Konuyu bilen bir başka opti arkadaşımızın çözmesi için bu soruları pas geçiyoruz. <b>Eğer bilmediğimiz soruya cevap verdiğimiz sezilmiş olursa, Opti Denetmenlerin bu kalitesiz cevapları silme yetkisi vardır. </b></li>
+					<li><b>Doğru Doğrulama ekibinde olmayan optilerimizin, opti soru sayfasından doğrulama yapmasına gerek yoktur.</b> Hatalı doğrulamaları en aza indirmek için, opti sorularımızın DD ekibi tarafından doğrulanmasına dikkat ediyoruz. </li>
+				</ol>
+			<h3 align="center"><br><br><i>Together, we are Brainly!</i></h3>
+		</div>
+
+		<!-- 5.3. Rankings
+		=========================================|▷ -->
+		<div id="ranking">
+
+			<!-- 5.3.1. Rankings :: header
+			=======================================|▷ -->
+			<h3>
+				En Çok Cevaplayanlar
+			</h3>
+
+			<!-- 5.3.2. Rankings :: tab controls
+			=======================================|▷ -->
+			<ul class="mint-tabs">
+				<li class="mint-tabs__tab mint-tabs__tab--active" data-ranking='general'>Genel</li>
+				<li class="mint-tabs__tab" data-ranking='weekly'>Haftalik</li>
+			</ul>
+
+			<!-- 5.3.3. Rankings :: general
+			=======================================|▷ -->
+			<ul id="rankingList">
+
+				<script type="text/template" id="templateRanking">
+					<li>
+						<div class="ranking-element">
+							<a class="ranking-user" data-userId=<%= user_id %>><%= user_name %>
+								<div class="number">
+									<%= answers_count %>
+								</div>
+							</a>
+						</div>
+					</li>
+				</script>
+
+			</ul>
+
+			<!-- 5.3.4. Rankings :: weekly
+			=======================================|▷ -->
+			<ul id="rankingListWeekly">
+
+				<script type="text/template" id="templateRankingWeekly">
+					<li>
+						<div class="ranking-element">
+							<a class="ranking-user" data-userId=<%= user_id %>><%= user_name %>
+								<div class="number">
+									<%= answers_count_weekly %>
+								</div>
+							</a>
+						</div>
+					</li>
+				</script>
+
+			</ul>
+		</div>
+
+		<!-- 5.4. Secondary Header
+		=========================================|▷ -->
+		<h1 class="mint-text-bit mint-text-bit--alt">
+				EN SEVDİĞİN KONU
+			</h1>
+
+		<!-- 5.5. Navigation
+		=========================================|▷ -->
+		<menu id="controls">
+			<div class="menu-element" id="help-button">
+			</div>
+			<div class="menu-element" id="subjects-button">
+			</div>
+			<div class="menu-element" id="ranking-button">
+			</div>
+		</menu>
+
+		<!-- 5.6. Classes filter dropdown
+		=========================================|▷ -->
+		<!-- <div class="sg-select sg-select--full-width">
+			<div class="sg-select__icon">
+				<svg class="sg-icon sg-icon--x8 sg-icon--gray">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow_down"></use>
+				</svg>
+			</div>
+			<select class="sg-select__element">
+				<option selected="">all-classes</option>
+				<option>6-8</option>
+				<option>9</option>
+				<option>10-12</option>
+				<option>uncategorized</option>
+			</select>
+		</div> -->
+
+		<!-- 5.7. Subjects filter
+		=========================================|▷ -->
+		<div class="subjects-menu">
+			<button data-subject-name="HEPSI" data-subject-id="all" class="mint-button-secondary mint-button-secondary--alt-inverse">
+				<div class="mint-button-secondary__hole">
+					HEPSI
+				</div>
+			</button>
+
+			<script type="text/template" id="templateSubjects">
+				<button data-subject-name="<%= name %>" data-subject-id="<%= id %>" class="mint-button-secondary mint-button-secondary--dark">
+					<div class="mint-button-secondary__hole">
+						<%= name %>
+					</div>
+				</button>
+			</script>
+
+		</div>
+
+		<!-- 5.8. Json results
+		=========================================|▷ -->
+		<div id="results-wrapper">
+
+			<!-- 5.8.1. Question list
+			=======================================|▷ -->
+			<ul id="questionList">
+
+				<!-- TEMPLATE QUESTION LIST
+				=====================================|▷ -->
+				<script type="text/template" id="templateQuestions">
+					<li class="json-question all all-classes <%= sub_id %> <%= aged %> <%= level %> <%= id %>" data-id="<%= id %>">
+						<div class="json-question-txt">
+							<%= content %>
+						</div>
+							<div class="json-answer--wrapper json-answer--hidden">
+								<a href="<%= link %>" class="json-link" target="_blank">
+								<h3 class="json-header <%= approve_1 %>">
+									Cevap 1
+								</h3>
+								<p class="json-answer">
+									<%= answer_1 %>
+								</p>
+							</a>
+								<a href="<%= link %>" class="json-link" target="_blank">
+								<h3 class="json-header <%= approve_2 %>">
+									Cevap 2
+								</h3>
+								<p class="json-answer">
+									<%= answer_2 %>
+								</p>
+							</a>
+							</div>
+					</li>
+				</script>
+
+				<!-- 5.8.1.1. Question list :: header
+				=====================================|▷ -->
+				<h3>
+					Cevapları görmek için sorunun üzerine tıkla
+				</h3>
+			</ul>
+
+			<!-- 5.8.2. Call to action
+			=======================================|▷ -->
+			<div class="call-to-action">
+
+				<!-- 5.8.2.1. Call to action :: message
+				=====================================|▷ -->
+				<h3>
+					İşin bitti mi? Siteye dönmek ister misin?
+				</h3>
+
+				<!-- 5.8.2.2. Call to action :: button
+				=====================================|▷ -->
+				<div class="call-to-action--btn">
+					<a href="http://www.eodev.com" target="_blank" class="mint-button-primary mint-button-primary--dark">
+						<div class="mint-button-primary__hole">
+							Eodev'e geç!
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- 6. Profile
+	===========================================|▷ -->
+	<section id="profile">
+		<div class="profile-wrapper">
+
+			<!-- TEMPLATE PROFILE
+			=======================================|▷ -->
+			<script type="text/template" id="templateProfile">
+				<div class="profile-wrapper--hole <%= user_id %>">
+					<div class="profile-user">
+						<div class="avatar">
+							<img src="https://<%= user_avatar %>" alt="avatar" />
+						</div>
+						<div class="user-info" data-userid="<%= user_id %>">
+							<h3 class="username">
+								<a href="http://www.eodev.com/profil/user-<%= user_id %>">
+									<%= user_name %>
+								</a>
+							</h3>
+							<h4 class="rank">
+								<%= user_rank %>
+							</h4>
+						</div>
+						<!-- <div class="user-titles">
+							<h3>
+								Titles
+							<ul class="titles">
+							</h3>
+							<li>
+								<%= user_title_1 %>
+							</li>
+							<li>
+								<%= user_title_2 %>
+							</li>
+							<li>
+								<%= user_title_3 %>
+							</li>
+							</ul>
+						</div> -->
+					</div>
+					<div id="badges-menu">
+						<!-- <button class="general-badges-btn sg-button-secondary-active sg-button-secondary sg-button-secondary--alt-inverse sg-button-secondary--small sg-button-secondary--full" data-type="general">
+	            General
+	        	</button> -->
+						<!-- <button class="special-badges-btn sg-button-secondary sg-button-secondary--alt-inverse sg-button-secondary--small sg-button-secondary--full" data-type="special">
+	            Special
+	        	</button> -->
+					</div>
+					<div class="profile-achievements">
+						<h2>
+							Hak Eden Kazansın
+						</h2>
+						<div class="badges" data-badgeId="<%= badge_011 %>,<%= badge_012 %>,<%= badge_013 %>,<%= badge_021 %>,<%= badge_022 %>,<%= badge_023 %>,<%= badge_031 %>,<%= badge_032 %>,<%= badge_033 %>,<%= badge_04 %>,<%= badge_05 %>,<%= badge_06 %>,<%= badge_07 %>,<%= badge_08 %>,<%= badge_09 %>,<%= badge_10 %>,<%= badge_11 %>,<%= badge_12 %>,<%= badge_13 %>,<%= badge_14 %>,<%= badge_15 %>">
+							<div class="general">
+								<ul class="badges-wrapper badges-wrapper--general">
+								</ul>
+							</div>
+							<div class="special">
+								<ul class="badges-wrapper badges-wrapper--special">
+								</ul>
+							</div>
+						</div>
+			</script>
+
+			<!-- TEMPLATE BAGDES GENERAL
+					=======================================|▷ -->
+			<script type="text/template" id="templateBadgesGeneral">
+				<li class="badges-item">
+					<div class="badge rookie" data-id="<%= badge_id %>1">
+						<img src="css/assets/img/badges/<%= badge_id %>1.png" alt="<%= badge_name %>" />
+					</div>
+					<div class="badge zealot" data-id="<%= badge_id %>2">
+						<img src="css/assets/img/badges/<%= badge_id %>2.png" alt="<%= badge_name %>" />
+					</div>
+					<div class="badge master" data-id="<%= badge_id %>3">
+						<img src="css/assets/img/badges/<%= badge_id %>3.png" alt="<%= badge_name %>" />
+					</div>
+					<div class="description">
+						<h3>
+									<%= badge_name %>
+								</h3>
+						<p>
+							<%= badge_description %>
+						</p>
+						<div class="based-on">
+							<%= badge_metric %>
+						</div>
+						<h2>
+									Requirements
+								</h2>
+						<div class="requirements">
+							<div class="element rookie">
+								<h3>
+											rookie
+										</h3>
+								<p>
+									<%= req_rookie %>
+								</p>
+							</div>
+							<div class="element disciple">
+								<h3>
+											disciple
+										</h3>
+								<p>
+									<%= req_disciple %>
+								</p>
+							</div>
+							<div class="element master">
+								<h3>
+											master
+										</h3>
+								<p>
+									<%= req_master %>
+								</p>
+							</div>
+						</div>
+					</div>
+				</li>
+			</script>
+
+			<!-- TEMPLATE BADGES SPECIAL
+					=======================================|▷ -->
+			<script type="text/template" id="templateBadgesSpecial">
+				<li class="badges-item">
+					<div class="badge" data-id="<%= badge_id %>">
+						<img src="css/assets/img/badges/<%= badge_id %>.png" alt="" />
+					</div>
+					<div class="description">
+						<h3>
+							<%= badge_name %>
+						</h3>
+						<p>
+							<%= badge_description %>
+						</p>
+						<div class="based-on">
+							<%= badge_metric %>
+						</div>
+					</div>
+				</li>
+			</script>
+
+			<!-- 6.1. Profile :: Top Bar
+			=======================================|▷ -->
+			<div class="profile-top">
+				<div id="profile-btn">
+					<svg class="mint-icon">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-x"></use>
+					</svg>
+				</div>
+			</div>
+			</div>
+	</section>
+
+	<!-- 7. Footer section
+	===========================================|▷ -->
+	<section id="footer">
+
+		<!-- 7.1. Copyrights
+		=========================================|▷ -->
+		<p>
+			Copyright © 2016 Eodev.com
+		</p>
+	</section>
+
+	<!-- 8. Top-layer background blackout
+	===========================================|▷ -->
+	<div id="blackout" class="hidden">
+	</div>
+
+	<!-- 9. Scripts import
+	===========================================|▷ -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+	<script src="https://styleguide.brainly.com/images/icons-1b3ff8e58d.js"></script>
+	<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+	<script src="config.js"></script>
+	<script src="http://cbse.brainly.in/strive-for-better/config/functions.js"></script>
+	<script src="http://cbse.brainly.in/strive-for-better/config/script.js"></script>
+
+
+	<!-- 9.1. G.A. tracking snippet placeholder
+		===========================================|▷
+
+			Put your G.A. script here so the magic could start happening!
+
+		-->
+
+</body>
+
+</html>

@@ -1,41 +1,30 @@
 # Opti-tool
-Optimization tool for moderators
 
-Hello!
+### Synopsis
+The aim of this project was to create a stand-alone tool which could empower different communities on Brainly sites, to better focus their work. Additionally, every member was given a panel showing their progress and position inside their community.
 
+### Features:
+  - List of questions with their answers
+  [configured via json-data spreadsheet in _config_ sheet || __underscore.js__]
+  - Subjects menu to filter all questions by a specific subject
+  [configured via json-data spreadsheet in _subjects_ sheet || __underscore.js__]
+  - Questions counters appearing on subjects buttons _on hover_
+  - General and weekly rankings based on no. of answers and no. of approvals done on current content
+  [calculations done by _ranking_ sheet in json-data spreadsheet || __underscore.js__]
+  - Extra info section accessible with the __info__ button
+  - User information and progress rendered on separate panels for each user. Apart from basic user info, it also shows achievements, accumulated badges as well as titles. Features single-level and three-level badges
+  [configured via json-data spreadsheet in _profile_ sheet || __underscore.js__]
 
-Aim of this project is to create a stand-alone tool to fetch data about questions from brainly sites in order to provide them in a more accessible and appealing way to a closed community of moderators.
+### Optional Features:
+  - Secondary content filter based on _user-category_ set by the content specialist upon adding the content
+  [configured via json-data spreadsheet in _questions_ sheet || __underscore.js__] -> for more info ask _Rishi Raj_
+  - **Deleted content** and **Approved content** buttons under each question.
+  [configured via json-data spreadsheet in _approved_ sheet || __underscore.js__ && __blockspring__]
 
-### Version 1.2
+### Technologies used:
+  Front-end data rendering is based on AJAX promises, which fetch data from Google Spreadsheets and then render the data with underscore.js. All templates are stored directly in the HTML files, on the bottom of those documents. Optional **delete** and **approve** buttons also feature using blockspring for sending data back over to the json-data spreadsheet and to the _approved_ sheet
 
-##### Features:
-  - List of questions with answers/approvals
-  - Hiding inaccessible questions (aged/approved)
-  - Subjects filter
-  - #Help top-layer
-  - Ranking (General)
-  - UI (buttons for #help and #subjects-list [RWD : button for #ranking-list])
-  - RWD support
+### How to switch elements of the tool ON and OFF?
+  Every single element which is loaded using an __underscore.js template__ can be easily switched off by removing or commenting out a specific underscore template in **index.html** of a specific version of the tool. You can also alter any of the templates if you need. Eg. you could remove **delete** and **approve** buttons by changing the __question template__.
 
-### Version 1.3
-
-##### Changes:
-  - Added an error screen shown when Google Spreadsheets' response is too slow and the site cannot load its content properly
-  - Moved .animated class from list elements to the whole #questionList
-
-### Version 1.4
-
-##### Changes:
-  - Added full support for new 'weekly' rankings
-  - Created tab-like button to switch between both rankings
-  - Adjusted rankings' layouts for RWD
-  - Organized the code in index.html and style.css in sections listed on the top of the respective documents under --- CONTENTS --- section. 
-
-### Version 1.5
-
-##### Added features:
-
-  - Profile containers for each user in the ranking accessable by clicking user's name in any ranking.
-  - RWD support for all features
-  - Achievements system configurable via separate JSON-profile-IN spreadsheet
-  - Numbers of questions left from each subject accessable by hovering over a filter button (all shows all questions)
+### FAQ

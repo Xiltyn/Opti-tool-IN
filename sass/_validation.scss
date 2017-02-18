@@ -1,0 +1,64 @@
+.validation {
+  display: flex;
+}
+.validation-btn {
+  margin: 15px auto;
+  z-index: 500;
+  border: 2px solid #6ed6a0;
+  color: #6ed6a0;
+  padding: 1px 3px;
+  font-weight: 800;
+  font-size: 0.7rem;
+  transition: all 0.2s ease-out;
+  text-align: center;
+  width: 40%;
+}
+.validation-btn:hover {
+  background-color: #6ed6a0;
+  border: 2px solid #6ed6a0;
+  color: #fff;
+}
+.deletion-btn {
+  margin: 15px auto;
+  z-index: 500;
+  border: 2px solid #ff8073;
+  color: #ff8073;
+  padding: 1px 3px;
+  font-weight: 800;
+  font-size: 0.7rem;
+  transition: all 0.2s ease-out;
+  text-align: center;
+  width: 40%;
+}
+.deletion-btn:hover {
+  background-color: #ff8073;
+  border: 2px solid #ff8073;
+  color: #fff;
+}
+.approved {
+  border: 2px solid #6ed6a0;
+  background-color: #6ed6a0;
+  color: #fff;
+}
+.approved:hover {
+  background-color: #6ed6a0;
+  color: #fff;
+  cursor: initial;
+}
+.deleted {
+  border: 2px solid #ff8073;
+  background-color: #ff8073;
+  color: #fff;
+}
+.deleted:hover {
+  background-color: #ff8073;
+  color: #fff;
+  cursor: initial;
+}
+.reviewed-el {
+  color: #6e85ff !important;
+  font-weight: 800 !important;
+  .validation-btn, .deletion-btn {
+    display: none;
+  }
+}
