@@ -27,9 +27,28 @@ The aim of this project was to create a stand-alone tool which could empower dif
 ### How to switch elements of the tool ON and OFF?
   Every single element which is loaded using an __underscore.js template__ can be easily switched off by removing or commenting out a specific underscore template in **index.html** of a specific version of the tool. You can also alter any of the templates if you need. Eg. you could remove **delete** and **approve** buttons by changing the __question template__.
 
-### FAQ
-  1. My tool doesn't update, what should I do?
+### Troubleshooting
+  1. My tool data doesn't update, what should I do?
 
-  > If your tool loads the questions properly but doesn't update them at all, for example, new answers don't show up, approvals are not updated and similar, but there is no loading error screen shown, there are two possibilities:
-  1. There is a problem with code.z-dn.net, in which case please contact Artur Siara
-  2. There can be a problem with Cron script updates, which is mantained by KIT, so consult with him
+  > If your tool loads the questions properly but doesn't update them at all, for example, new answers don't show up, rankings or approvals are not updated and similar, but there is no loading error screen shown, there are two possibilities:
+  
+  > 1. There is a problem with code.z-dn.net, in which case please contact Artur Siara
+  > 2. There can be a problem with Cron script updates, which is mantained by KIT, so consult with him
+  
+  2. My tool loads ok, but there's a bunch of really weird data showing up in different places, why's that?
+  
+  > The tool takes data from links pointing to specific sheets in a spreadsheet **in order**, for example:
+  
+  ```
+  https://spreadsheets.google.com/feeds/list/1oiAp1Rcgz3qQKdwJf30v7cDJdG8oihXUhqQDWxpSebM/1/public/basic?alt=json
+  ```
+  > Take a look at the last part of it - `1oiAp1Rcgz3qQKdwJf30v7cDJdG8oihXUhqQDWxpSebM/1/public/basic?alt=json`. The number in the middle of it, in this case '1', is the number of a sheet in your spreadsheet. In other words, if you change the order of sheets in your spreadsheet, you might end up loading questions info into rankings for example, so make sure, that you don't change the order of your sheets in **json-data**
+  
+  3. My tool started crashing after I uploaded new questions and I can't make it right again.
+  
+  > Query which takes the data out from the database accepts only numbers as input, therefore, anything but digits will crash the query and hence - the tool. If you want to check for that, you can use a short formula 
+  
+  ```
+  =IF(ISNUMBER(A2);"I'm a number!";"I'm not a number")
+  ```
+  ...and paste it next to every number in the second column of the *config* sheet in the **json-data** spreadsheet.
