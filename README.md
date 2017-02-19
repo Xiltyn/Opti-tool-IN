@@ -58,9 +58,10 @@ The aim of this project was to create a stand-alone tool which could empower dif
   
   ### Json-Data spreadsheet's structure
   Json-Data spreadsheet contains all the data used by the Opti-Tool. Furthermore, many of the initial data manipulation and calculations are done there as well. Every Json-Data spreadsheet should have the following sheets: 
-  1. **Questions** (contains all information about questions, their subjects, school levels, answers, approvals and whether they should be removed from the list or not)
-  2. **Ranking** 
-  3. **Subjects**
-  4. **Profiles**
-  5. **General** badges
-  6. **Special** badges
+  
+  - **Questions** (contains all information about questions, their subjects, school levels, answers, approvals and whether they should be removed from the list or not)
+  - **Ranking** (calculates and stores information ranking records for both answers and approvals done by specified users) 
+  - **Subjects** (defines subjects used for subjects filter)
+  - **Profiles** (specifies user profile information for users in ranking, it should contain the same list of users as ranking)
+  - **General** badges (describes _general_, three-leveled achievements as well as their IDs, descriptions and requirements rendered in the front-end)
+  - **Special** badges (describes _special_, single-level achievements as well as their IDs, descriptions and requirements rendered in the front-end)
