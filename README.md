@@ -52,3 +52,15 @@ The aim of this project was to create a stand-alone tool which could empower dif
   =IF(ISNUMBER(A2);"I'm a number!";"I'm not a number")
   ```
   ...and paste it next to every number in the second column of the *config* sheet in the **json-data** spreadsheet.
+  
+  ##### When it's neither Cron's, nor the Code.z-dn.net's fault something's wrong
+  In case you are positive that it's neither Cron, nor the Code.z, that's creating a problem, you need to take a look at the **javascripts** behind the it. If you don't feel confident enough to do it, please ask a person from the **Front-End Team** to help you out. A person who helped building the tool was Mateusz Zimowski, so he should be a good person to start with. 
+  
+  ### Json-Data spreadsheet's structure
+  Json-Data spreadsheet contains all the data used by the Opti-Tool. Furthermore, many of the initial data manipulation and calculations are done there as well. Every Json-Data spreadsheet should have the following sheets: 
+  1. **Questions** (contains all information about questions, their subjects, school levels, answers, approvals and whether they should be removed from the list or not)
+  2. **Ranking** 
+  3. **Subjects**
+  4. **Profiles**
+  5. **General** badges
+  6. **Special** badges
