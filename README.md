@@ -29,6 +29,7 @@ The aim of this project was to create a stand-alone tool which could empower dif
 
 ### FAQ
   1. My tool doesn't update, what should I do?
+
   > If your tool loads the questions properly but doesn't update them at all, for example, new answers don't show up, approvals are not updated and similar, but there is no loading error screen shown, there are two possibilities:
-  > 1. There is a problem with code.z-dn.net, in which case please contact Artur Siara
-  > 2. There can be a problem with Cron script updates, which is mantained by KIT, so consult with him
+  1. There is a problem with code.z-dn.net, in which case please contact Artur Siara
+  2. There can be a problem with Cron script updates, which is mantained by KIT, so consult with him
